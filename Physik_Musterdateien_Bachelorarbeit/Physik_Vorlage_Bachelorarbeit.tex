@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_GB
 %_______________________________________________________________________________
 %class
 %_______________________________________________________________________________
@@ -29,6 +30,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{endnotes}
+
 
 
 %_______________________________________________________________________________
@@ -108,7 +110,7 @@ Zitate kenntlich gemacht habe.
 Mainz, den [Datum] [Unterschrift]
 \vfill
 \noindent 
-Johanna Musterfrau\\
+Martin Sobotzik\\
 KOMET\\
 Institut f\"ur Physik\\
 Staudingerweg 7\\
@@ -163,38 +165,97 @@ ersten \"Uberblick \"uber den nachfolgenden Text zu geben.
 
 Der Mainzer Mikrotron (MAMI) war zur Zeit meiner Bachelorarbeit ein mehrstufiger Rennbahn-Teilchenbeschleuniger (RTM\footnote{Race-Track-Microtron}) für Elektronenstrahlen und stand verschiedenen Arbeirsgruppen
  für Experimente zur Verfügung. Die Anlage befand sich auf dem Gelände des Instituts für Kernphysik (KPh) der Johannes Gutenberg-Universität 
-und bestand aus mehreren Hallen. 
-\newline
-\newline
+und bestand aus mehreren Hallen.
 
-Die A2-Kollaborations untersuchte unter anderem die Struktur von Nukleonen mittels reeller Photonen. Diese Photonen werden durch Bremsstrahlung des MAMI-Elektronenstrahls erzeugt und ihre Energie wird durch eine Photonenmarkierungsanlage (Tagger\footnote{to tag: markieren}) bestimmt.
+Die A2-Kollaborations untersuchte vor allem die Struktur von Nukleonen mit Hilfe von reellen Photonen, welche durch Bremsstrahlung des MAMI-Elektronenstrahls erzeugt wurden. Die Photonenenergie konnte durch eine Photonenmarkierungsanlage (Tagger\footnote{to tag = markieren}) bestimmt werden. Nach der Reaktion mit dem Target wurden die Teilchen durch ein System von verschiedenen Teilchendetektoren nachgewiesen.
+
+\begin{figure}[h]
+	
+	\includegraphics{grundriss}
+	\caption{Grundriss der Beschleunigeranlage MAMI. Zu sehen sind die drei RTMs, der HDSM der Tagger und die verschiedenen Experimentierhallen: A1(Elektronenstreuung), A2(Strukturanalyse von Nukleonen), A4 (Parit\"atsverletzung) und X1 (R\"ontgenstrahlung). \cite{KPh07}}
+	\label{fig.grundriss_anlage}
+\end{figure}
 
 
 \section{Der MAMI-Beschleuniger}
 1979 wurde das MAMI erstmals in Betrieb genommen und bestand damals nur aus einem einzelnen RTM, womit eine maximale Elektronenenergie von 14 MeV erreicht werden konnte. 
-Im Laufe der Jahre wurde das MAMI um zwei weitere RTMs und einem HDSM \footnote{Harmonic Double Sided Microtron} erweitert, wodurch eine Elektronenenergie von 1,5 GeV erreicht werden konnte.\cite{KPh11G} \newline
+Im Laufe der Jahre wurde das MAMI um zwei weitere RTMs und einem HDSM \footnote{Harmonic Double Sided Microtron} erweitert, wodurch eine Elektronenenergie von 1,5 GeV erreicht werden konnte.\cite{KPh11G} 
+\newline
 
-\subsection{Funktionsprinzip des MAMI}
+
 Um unpolarisierte Elektronen zu erzeugen, wurde eine Glühkathode auf 1000°C erhitzt. Dadurch konnten Elektronen den Heizdraht, aufgrund ihrer thermischen Bewegung, verlassen. Diese Elektronen wurden durch ein elektrisches Feld, welches durch die heiße Kathode und einer Anode, erzeugt wurde, zur Anode beschleunigt und traten dann durch ein Loch in der Anode aus und wurden weiter durch einen Linearbeschleuniger mit einer Frequenz von 2,45 GHz auf ca. 3,5 MeV beschleunigt. \cite{Un08} Diese Frequenz ist für das MAMI typisch und machte es zu einem Dauerstrich-Elektronen-Beschleuniger. Das heißt die Frequenz, mit der die Elektronen-Pakete auftraten, war größer, als die Frequenz, mit der die Detektoren einzelne Events auflösen konnten und somit wirkte der Strahl für die Detektoren kontinuierlich.
 \newline
 Da die Elektonen mit einem Linearbeschleuniger nur einige MeV pro Meter beschleunigt werden k\"onnen, und man keine kilometerlangen Strecke bauen wollte, entschied man sich daf\"ur, die Elektronen mehrmals durch den gleichen Beschleunigerabschnitt zu beschleunigen. Dazu wurden sie nachdem sie beschleunigt wurden, durch zwei 180° Dipole so umgeleitet, dass sie wieder am Anfang des Beschleunigerabschnitts waren und diese Bahn abermals durchlaufen konnten. Eine phasengerichtete R\"uckkopplung ist allerdings nur m\"oglich, wenn die statische und die dynamische Koh\"arenzbedingung erf\"ullt sind. Damit die statische Koh\"arenzbedingung erf\"ullt ist, muss die L\"ange der ersten vollst\"andigen Bahn ein ganzzahliges Vielaches der beschleunigten Hochfrequenz sein. F\"ur die dynamische Koh\"arenz muss die L\"angendifferenz von zwei aufeinander folgenden Uml\"aufen ebenfalls ein ganzzahliges Vielfaches de Wellenl\"ange sein\cite{Un08}. Diese Bedingungen gaben ebenfalls die Grenzen f\"ur den maximal m\"oglichen Energiegewinn jeder Stufe an. 
 \newline
 \newline
-Wie bereits erw\"ahnt besitzt MAMI drei dieser RTMs. Die erste Stufe MAMI A bestand aus zwei RTMs mit 18 bzw. 51 Uml\"aufen. Die zweite Stufe MAMI B bestand aus dem, zu diesem Zeitpunkt, gr\"o{\ss}ten RTM der Welt mit 90 Uml\"aufen und Dipolen mit einer Breite von jeweils 5 m, wodurch sie 450 t schwer waren. Damit waren auch die technischen Grenzen erreicht.\cite{KPh11F}
+Wie bereits erw\"ahnt besa{\ss} MAMI drei dieser RTMs. Die erste Stufe MAMI A bestand aus zwei RTMs mit 18 bzw. 51 Uml\"aufen. Die zweite Stufe MAMI B bestand aus dem, zu diesem Zeitpunkt, gr\"o{\ss}ten RTM der Welt mit 90 Uml\"aufen und Dipolen mit einer Breite von jeweils 5 m, wodurch sie 450 t schwer waren. Damit waren auch die technischen Grenzen erreicht.\cite{KPh11F}
+
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics{RTM}	
+	\caption{Prinzip eines RTM: Der Elektronenstrahl wird immer wieder durch den Linearbeschleuniger geschickt, bis die gew\"unschte Energie erreicht wurde und der Strahl mittels eines sogenannten Kicker-Magnet zum n\"achstem Abschnitt weiter geleitet wird. }
+	\label{fig.RTM}
+\end{center}
+\end{figure}
+
+Um nun aber trotzdem h\"ohere Energien zu erreichen, musste sich ein neues Konzept \"ubelegt werden. MAMI C war folglich kein RTM mehr, sondern ein HDSM. Das hei{\ss}t, es bestand aus vier 90° Dipolen, welche jeweils 250 t schwer waren und einem zus\"atzlichen Linearbeschleuniger. F\" dieses HDSM wurde der erste Linearbeschleuniger der Welt gebaut, der mit einer Fequenz von 4,9 GHz betrieben werden konnte betrieben wurde er allerdings, wie die beiden voherigen RTMs mit einer Frequenz von 2,45 GHz.
 \newline
-Um nun aber trotzdem h\"ohere Energien zu erreichen, musste sich ein neues Konzept \"ubelegt werden. MAMI C war folglich kein RTM mehr, sondern ein HDSM. Das hei{\ss}t, es bestand aus vier 90° Dipolen, welche jeweils 250 t schwer waren und einem zus\"atzlichen Linearbeschleuniger. F\" dieses HDSM wurde der erste Linearbeschleuniger der Welt gebaut, der mit einer Fequenz von 4,9 GHz betrieben werden konnte betrieben wurde er allerdings, wie die beiden voherigen RTMs mit einer Frequenz von 2,45 GHz/.
-\newline
- Der Elektronenstrahl hatte am Ende der Beschleunigung eine Energie von ca. 1,5 GeV, diese konnte in etwa 15 MeV Schriten eingestellt werden, und einen Durchmesser im Mikrometerbereich, was sehr gute Voraussetzungen f\"ur Pr\"azisionsexperimente sind.\cite{KPh07}. 
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|l|c|c|c|c|}
+			\hline
+			& RTM1 & RTM2 & RTM3 & HDSM \\
+			\hline
+			\hline
+			Eingangsenergie &3,455 MeV  &  14,35 MeV& 179,5 MeV  &854,6 MeV \\ \hline
+			Ausgangsenergie &14,35 MeV  &  179,5 MeV &854,6 MeV  & 1,5 GeV \\ \hline
+			Anzahl Uml\"aufe&18  &51  &90  &43 \\ \hline
+			Energiegewinn pro Umlauf &0,559 MeV  & 3,24 MeV & 7,5 MeV  & 13,93-16,63 MeV \\ \hline
+			
+	
+		\end{tabular}
+		\caption{Technische Daten der MAMI-Beschleunigerstufen \cite{Un08}}
+		\label{tab.MAMIstufen}
+	\end{center}
+\end{table}
 
 
+ Der Elektronenstrahl hatte am Ende der Beschleunigung eine Energie von ca. 1,5 GeV, diese konnte in etwa 15 MeV Schriten eingestellt werden, und einen Durchmesser im Mikrometerbereich, was sehr gute Voraussetzungen f\"ur Pr\"azisionsexperimente waren.\cite{KPh07}. 
+ 
+ 
+ \section{Die Photonenmarkierungsanlage}
+ 
+ In der A2-Experimentierhalle wurde der reelle Photonenstrahl mittels Bremsstrahlung erzeugt. Dazu traf der MAMI-Elektronenstrahl auf einen Radiator, typischerweise ein d\"unnes Metal oder ein Diamant mit einer Dicke von 10 bis 100 $\mu$m, und wurde gestreut, dabei wird aufgrund der Impulserhaltung ein Photon abgestrahlt:
+ \begin{equation}
+ e^{-}+N\rightarrow N + e^{-}+\gamma
+ \label{eq.Streuung}
+ \end{equation}
+  Der R\"ucksto{\ss} des Kerns kann aufgrund seiner gro{\ss}en Masse vernachl\"assigt werden und die Energie der Photonen kann mit folgender Formel berechnet werden:
+  \begin{equation}
+  E_{\gamma}= E_{e^{}}-E_{e^-}
+  \label{eq.Photonenenergie}
+  \end{equation}
+ Dabei war $E_e$ die Energie des Elektronenstrahls und $E_{e^-}$ die Energie der Elektronen der gestreuten Elektronen, welche durch den Glasgow-Mainz-Tagger bestimmt wurde, dieser trennt zus\"azlich den Photonen- von dem Elektronenstrahl. Durch einen Dipol wurden die Elektronen ohne Bremsstrahlung, das hei{\ss}t ohne Energieverlust, abgelenkt und, je nach Energie, auf einen bestimmten Abschnitt des Tagger-Elektronenleiters fokusiert. Die Tagger-Elektronenleiter bestand aus 353 Szintilatoren, welche sich jeweils zur H\"alfte \"uberlappten. Dadurch ergaben sich 352 Kan\"ale mit einer Energieaufl\"osung von $\Delta E \approx$  2 MeV bzw. 4 MeV bei einer Strahlenenergie von $E_e=$ 800 MeV bzw. 1.5 GeV. Folglich lie{\ss} sich der Impuls \"uber den Auftreffort bestimmen und dadurch die Energie der Elektronen und damit konnte die Energie der Photonen mit Gleichung \ref{eq.Photonenenergie} errechnet werden\cite{We13}.
+\newline 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics{TAGGER}
+	\label{fig.TAGGER}
+	\caption{Der Glasgow-Mainz-Tagger: Am Radiator entstanden durch Bremsstrahlung Photonen, welche durch den Kollimator auf das Target trafen. Die Elektronen wurden durch den Dipol auf den Elektronenleiter angelenkt, wodurch sich ihre Energie bestimmen lie{\ss}\cite{Un08}}
+	\end{center}
+\end{figure}
+ 
+ 
+\section{Der Crystal-Ball-Detector}
 
-
-\section{Versuchsaufbau}
-
-Wenn Sie an einem experimentellen Thema arbeiten, beschreiben Sie 
-den Versuchsaufbau, auch wenn Sie an einem bereits vorhandenen 
-Versuch arbeiten, soweit dies f\"ur Ihre spezielle Fragestellung 
-relevant ist. 
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics{crystal_ball}
+		\label{[fig.crystal_ball]}
+		\caption{Anordnung des Detektorsystems: Im Inneren des sph\"arischen Kalorimeters (Crystal-Ball) befanden sich der Detektor zur Teilchenidentifikation (PID) und zwei zur Bestimmung er Teilchen-Trajektorie (MWPC). Die TAPS-Wand befand sich am Ausgang des Crystal-Balls und sorgte daf\"ur, dass der fast der gesamte Raumwinkel durch den Crystal-Ball abgedeckt wurde}
+	\end{center}
+\end{figure}
 
 \section{Methoden}
 
@@ -300,35 +361,9 @@ findet man im Internet: \url{http://janeden.net/bibliographien-mit-latex}.
 
 
 
-%\cite{thepnews}
-\bibitem{EbelBliefert}
-H.\ F.\ Ebel, C.\ Bliefert, 
-  ``Bachelor-, Master- und Doktorarbeit: Anleitungen f\"ur den 
-  naturwissenschaftlich-technischen Nachwuchs,''
-  Wiley-VCH, Weinheim (2009). 
-\bibitem{thepnews}
-  S.~Becker, D.~G\"otz, C.~Reuschle, C.~Schwan, S.~Weinzierl,  
-  \url{http://wwwthep.physik.uni-mainz.de/site/news/168/}.
 
-%\cite{Weinberg:1995mt}
-\bibitem{Weinberg:1995mt}
-  S.~Weinberg,
-  ``The Quantum theory of fields. Vol. 1: Foundations,''
-  Cambridge, UK: Univ. Pr. (1995) 609 p.
 
-%\cite{Moch:2001zr}
-\bibitem{Moch:2001zr}
-  S.~Moch, P.~Uwer, S.~Weinzierl,
-  %``Nested sums, expansion of transcendental functions and multiscale 
-  % multiloop integrals,''
-  J.\ Math.\ Phys.\  {\bf 43 } (2002)  3363-3386.
-  [hep-ph/0110083].
 
-%\cite{LoopTools}
-\bibitem{LoopTools}
-  T.~Hahn, 
-  ``The LoopTools Site,''
-  \url{http://www.feynarts.de/looptools/}.
 
 %\cite{BA:Freund}
 \bibitem{BA:Freund}
