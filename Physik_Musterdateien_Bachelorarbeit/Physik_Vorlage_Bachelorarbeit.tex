@@ -164,7 +164,7 @@ dabei auch auf das weitere Umfeld der Arbeit ein und erl\"autern Sie,
 warum Aufgabenstellung und Herangehensweise interessant sind. Auch 
 die weitere Gliederung kann angesprochen werden, um dem Leser einen 
 ersten \"Uberblick \"uber den nachfolgenden Text zu geben.
-
+\section{Gliederung}
 %_______________________________________________________________________________
 
 
@@ -293,8 +293,23 @@ Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Cr
 
 \chapter{Kalibrierung des Crystal-Ball}
 
-\section{Simulation}
+\section{Energie-Interval Abhängigkeit}
 
+Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervale gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurde zunächst ein 2-Dimensionales Histogramm angelegt. 
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=100mm]{energydependencyallbins0903}
+		\label{fig:Energy-Interval-Hist-All-Bins}
+		\caption{2-D Histogram: Auf der x-Achse ist errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
+	\end{center}
+\end{figure}
+Die Invariante Masse, die auf der x-Achse aufgetragen ist, konnte durch die Gleichung
+\begin{equation}
+	$m=\sqrt{2*E_{\gamma_1}E_{gamma_2}*(1-cos(\theta))}
+	\label{eq:invariantmass}
+\end{equation}
+berechnet werden. Diese Formel gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls können nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von 20°-160° zur Strahlenachse ab.
 
 \section{Methoden}
 
@@ -335,13 +350,7 @@ Information im Text angesprochen wird und selbsterkl\"arende Legenden
 vorhanden sind.
 \medskip
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=100mm]{energydependencyallbins0903}
-\label{fig:Energy-Interval-Hist-All-Bins}
-\caption{2-D Histogram: Auf der x-Achse ist errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
-\end{center}
-\end{figure}
+
 
 \begin{figure}
 	\begin{center}
