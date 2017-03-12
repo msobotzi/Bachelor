@@ -30,7 +30,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{endnotes}
-
+\usepackage{textgreek}
 
 
 
@@ -85,7 +85,7 @@
 \begin{titlepage}
   \vspace*{6mm}
   \begin{center}
-     {\afont Systematische Studien zur {$\pi^{0}$} Kalibrierung des Crystal-Ball Detektor}
+     {\afont Systematische Studien zur $\pi^0$ Kalibrierung des Crystal-Ball Detektor}
      \\[3.5cm]
      {\large von}
      \\[3.5cm]
@@ -134,37 +134,41 @@ D-55099 Mainz\\
 
 \section{Motivaton}
 {
-	Diese Bachelorarbeit beschäftigt sich mit der Kalibrierung des Crystal-Ball Detektors der A2-Kollaboration am Institut für Kernphysik an der Johannes-Gutenberg-Universität.
+	Diese Bachelorarbeit beschäftigt sich mit Studien zur Kalibrierung des Crystal-Ball Detektors der A2-Kollaboration am Institut für Kernphysik an der Johannes-Gutenberg-Universität.
 	Die A2-Kollaboration untersuchte unter anderem die innere Struktur von Nukleonen mit Hilfe eines, durch Bremsstrahlung erzeugten, reellen Photonenstrahls. 
 	
-	Wird ein hochenergetisches Photon durch ein Proton absorbiert, werden Stark-Wechselwirkende Teilchen erzeugt. Diese Teilchen zerfallen fast instantan in Photonen, welche mit dem Crystal-Ball Detektor nachgewiesen werden können. 
+	Wird ein hochenergetisches Photon durch ein Proton absorbiert, werden Stark-Wechselwirkende Teilchen erzeugt. Diese Teilchen zerfallen überwiegend in Photonen, welche schließlich mit dem Crystal-Ball Detektor nachgewiesen werden können. 
 	
 	Der Crystal-Ball bestand aus 672 Natriumiodid Kristallen die als Detektoren dienten und deckte ca. 94\% des Raumwinkels ab.
 	Er hatte zwei Bereiche ohne Detektor die für den Strahlenein und -ausgang vorheriger Experimente dienten.
 	Um die Detektoren nun zu kalibrieren, betrachtete man folgende Prozesse:
+\begin{equation}
+	\gamma + p \rightarrow p + \pi^0
+	\label{eq.gammascattering}
+\end{equation} 
+Bei diesem Prozess absorbiert ein Proton $p$ ein hochenergetischen Photon $\gamma$. Dabei wird ein $\pi^0$-Meson erzeugt.
+
 	\begin{equation}
-		$\gamma + p \rightarrow p + \pi^0$
-		\label{eq:gammascattering}
+		\pi^0\rightarrow \gamma \gamma
+		\label{eq.pi0decay}
 	\end{equation}
-	und
-	\begin{equation}
-		$\pi^0\rightarrow \gamma \gamma
-		\label{eq:pi0decay}
-	\end{equation}
-	Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^-+\gamma$ zerfallen. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter 10^{-5}\% besitzen. Im Crystal-Ball wurde, sowohl die Energie der Photonen, als auch ihr Winkel in Strahlrichtung bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lies. Allerdings überträgt ein Photon nicht seine gesamte Energie an einen Detektorkristall, sondern auch an seine umliegenden. Nun hat aber nicht jeder Detektor gleich viele Nachbarn. Die Detektoren am Rand des Strahlenein- und ausgangs haben weniger Nachbarn, als die restlichen Detektoren. Folglich konnten sie nicht sehr gut kalibriert werden, da die Energie des Photons, welches diesen Detektor trifft nicht vollständig bekannt war.
-	Die Masse des $\pi^0$ ist mit 135 MeV wohl bekannt, folglich wurden die Detektoren so eingestellt, dass sich der $\pi^0$-Peak bei dieser Energie befindet. 
+	Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^-+\gamma$. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter $10^{-5}$\% aufweisen. Im Crystal-Ball wurde, sowohl die Energie der Photonen, als auch ihr Winkel in Strahlrichtung bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lies. 
 	
-	\newline
-	\newline
-	 
-	 
-In der Einleitung Ihrer Bachelorarbeit sollte das Thema der Arbeit 
-m\"oglichst allgemeinverst\"andlich eingef\"uhrt werden. Gehen Sie 
-dabei auch auf das weitere Umfeld der Arbeit ein und erl\"autern Sie, 
-warum Aufgabenstellung und Herangehensweise interessant sind. Auch 
-die weitere Gliederung kann angesprochen werden, um dem Leser einen 
-ersten \"Uberblick \"uber den nachfolgenden Text zu geben.
+	Eine Problematik ergab sich allerdings dadurch, dass zum Beispiel, ein Photon nicht seine gesamte Energie an einen Detektorkristall überträgt, sondern auch an die umliegenden. Nun hat aber nicht jeder Detektor gleich viele Nachbarn. Die Detektoren am Rand des Strahlenein- und ausgangs haben weniger Nachbarn, als die restlichen Detektoren. Folglich konnten sie nicht sehr gut kalibriert werden, da die Energie des Photons, welches diese Detektoren traf nicht vollständig bekannt war.
+	
+	Die Masse des $\pi^0$ ist mit 135 MeV wohl bekannt, folglich wurden die Detektoren so eingestellt, dass sich der $\pi^0$-Peak bei dieser Energie befindet. 
+	\newline	 
+	
+	
+%In der Einleitung Ihrer Bachelorarbeit sollte das Thema der Arbeit 
+%m\"oglichst allgemeinverst\"andlich eingef\"uhrt werden. Gehen Sie 
+%dabei auch auf das weitere Umfeld der Arbeit ein und erl\"autern Sie, 
+%warum Aufgabenstellung und Herangehensweise interessant sind. Auch 
+%die weitere Gliederung kann angesprochen werden, um dem Leser einen 
+%ersten \"Uberblick \"uber den nachfolgenden Text zu geben.
 \section{Gliederung}
+
+Die Gliederung
 %_______________________________________________________________________________
 
 
@@ -291,25 +295,40 @@ Au{\ss}erhalb des PIDs waren die MWPCs angebracht. Dabei handelte es sich um zwe
 Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei \textit{L\"ocher} f\"ur einen Strahleneingang und -ausgang besa{\ss}, wurde die TAPS-Wand entwickelt. Diese deckte einen Vorw\"artswinkel zur Strahlenachse von 1,2 ° bis 20 ° ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und bestand aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. Somit konnte mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt werden.
 
 
-\chapter{Kalibrierung des Crystal-Ball}
+\chapter{Studien zur Kalibrierung des Crystal-Ball}
 
 \section{Energie-Interval Abhängigkeit}
 
-Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervale gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurde zunächst ein 2-Dimensionales Histogramm angelegt. 
+Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit aus dem Jahr 2014 genommen. Aus diesen Daten konnte mit der Gleichung
+\begin{equation}
+m_{\pi^0}=\sqrt{2E_{\gamma_1}E_{\gamma_2}(1-cos(\theta))}
+\label{eq:invariantmass}
+\end{equation}
+die invariante Masse des $\pi^0$ berechnet werden. Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
-\begin{figure}
+
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=100mm]{energydependencyallbins0903}
 		\label{fig:Energy-Interval-Hist-All-Bins}
-		\caption{2-D Histogram: Auf der x-Achse ist errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
+		\caption{2-D Histogram: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
 	\end{center}
 \end{figure}
-Die Invariante Masse, die auf der x-Achse aufgetragen ist, konnte durch die Gleichung
-\begin{equation}
-	$m=\sqrt{2*E_{\gamma_1}E_{gamma_2}*(1-cos(\theta))}
-	\label{eq:invariantmass}
-\end{equation}
-berechnet werden. Diese Formel gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls können nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von 20°-160° zur Strahlenachse ab.
+
+Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen sich im gleichen Intervall befanden.
+
+Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Setzt man nun $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 450 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 125 MeV bis 450 MeV berücksichtigt.
+Um nun die Position des $\pi^0$ zu bestimmen, wurde über das Intervall von 70 MeV bis 180 MeV gefittet. 
+
+
+\begin{figure}[h]
+	\begin{center}
+		\includegraphics[width=100mm]{fitexampleenergyinterval0903}
+		\label{fig:fitexampleenergyinterval0903}
+		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 325 MeV bis 350 MeV}
+	\end{center}
+\end{figure}
+ 
 
 \section{Methoden}
 
