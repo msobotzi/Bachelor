@@ -264,9 +264,10 @@ Um nun aber trotzdem h\"ohere Energien zu erreichen, musste sich ein neues Konze
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics{TAGGER}
-	\label{fig.TAGGER}
+	
 	\caption{Der Glasgow-Mainz-Tagger: Am Radiator entstanden durch Bremsstrahlung Photonen, welche den Kollimator passierten und auf das Target trafen. Die Elektronen wurden durch den Dipol auf den Elektronenleiter angelenkt, wodurch sich ihre Energie bestimmen lie{\ss}\cite{Un08}}
-	\end{center}
+\label{fig.TAGGER}	
+\end{center}
 \end{figure}
  
  
@@ -275,9 +276,10 @@ Nach seiner Erzeugung traf der Photonenstrahl auf das Flüssig-Wasserstoff-Targe
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics{crystal_ball}
-		\label{[fig.crystal_ball]}
+	
 		\caption{Anordnung des Detektorsystems: Im Zentrum des sph\"arischen Kalorimeters (CB) befanden sich der Detektor zur Teilchenidentifikation (PID) und zwei zur Bestimmung der Teilchen-Trajektorie (MWPC). Die TAPS-Wand befand sich am Ausgang des CB und sorgte daf\"ur, dass der CB einen Raumwinkel von fast 4$\pi$ abdeckte\cite{We13}}
-	\end{center}
+		\label{[fig.crystal_ball]}	
+\end{center}
 \end{figure}
 
 \subsection{Der Crystal-Ball-Detektor}
@@ -304,43 +306,49 @@ Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereic
 m_{\pi^0}=\sqrt{2E_{\gamma_1}E_{\gamma_2}(1-cos(\theta))}
 \label{eq:invariantmass}
 \end{equation}
-die invariante Masse des $\pi^0$ berechnet werden. Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
+die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. 
+Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=100mm]{energydependencyallbins0903}
-		\label{fig:Energy-Interval-Hist-All-Bins}
+	
 		\caption{2-D Histogram: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
+			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
 
-Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen sich im gleichen Intervall befanden.
+Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen im gleichen Intervall befanden.
 
-Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Setzt man nun $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 450 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 125 MeV bis 450 MeV berücksichtigt.
-Um nun die Position des $\pi^0$ zu bestimmen, wurde über das Intervall von 70 MeV bis 180 MeV gefittet. 
+Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 450 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 125 MeV bis 450 MeV berücksichtigt.
+Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich von 70 MeV bis 180 MeV gefittet. 
 
 
 \begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=100mm]{fitexampleenergyinterval0903}
-		\label{fig:fitexampleenergyinterval0903}
+		
 		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 325 MeV bis 350 MeV}
-	\end{center}
+		\label{fig:fitexampleenergyinterval0903}	
+\end{center}
 \end{figure}
+ Beim Fit wurde zuerst der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden, was den einen besseren Gauß-Fit (grün) des Peaks ermöglichte. Daraus konnte die Position des $\pi^0$-Peaks abgelesen werden. 
  
+ \begin{figure}[h]
+ 	\begin{center}
+ 		\includegraphics[width=100mm]{energydependency0903}
+ 	
+ 		\caption{Position der $\pi^0$ aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins}. Die errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen. Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden} 
+ 		\label{fig.Energydependency_pion}
+ 	\end{center}
+ \end{figure}
+  
+In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen der Pionen gegen die Energie der Photonen aufgetragen. Zu sehen ist eine deutliche Abweichung zum Literaturwert des $\pi^0$ Peaks. Auch nahm die Abweichung für größere Energien zu und betrug teilweise über 6\% (vgl. Abb.:\ref{fig:RelativEnergyDependency}).
+  
+Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie vorlag, wenn sich die Photonen energetisch ähnelten.
 
-\section{Methoden}
 
-Entsprechend kann es bei einer theoretischen Arbeit sinnvoll sein,
-die L\"osungsmethoden in einem eigenen Kapitel zu beschreiben.
-
-\section{Ergebnisse}
-
-Hauptteil Ihrer Arbeit ist das Kapitel (oder die Kapitel) mit den 
-Ergebnissen. Bei einer theoretischen Arbeit kann damit auch 
-die Herleitung von Formeln oder die Beschreibung eines Computerprogramms 
-gemeint sein.
 
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
@@ -371,20 +379,15 @@ vorhanden sind.
 
 
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=100mm]{energydependency0903}
-		\label{fig:Energydependency_pion}
-		\caption{Position der $\pi^0$ aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins}. Die errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen. Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden} 
-	\end{center}
-\end{figure}
 
 
-\begin{figure}
+
+\begin{figure}[h]
 	\begin{center}
 		\includegraphics[width=100mm]{relativedependency0903}
-		\label{fig:RelativEnergyDependency}
+		
 		\caption{Die relative Abweichung des errechneten $\pi^0$-Peaks aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} von dem Literaturwert. Die Abweichung wurde in Prozent gegen die Energie der Photonen aufgetragen.  Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen. Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden}			
+		\label{fig:RelativEnergyDependency}	
 	\end{center}
 \end{figure}
 
