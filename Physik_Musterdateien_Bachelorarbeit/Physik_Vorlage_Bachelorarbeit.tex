@@ -152,7 +152,7 @@ Bei diesem Prozess absorbiert ein Proton $p$ ein hochenergetischen Photon $\gamm
 		\pi^0\rightarrow \gamma \gamma
 		\label{eq.pi0decay}
 	\end{equation}
-	Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^-+\gamma$. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter $10^{-5}$\% aufweisen. Im Crystal-Ball wurde, sowohl die Energie der Photonen, als auch ihr Winkel in Strahlrichtung bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lies.
+	Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^- \gamma$. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter $10^{-5}$\% aufweisen. Im Crystal-Ball wurde, sowohl die Energie der Photonen, als auch ihr Winkel in Strahlrichtung bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lies.
 	Laut Literatur betr\"agt diese Masse 135 MeV, folglich wurden die Detektoren so eingestellt, dass sich der errechnete $\pi^0$-Peak bei dieser Masse befand. 
 		
 	Eine Problematik ergab sich allerdings dadurch, dass zum Beispiel, ein Photon nicht seine gesamte Energie an einen Detektorkristall überträgt, sondern auch an die umliegenden. Nun hat aber nicht jeder Detektor gleich viele Nachbarn. Die Detektoren am Rand des Strahlenein- und ausgangs haben weniger Nachbarn, als die restlichen Detektoren. Folglich konnten sie nicht sehr gut kalibriert werden, da die Energie des Photons, welches diese Detektoren traf nicht vollständig bekannt war.
@@ -273,7 +273,7 @@ Um nun aber trotzdem h\"ohere Energien zu erreichen, musste sich ein neues Konze
  
  
 \section{Das Detektorsystem}
-Nach seiner Erzeugung traf der Photonenstrahl auf das Flüssig-Wasserstoff-Target, welches sich im Zentrum des Crystal-Balls (CB) befand. Die erzeugten und gestreuten Teilchen konnten dann durch ein System von Detektoren bestehend aus dem Crystal-Ball Detektor, einem Teilchenidentifikationsdetektor (PID\footnote{Particle Ideticication Detector}), zwei Vieldrahtproportionalkammern (MWPC\footnote{Multi-Wire Proportional Chamber}) und einem Photonenspektrometer (TAPS\footnote{Two Arm  Photon Spectrometer}) nachgewiesen werden. Der PID und die MWPC waren im Inneren des CB angebracht. Der TAPS wurde am Ausgang des CB platziert, um einen fast vollständig abgedeckten Raumwinkel zu erreichen.
+Nach seiner Erzeugung traf der Photonenstrahl auf ein ca. 10 cm langes Flüssig-Wasserstoff-Target, welches sich im Zentrum des Crystal-Balls (CB) befand. Die erzeugten und gestreuten Teilchen konnten dann durch ein System von Detektoren bestehend aus dem Crystal-Ball Detektor, einem Teilchenidentifikationsdetektor (PID\footnote{Particle Ideticication Detector}), zwei Vieldrahtproportionalkammern (MWPC\footnote{Multi-Wire Proportional Chamber}) und einem Photonenspektrometer (TAPS\footnote{Two Arm  Photon Spectrometer}) nachgewiesen werden. Der PID und die MWPC waren im Inneren des CB angebracht. Der TAPS wurde am Ausgang des CB platziert, um einen fast vollständig abgedeckten Raumwinkel zu erreichen.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics{crystal_ball}
@@ -311,7 +311,8 @@ Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereic
 m_{\pi^0}=\sqrt{2E_{\gamma_1}E_{\gamma_2}(1-cos(\theta))}
 \label{eq:invariantmass}
 \end{equation}
-die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. 
+die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die gemessenen Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. Zur Bestimmung dieses Winkels wurde angenommen, dass das $\pi^0$ im Zentrum des Targets zerfällt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
+
 Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
 
@@ -319,22 +320,22 @@ Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der inva
 	\begin{center}
 		\includegraphics[width=100mm]{energydependencyallbins0903}
 	
-		\caption{2-D Histogram: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
+		\caption{2-D Histogram: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 22,2 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
 			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
 
 Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen im gleichen Intervall befanden.
 
-Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Allerdings mussten auch die Intervalle von 100 bis 150 MeV verworfen werden, da hier der $\pi^0$-Peak zu stark durch den Untergrund gest\"ort wurde. Für Energien über 450 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 150 MeV bis 450 MeV berücksichtigt.
-Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich von 70 MeV bis 180 MeV gefittet. 
+Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 444 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 122 MeV bis 444 MeV berücksichtigt Diese etwas krummen Werte ergaben sich dadurch, dass unbeabsichtigt die falsche Binanzahl angegeben wurde und dies zu spät bemerkt wurde. 
+Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 70 MeV bis 180 MeV gefittet. 
 
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{fitexampleenergyinterval0903}
 		
-		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 200 MeV bis 225 MeV mit der Bedingung, dass sich die Photonen energetisch \"ahneln. Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen}
+		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 177 MeV bis 200 MeV mit der Bedingung, dass sich die Photonen energetisch \"ahneln. Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen}
 		\label{fig:fitexampleenergyinterval0903}	
 \end{center}
 \end{figure}
@@ -372,7 +373,7 @@ Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwe
 
 \section{Vernachl\"assigung der Detektoren am Rand}
 
-Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon nicht seine gesamte Energie an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal eingestellt werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. Auch wurden hier keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo-Simualation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
+Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon nicht seine gesamte Energie an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal eingestellt werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. Auch wurden hier keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
 
 Da es sich hierbei um  Simulationen handelte, wusste man, welche Photonen durch welchen Prozess erzeugt wurden. Folglich konnte alles so einstellen werden, dass nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 
@@ -386,10 +387,10 @@ In erster Linie war es wichtig einen Vergleich zwischen der $\pi^0$ Position mit
 	\end{center}
 \end{figure}
 
-Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man direkt, dass Simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
+Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man auch direkt, dass simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
 
 Die Vermutung war, wie bereits erw\"ahnt, dass die Detektoren am Rand schlecht kalibriert waren. Deswegen wurden diese nicht betrachtet, dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehr Photonen besa{\ss}en, welche einen Winkel von 30° oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20°. Foglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10°. Sowohl f\"ur den Strahlenein- als auch ausgang wurden die Detektoren am Rand vernachl\"assigt. 
-Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403})und die einzelnen Positionen wurden dann gefittet um die Position des $\pi^0$ zu bestimmen.
+Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403}) und die einzelnen Positionen wurden dann gefittet um die Position des $\pi^0$ zu bestimmen.
 
 Um nun die beiden Ergebnisse besser vergleichen zu k\"onnen, wurde die relative Abweichung mit und ohne Bedingung zusammen in einen Graphen gezeichnet. In diesem Graphen erkennt man, dass der Unterschied nur sehr klein ist und weniger als 0,1\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30° eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
 
@@ -402,12 +403,18 @@ Um nun die beiden Ergebnisse besser vergleichen zu k\"onnen, wurde die relative 
 
 
 \section{Z-Vertex Abh\"angigkeit}
-Ein weiterer Abspekt der \"Uberpr\"uft wurde, ist die Abh\"angigkeit zwischen der Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entsteht und zerf\"allt. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht. Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wei{\ss} man demnach auch den genauen Ort. Bei reellen Daten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Prozesses zu bestimmen. 
+\label{sec:Z-Vertex-Abaengigkeit}
+Ein weiterer Abspekt der \"Uberpr\"uft wurde, ist die Abh\"angigkeit zwischen der Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entsteht und zerf\"allt. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
-\begin{figure}
+ Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wei{\ss} man demnach auch den genauen Ort am dem sich der Prozess ereignete. Bei reellen Daten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Prozesses zu bestimmen. 
+ 
+Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse.
+
+
+\begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{ZVertex3DHisto}
-		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der Z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der X-Achse ist die errechnete invariante Masse und auf der Y-Achse die Energie der Photonen aufgetragen.}
+		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse die Energie der Photonen aufgetragen.}
 		\label{fig:Z-Vertex-3D-Histogramm}
 	\end{center}
 \end{figure}
@@ -512,6 +519,13 @@ Arbeiten an der Aufgabenstellung.
 	\begin{center}
 		\includegraphics[width=100mm]{30DegreeEdgeAllFits}
 		\caption{Alle Fits der Energieintervalle zur Bestimmung des $\pi^0$. Mit der Bedingung, dass die Detektoren am Rand vernachl\"assigt wurden. Daten stammen aus einer Simulation (Cocktail). Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
+	\end{center}
+\end{figure}
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=100mm]{FullZVertexDependenceAllFits}
 	\end{center}
 \end{figure}
 
