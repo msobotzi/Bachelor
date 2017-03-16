@@ -389,14 +389,32 @@ In erster Linie war es wichtig einen Vergleich zwischen der $\pi^0$ Position mit
 Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man direkt, dass Simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
 
 Die Vermutung war, wie bereits erw\"ahnt, dass die Detektoren am Rand schlecht kalibriert waren. Deswegen wurden diese nicht betrachtet, dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehr Photonen besa{\ss}en, welche einen Winkel von 30° oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20°. Foglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10°. Sowohl f\"ur den Strahlenein- als auch ausgang wurden die Detektoren am Rand vernachl\"assigt. 
-Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt ( Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403}) und wurden dann gefittet um die Position des $\pi^0$ zu bestimmen.
+Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403})und die einzelnen Positionen wurden dann gefittet um die Position des $\pi^0$ zu bestimmen.
 
+Um nun die beiden Ergebnisse besser vergleichen zu k\"onnen, wurde die relative Abweichung mit und ohne Bedingung zusammen in einen Graphen gezeichnet. In diesem Graphen erkennt man, dass der Unterschied nur sehr klein ist und weniger als 0,1\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30° eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{30DegreeEdge1403}
-		\caption{Energie der Photonen gegen die errechnete invariante Masse mit der Bedingung, dass die Detektoren am Rand nicht ber\"ucksichtigt werden}
-		\label{fig:Energy-Intervall-2D-Hist-30-Edge-1403}
+		\includegraphics[width=100mm]{EnergyAngleBothRelativeDeviation}
+		\caption{Die relative Abweichung wurde in Prozent gegen die Energie der Photonen gezeichnet. Die schwarze Linie stellt die relative Abweichung ohne die Bedingung, dass Photonen mit einem Winkel kleiner als 30° verworfen wurden, die blaue Linie mit der Bedingung.}
+	\end{center}
+\end{figure}
+
+
+\section{Z-Vertex Abh\"angigkeit}
+Ein weiterer Abspekt der \"Uberpr\"uft wurde, ist die Abh\"angigkeit zwischen der Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entsteht und zerf\"allt. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht. Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wei{\ss} man demnach auch den genauen Ort. Bei reellen Daten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Prozesses zu bestimmen. 
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=100mm]{ZVertex3DHisto}
+		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der Z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der X-Achse ist die errechnete invariante Masse und auf der Y-Achse die Energie der Photonen aufgetragen.}
+		\label{fig:Z-Vertex-3D-Histogramm}
+	\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{FullZVertexDependence}
 	\end{center}
 \end{figure}
 
@@ -452,7 +470,7 @@ Arbeiten an der Aufgabenstellung.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{allphotons2Dhist1303}
-		\caption{Zwei zweidimensionales Histogramm. Auf der x-Achse ist die errechnete invariante Masse aufgetragen, auf der y-Achse sind die Energien der Photonen. Das Histogramm wurde mit jedem Photonpaar gefüllt. Es gab also keine Einschränkung }
+		\caption{Zwei zweidimensionales Histogramm. Auf der x-Achse ist die errechnete invariante Masse aufgetragen, auf der y-Achse sind die Energien der Photonen. Das Histogramm wurde mit jedem Photonenpaar gefüllt. Es gab also keine Einschränkung }
 		\label{fig:Energy-Intervall-Hist-All-Energys-No-Condition}
 	\end{center}
 \end{figure}
@@ -478,6 +496,15 @@ Arbeiten an der Aufgabenstellung.
 	\begin{center}
 		\includegraphics[width=100mm]{NoEdgeAngleAllFits1403}
 		\caption{Alle Fits der Energieintervalle zur Bestimmung des $\pi^0$. Es galt keine weitere Bedingung. Daten stammen aus einer Simulation (Cocktail). Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
+	\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{30DegreeEdge1403}
+		\caption{Energie der Photonen gegen die errechnete invariante Masse mit der Bedingung, dass die Detektoren am Rand nicht ber\"ucksichtigt werden}
+		\label{fig:Energy-Intervall-2D-Hist-30-Edge-1403}
 	\end{center}
 \end{figure}
 
