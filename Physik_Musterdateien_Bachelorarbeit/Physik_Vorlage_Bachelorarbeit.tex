@@ -404,11 +404,13 @@ Um nun die beiden Ergebnisse besser vergleichen zu k\"onnen, wurde die relative 
 
 \section{Z-Vertex Abh\"angigkeit}
 \label{sec:Z-Vertex-Abaengigkeit}
-Ein weiterer Abspekt der \"Uberpr\"uft wurde, ist die Abh\"angigkeit zwischen der Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entsteht und zerf\"allt. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
+Ein weiterer Abspekt der \"Uberpr\"uft wurde, war die Abh\"angigkeit zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
- Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wei{\ss} man demnach auch den genauen Ort am dem sich der Prozess ereignete. Bei reellen Daten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Prozesses zu bestimmen. 
+ Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
  
-Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse.
+Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse. Hier ist schließlich  dann auch die im Programm falsch angegebene Binzahl aufgefallen, die dafür gesorgt hat, das die Energie der Photon in Intervalle mit etwas krummen Zahlen aufgeteilt wurden, sodass diese geändert wurden. Die neuen Intervalle reichten von 125 MeV bis 450 MeV und hatten eine Breite von 25 MeV.
+
+Das 3-D Z-Vertex Histogramm wurde dann mit den Daten aus der Cocktail Simulation gefüllt. Auch hier wurden nur die Prozesse betrachtet, in denen ein $\pi^0$ entstanden ist. 
 
 
 \begin{figure}[h!]
@@ -419,24 +421,31 @@ Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Wasserstoff-Ta
 	\end{center}
 \end{figure}
 
+Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen berechnet.
+Diese 10 Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-Vertex-Multi-Graph} eingetragen.
+
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{FullZVertexDependence}
+		\caption{Die Abweichung der $\pi^0$-Peak Position für verschiedene Z-Vertices gegen die Energie der gemessenen Photonen}
+		\label{fig:Z-Vertex-Multi-Graph}
 	\end{center}
 \end{figure}
+
+
 
 
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
 
-In der Zusammenfassung sollten Sie in knapper Form die Aufgabenstellung 
-und die wichtigsten Ergebnisse rekapitulieren. Es ist f\"ur die 
-Gutachter hilfreich, wenn Sie ausdr\"ucklich beschreiben, worin 
-Ihre eigenen Beitr\"age liegen. Scheuen Sie sich auch nicht davor 
-auszusprechen, welche Untersuchungen durch die Zeitbegrenzung der 
-Bachelorarbeit nicht m\"oglich waren und nutzen Sie dies als 
-\"Uberleitung zu einem Ausblick auf m\"ogliche weitergehende 
-Arbeiten an der Aufgabenstellung.
+%In der Zusammenfassung sollten Sie in knapper Form die Aufgabenstellung 
+%und die wichtigsten Ergebnisse rekapitulieren. Es ist f\"ur die 
+%Gutachter hilfreich, wenn Sie ausdr\"ucklich beschreiben, worin 
+%Ihre eigenen Beitr\"age liegen. Scheuen Sie sich auch nicht davor 
+%auszusprechen, welche Untersuchungen durch die Zeitbegrenzung der 
+%Bachelorarbeit nicht m\"oglich waren und nutzen Sie dies als 
+%\"Uberleitung zu einem Ausblick auf m\"ogliche weitergehende 
+%Arbeiten an der Aufgabenstellung.
 
 %_______________________________________________________________________________
 \begin{appendix}
@@ -526,6 +535,8 @@ Arbeiten an der Aufgabenstellung.
 \begin{figure}
 	\begin{center}
 		\includegraphics[width=100mm]{FullZVertexDependenceAllFits}
+		\caption{Hier werden alle Fits zur Bestimmung der $\pi^0$ Position  für verschiedene Z-Vertizes aufgelistet. Die erste Zeile ist das Z-Vertex Intervall von -5 cm bis -4 cm das nächste von -4 cm bis -3 cm usw. Die Energienintervalle der Photonen sind in den Titeln der einzelnen Fits aufgetragen. Es wurden die Daten aus dem Cocktail benutzt.}
+		\label{fig:Z-Vertex-All-Fits}
 	\end{center}
 \end{figure}
 
