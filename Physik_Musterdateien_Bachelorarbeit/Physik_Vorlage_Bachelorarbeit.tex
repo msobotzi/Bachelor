@@ -301,12 +301,14 @@ Der PID hatte eine zylindrische Form mit einem Durchmesser von 116,5 mm und best
 
 Au{\ss}erhalb des PIDs waren die MWPCs angebracht. Dabei handelte es sich um zwei, aus Anodendr\"ahten aufgebauten, Ioniastionskammern in Form von Zylindern. Die Anodendr\"ahte waren parallel zur Strahlenachse ausgerichtet und befanden sich zwischen zwei Lagen von spiralf\"ormigen Kathodenstreifen. 
 
-Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei \textit{L\"ocher} f\"ur einen Strahleneingang und -ausgang besa{\ss}, wurde die TAPS-Wand entwickelt. Diese deckte einen Polarwinkel zur Strahlenachse von 1,2 ° bis 20 ° ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und bestand aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. Somit konnte mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt werden.
+Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei \textit{L\"ocher} f\"ur einen Strahleneingang und -ausgang besa{\ss}, wurde die TAPS-Wand entwickelt. Diese deckte einen Polarwinkel zur Strahlenachse von 1,2° bis 20° ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und bestand aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. Somit konnte mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt werden.
 
 
 \chapter{Studien zur Kalibrierung des Crystal-Ball}
 
 Zerf\"allt ein $\pi^0$, so werden nach Reaktion \ref{eq.pi0decay} zwei Photonen frei. Diese Photonen wurden durch den Crystal-Ball Detektor nachgewiesen. Dabei wurde sowohl der Winkel zwischen den beiden Photonen, als auch die Energie der Photonen bestimmt, um die invariante Masse des $\pi^0$ ausrechnen zu k\"onnen.
+
+Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch alle gew\"unschten Bedingungen eingestellt werden. 
 
 
 \section{Energie-Interval Abhängigkeit}
@@ -317,7 +319,7 @@ Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereic
 m_{\pi^0}=\sqrt{2E_{\gamma_1}E_{\gamma_2}(1-cos(\theta))}
 \label{eq:invariantmass}
 \end{equation}
-die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die gemessenen Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. Zur Bestimmung dieses Winkels wurde angenommen, dass das $\pi^0$ im Zentrum des Targets zerfällt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
+die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die gemessenen Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. Zur Bestimmung dieses Winkels wurde angenommen, dass das $\pi^0$ im Zentrum des Targets zerfällt, wodurch dann durch Kenntniss des Auftreffortes der Photonen der Winkel bestimmt werden konnte. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
 
 Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
@@ -333,7 +335,8 @@ Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der inva
 
 Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen im gleichen Intervall befanden.
 
-Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 444 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 122 MeV bis 444 MeV berücksichtigt Diese etwas krummen Werte ergaben sich dadurch, dass unbeabsichtigt die falsche Binanzahl angegeben wurde und dies zu spät bemerkt wurde. 
+Formel \ref{eq:invariantmass} gibt auch die untere Energiegrenze zur Entstehung von $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besitzen, können $\pi^0$-Mesonen erzeugt werden. Für Energien über 444 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 122 MeV bis 444 MeV berücksichtigt. Diese etwas krummen Werte ergaben sich dadurch, dass unbeabsichtigt die falsche Binanzahl angegeben wurde und dies zu spät bemerkt wurde. 
+
 Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 70 MeV bis 180 MeV gefittet. 
 
 
@@ -341,18 +344,19 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 	\begin{center}
 		\includegraphics[width=100mm]{fitexampleenergyinterval0903}
 		
-		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 177 MeV bis 200 MeV mit der Bedingung, dass sich die Photonen energetisch \"ahneln. Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen}
+		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 177 MeV bis 200 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
+		Zu erkennen ist der Untergrundfit (Blau), der Gau{\ss}fit (Gr\"un) und die Kombination der beiden (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.}
 		\label{fig:fitexampleenergyinterval0903}	
 \end{center}
 \end{figure}
- Beim Fit wurde zuerst der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden, was den einen besseren Gauß-Fit (grün) des Peaks ermöglichte. Daraus konnte die Position des $\pi^0$-Peaks abgelesen werden. 
+ Beim Fit wurde zuerst der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden, was den einen besseren Gauß-Fit (grün) des Peaks ermöglichte. Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). Folglich konnte aus den Fitdaten die Position des $\pi^0$-Peaks abgelesen werden. 
  
  \begin{figure}[h!]
  	\begin{center}
  		\includegraphics[width=100mm]{energydependency0903}
  	
- 		\caption{Position der $\pi^0$ aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins}. Die errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen.
- 			Bedingung: Die Energie der Photonen sollte sich \"ahneln.
+ 		\caption{Die aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen.
+ 			Es galt die Bedingung, dass die Energie der Photonen sich \"ahneln sollte.
  			%Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden
  		} 
  		\label{fig.Energydependency_pion}
@@ -364,7 +368,9 @@ In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen d
 Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie vorlag, wenn sich die Photonen energetisch ähnelten.
 
 Daraufhin wurde das gleiche Verfahren nochmal angewendet, allerdings wurde dieses mal die Bedingung weggelassen, dass die Photonen sich energetisch ähneln sollen. Das heißt, aus den beiden Photonen wurde die invariante Masse berechnet und dann wurden beide Photonen in das Histogramm  \ref{fig:Energy-Intervall-Hist-All-Energys-No-Condition} eingetragen.
-Die Fits der einzelnen Intervalle sind in Abbildung \ref{fig:allenergyallfits} zu sehen. Nun wurden die errechneten invariantne Massen des $\pi^0$ gegen die Energien der Photonen aufgetragen, zu sehen in Abbildung \ref{fig:Energy-Intervall-No-Condition-Deviation-1303}. 
+Die Fits der einzelnen Intervalle sind in Abbildung \ref{fig:allenergyallfits} zu sehen. 
+
+Nun wurden die errechneten invarianten Massen des $\pi^0$ gegen die Energien der Photonen aufgetragen, zu sehen in Abbildung \ref{fig:Energy-Intervall-No-Condition-Deviation-1303}. 
 
 Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwert zu erkennen. Diese Abweichungen betrugen zwar nur fast 2\% (siehe Abbildung \ref{fig:Relative-Deviation-Energy-Interval-No-Condition}}), sind aber nicht vernachl\"asigbar. 
 
@@ -380,7 +386,7 @@ Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwe
 \section{Vernachl\"assigung der Detektoren am Rand}
 \label{sec:Varnachlaessigung-der-Detektoren-am-Rand}
 
-Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal kalibriert werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. Auch wurden hier keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
+Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal kalibriert werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. Diesesmal wurden keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
 
 Da es sich hierbei um  Simulationen handelte, wusste man, welche Photonen durch welchen Prozess erzeugt wurden. Folglich konnte alles so einstellen werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 
@@ -399,9 +405,9 @@ Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Positio
 Die Vermutung war, wie bereits erw\"ahnt, dass die Detektoren am Rand schlecht kalibriert waren. Deswegen wurden diese nicht betrachtet, dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehr Photonen besa{\ss}en, welche einen Winkel von 30° oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20°. Foglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10°. 
 
 Sowohl f\"ur den Strahlenein- als auch ausgang wurden die Detektoren am Rand vernachl\"assigt. 
-Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403}) und die einzelnen Positionen wurden dann gefittet (Abb.: \ref{fig:Alle-Fits-ohne-Detektoren-am-Rand}), um die Position des $\pi^0$ zu bestimmen.
+Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403}) und die einzelnen Positionen wurden dann gefittet (Abb.: \ref{fig:Alle-Fits-ohne-Detektoren-am-Rand}), um die Position des $\pi^0$ zu bestimmen. Das Intervall das betrachtet und gefittet wurde
 
-Zum besseren Vergleich der beiden Ergebnisse, wurden die relative Abweichungen mit und ohne Bedingung zusammen in einen Graphen gezeichnet. In diesem erkennt man, dass der Unterschied nur sehr klein ist und weniger als 0,1\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30 ° eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
+Zum besseren Vergleich der beiden Ergebnisse, wurden die relative Abweichungen mit und ohne Bedingung zusammen in einen Graphen gezeichnet. In diesem erkennt man, dass der Unterschied nur sehr klein ist und weniger als 0,1\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30° eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
 
 \begin{figure}[h!]
 	\begin{center}
@@ -432,7 +438,7 @@ Das 3-D Z-Vertex Histogramm wurde dann mit den Daten aus der Cocktail Simulation
 	\end{center}
 \end{figure}
 
-Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen, wie in den vorherigen Kapiteln, berechnet.
+Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen, wie in den voran gehenden Kapiteln, berechnet.
 Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-Vertex-Multi-Graph} eingetragen.
 
 \begin{figure}[h!]
