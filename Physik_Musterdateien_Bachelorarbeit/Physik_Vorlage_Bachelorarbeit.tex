@@ -30,6 +30,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{endnotes}
+\usepackage{amsmath}
 
 
 
@@ -131,7 +132,7 @@ D-55099 Mainz\\
 
 %_______________________________________________________________________________
 \chapter{Einleitung}
-
+In der folgenden Arbeit werden natürliche Einheiten verwendet, d.h. $\hbar=c=1$.
 \section{Motivaton}
 {
 	Diese Bachelorarbeit beschäftigt sich mit Studien zur Kalibrierung des Crystal-Ball Detektors der A2-Kollaboration am Institut für Kernphysik an der Johannes-Gutenberg-Universität.
@@ -310,25 +311,65 @@ Zerf\"allt ein $\pi^0$, so werden nach Reaktion \ref{eq.pi0decay} zwei Photonen 
 
 Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch alle gew\"unschten Bedingungen eingestellt werden. 
 
+\section{Herleitung der Formel zur Berechnung der invarianten Masse}
+
+Man betrachte die beiden Viererimpulse: 
+\begin{equation}
+p_{1}=\left(\begin{array}{c}E_{1}\\\overrightarrow{p_{1}}\end{array}\right) \textnormal{ und } p_{2}=\left(\begin{array}{c}E_{2}\\\overrightarrow{p_{2}}\end{array}\right)
+\end{equation}
+Dabei sind $E_{1}$ und $E_{2}$ die Energien und $\overrightarrow{p_{1}}$ und $\overrightarrow{p_{2}}$ die Impulse der jeweiligen Photonen.
+
+Desweiteren gilt für den Impulsübertrag:
+\begin{equation}
+q^2=(p_{1}-p_{2})^2
+\label{eq:q^2=(p1-p2)^2}
+\end{equation}
+Da immer $q^2<0$ gilt, definiert man: $Q^2=-q^2$. 
+
+Außerdem gilt: $m^2=Q^2$
+
+Im folgenden wird Gleichung \ref{eq:q^2=(p1-p2)^2} weiter umgestellt.
+\begin{equation}
+\begin{split}
+q^2={}& (p_{1}-p_{2})^2 \\ 
+=& \underbrace{p_{1}^2}_{=m_1^2}+\underbrace{p_{2}^2}_{=m_2^2}-2p_{1}p_{2} \\ =& m_1^2+m_2^2-2E_1E_2+2\overrightarrow{p_1}\overrightarrow{p_2} \\ 
+=& m_1^2+m_2^2-2E_1E_2+2|\overrightarrow{p_1}||\overrightarrow{p_2}|cos(\vartheta) \\
+\end{split}
+\end{equation}
+
+Da mit dem Crystal-Ball nur Photonen detektiert werden konnten, wird angenommen, dass es sich bei den beiden Teilchen um Photonen handelt. Daraus folgt das $|\overrightarrow{p_1}|=E_1$ und $|\overrightarrow{p_2}|=E_2$ gilt. Außerdem sind die beiden Massen gleich Null.
+
+\begin{equation}
+\begin{split}
+\rightarrow 
+q^2={}-2E_1E_2(1-cos(\vartheta))
+\end{split}
+\end{equation}
+Damit lässt sich die invariante Masse des Teilchens, welchen in die beiden Photonen zerfallen ist, durch
+
+\begin{equation}
+\begin{split}
+\Rightarrow{m=\sqrt{2E_1E_2(1-cos(\vartheta))}}
+\label{eq:Formel-zur-Berechnung-der-Invariante-Masse}
+\end{split}
+\end{equation}
+berechnet werden.
+
+Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konnte die Energie der Photonen bestimmt werden und durch Kenntnis des Auftreffortes der Photonen im Crystal-Ball konnte der Winkel zwischen den beiden Photonen errechnet werden, dazu musste allerdings angenommen werden, dass das $\pi^0$ im Zentrum des Targets zerfällt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
 
 \section{Energie-Interval Abhängigkeit}
 \label{sec:Energie-Interval-Abhaengigkeit}
 
-Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit aus dem Jahr 2014 genommen. Aus diesen Daten konnte mit der Gleichung
-\begin{equation}
-m_{\pi^0}=\sqrt{2E_{\gamma_1}E_{\gamma_2}(1-cos(\theta))}
-\label{eq:invariantmass}
-\end{equation}
-die invariante Masse des $\pi^0$ berechnet werden. Dabei sind $E_{\gamma_1}$ und $E_{\gamma_2}$ die gemessenen Energien der beiden Photonen und $\theta$ ist der Winkel, zwischen den beiden Photonen. Zur Bestimmung dieses Winkels wurde angenommen, dass das $\pi^0$ im Zentrum des Targets zerfällt, wodurch dann durch Kenntniss des Auftreffortes der Photonen der Winkel bestimmt werden konnte. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
+Zunächst wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit aus dem Jahr 2014 genommen. Aus diesen Daten konnte mit der Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} die invariante Masse des $\pi^0$ berechnet werden. 
 
-Damit konnte dann ein zweidimensionales Histogramm angelegt werden, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
+Damit wurde schließlich ein zweidimensionales Histogramm angelegt, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{energydependencyallbins0903}
 	
-		\caption{2-D Histogram: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 22,2 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Interval befanden.}
+		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 22,2 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Intervall befanden.}
 			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
@@ -448,9 +489,10 @@ Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-V
 		\label{fig:Z-Vertex-Multi-Graph}
 	\end{center}
 \end{figure}
-Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichungen des Peaks. So war die Abweichung gr\"o{\ss}er, wenn die Bedingung galt, dass das $\pi^0$ am Rand des Targets zerf\"allt, als wenn nur Zerf\"alle in der Mitte des Targets betrachtet wurden. Dies lag daran, das zur Kalibrierung des Crystal-Ball angenommen wurde, dass das Meson im Zentrum des Targets zerf\"allt. Das hatte zur Folge, dass der Winkel aus Gleichung \ref{eq:invariantmass} verf\"alscht wurde, wenn ein Zerfall au{\ss}erhalb des Zentrum des Targets betrachtet wurde. Der Grund daf\"ur war, dass beim Zerfall des $\pi^0$ die meisten Photonen in Strahlrichtung entstehen. Folglich hebten sich die Abweichungen im Winkel nicht mit der Statistik weg, sondern es gab eine inhomogene Verteilung der Winkel. So war der wirkliche Winkel der Photonen, die am Anfang des Targets entstanden, meistens kleiner, als der angenommene, was dazu f\"uhrte, dass die berechnete invariante Masse gr\"o{\ss}er, als die tats\"achliche Masse war. F\"ur Prozesse am Ende des Targets galt genau das Umgekehrte.
+Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichungen des Peaks. So war die Abweichung gr\"o{\ss}er, wenn die Bedingung galt, dass das $\pi^0$ am Rand des Targets zerf\"allt, als wenn nur Zerf\"alle in der Mitte des Targets betrachtet wurden. Dies lag daran, das zur Kalibrierung des Crystal-Ball angenommen wurde, dass das Meson im Zentrum des Targets zerf\"allt. Das hatte zur Folge, dass der Winkel aus Gleichung \ref{eq:invariantmass} verf\"alscht wurde, wenn ein Zerfall au{\ss}erhalb des Zentrum des Targets betrachtet wurde. Der Grund daf\"ur war, dass beim Zerfall des $\pi^0$ die meisten Photonen in Strahlrichtung entstehen. Folglich hebten sich die Abweichungen im Winkel nicht mit der Statistik weg, sondern es gab eine inhomogene Verteilung der Winkel. 
+%So war der wirkliche Winkel der Photonen, die am Anfang des Targets entstanden, meistens kleiner, als der angenommene, was dazu f\"uhrte, dass die berechnete invariante Masse gr\"o{\ss}er, als die tats\"achliche Masse war. F\"ur Prozesse am Ende des Targets galt genau das Umgekehrte.
   
-Zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast durchgehend, ca. 1\% betr\"agt, ausgenommen ist das Intervall von -5 cm bis -4 cm. Auch war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
+Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast durchgehend, ca. 1\% betr\"agt, ausgenommen ist das Intervall von -5 cm bis -4 cm. Auch war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
 
 
 %_______________________________________________________________________________
@@ -608,7 +650,7 @@ anschlie{\ss}en, sind dies manchmal hilfreiche Informationen.
 Internetseite \url{http://www.kph.uni-mainz.de/a2.php} (Stand 11.03.2017)
 \bibitem[PDG16]{PDG16} Internetseite der PDG {\em Partivle Data Group} \url{http://pdg.lbl.gov/}, (Stand 20.03.2017)
 
-%\bibitem[De15]{De15} Skript zur Vorlesung Experimentalphysik Vb Universi\"at Mainz, Prof. Denig \url{https://reader.uni-mainz.de/WiSe2015-16/08-128-055-00/_layouts/15/start.aspx#/Lists/DocumentLib/Forms/AllItems.aspx?RootFolder=%2FWiSe2015%2D16%2F08%2D128%2D055%2D00%2FLists%2FDocumentLib%2FVorlesung&FolderCTID=0x012000C921B079A8CB0245BC9EC33368530110&View=%7B2564817C%2D039E%2D42A3%2D817D%2D6DEA68B3D91D%7D#InplviewHash2564817c-039e-42a3-817d-6dea68b3d91d=RootFolder%3D%252FWiSe2015%252D16%252F08%252D128%252D055%252D00%252FLists%252FDocumentLib%252FVorlesung}, (Stand: 14.03.2017)
+\bibitem[De15]{De15} Skript \& Übungsblätter zur Vorlesung Experimentalphysik Vb WS15/16 Johannes-Gutenberg Universi\"at Mainz, Prof. Denig \url{https://reader.uni-mainz.de/WiSe2015-16/08-128-055-00/_layouts/15/start.aspx#/Lists/DocumentLib/Forms/AllItems.aspx?RootFolder=}, (Stand: 14.03.2017)
 
 
 
