@@ -364,14 +364,14 @@ Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch all
 
 Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit aus dem Jahr 2014 genommen. Aus diesen Daten konnte mit der Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} die invariante Masse des $\pi^0$ berechnet werden. 
 
-Damit wurde schließlich ein zweidimensionales Histogramm angelegt, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von etwa 22 MeV unterteilt wurden. 
+Damit wurde schließlich ein zweidimensionales Histogramm angelegt, mit der invarianten Masse auf der x-Achse. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{energy_dependency_all_bins}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalSymmetricPhotonsHist}
 	
-		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 22,2 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Intervall befanden.}
+		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Intervall befanden.}
 			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
@@ -380,20 +380,19 @@ Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der b
 
 %Formel \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} gibt auch die untere Energiegrenze der Photonen beim Zerfall des $\pi^0$ an. Aufgrund der Geometrie des Crystal-Balls konnten nicht alle Winkel abgedeckt werden. So deckten die Detektoren nur einen Winkelbereich von etwa 20°-160° zur Strahlenachse ab. Wählt man nun für $m_{\pi^0}$ den Literaturwert 135 MeV und setzt $E_{\gamma}=E_{\gamma_1}=E_{\gamma_2}$ und $\theta= 20$°, dann kann man nach $E_{\gamma}$ auflösen und erhält $E_{\gamma}$ = 114 MeV. Das heißt, erst wenn beide Photonen eine Energie von mindestens 114 MeV besa{\ss}en, könnte mit Sicherheit gesagt werden, dass sie aus einem $\pi^0$-Zerfall erzeugt wurden. Für Energien über 444 MeV gab es nicht mehr genug Ereignisse, wodurch diese Energieintervalle auch verworfen werden mussten. Deswegen wurden in den folgenden Betrachtungen nur Energieintervalle im Bereich von 122 MeV bis 444 MeV berücksichtigt.
 
-Im folgenden wurden nur die Energieintervalle f\"ur Photonen von 122 MeV bis 444 MeV ber\"ucksichtigt.
-Dieser Bereich wurde bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\pi^0$ zu stark durch das Rauschen gest\"ort wurde und somit die Position nicht eindeutig bestimmt werden konnte. F\"ur Energien oberhalb von 444 MeV lagen nicht mehr genug Ereignisse vor, sodass h\"ohere Energieintervalle ebenfalls verworfen werden mussten. 
-Diese etwas krummen Werte f\"ur die Begrenzung ergaben sich dadurch, dass unbeabsichtigt die falsche Binanzahl angegeben wurde und dies zu spät bemerkt wurde. 
+Im folgenden wurden nur die Energieintervalle f\"ur Photonen von 125 MeV bis 425 MeV ber\"ucksichtigt.
+Dieser Bereich wurde bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\pi^0$ zu stark durch das Rauschen gest\"ort wurde und somit die Position nicht eindeutig bestimmt werden konnte. F\"ur Energien oberhalb von 425 MeV lagen nicht mehr genug Ereignisse vor, sodass h\"ohere Energieintervalle ebenfalls verworfen werden mussten. 
 
 
-Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 70 MeV bis 180 MeV gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit.
+Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 70 MeV bis 220 MeV gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit.
 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{fitexampleenergyinterval0903}
+		\includegraphics[width=100mm]{FitExampleRealDataEnergyIntervalSymmetricPhotons}
 		
-		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 177 MeV bis 200 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
-		Zu erkennen ist der Untergrundfit (Blau), der Gau{\ss}fit (Gr\"un) und die Kombination (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abb. \ref{fig:similarenergyallfits} zu sehen.
+		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
+		Zu erkennen ist der Untergrundfit (Blau), der Gau{\ss}fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
 	}
 		\label{fig:fitexampleenergyinterval0903}	
 	\end{center}
@@ -403,7 +402,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
  
  \begin{figure}[h!]
  	\begin{center}
- 		\includegraphics[width=100mm]{energydependency0903}
+ 		\includegraphics[width=100mm]{RealDataEnergyIntervalSymmetricPhotonsDeviation}
  	
  		\caption{Die aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen.
  			Es galt die Bedingung, dass die Energie der Photonen sich \"ahneln sollte.
@@ -413,7 +412,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
  	\end{center}
  \end{figure}
 
-In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen der Pionen gegen die Energie der Photonen aufgetragen. Zu sehen ist eine deutliche Abweichung zum Literaturwert des $\pi^0$ Peaks. Auch nahm die Abweichung für größere Energien zu und betrug teilweise über 6\% (vgl. Abb.:\ref{fig:RelativEnergyDependency}).
+In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen der Pionen gegen die Energie der Photonen aufgetragen. Zu sehen ist eine deutliche Abweichung zum Literaturwert des $\pi^0$ Peaks. Auch nahm die Abweichung für größere Energien zu und betrug teilweise fast 8\% (vgl. Abb.:\ref{fig:RelativEnergyDependency}).
   
 Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie vorlag, wenn sich die Photonen energetisch ähnelten.
 
@@ -424,9 +423,10 @@ Nun wurden die errechneten invarianten Massen des $\pi^0$ gegen die Energien der
 
 Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwert zu erkennen. Diese Abweichungen betrugen zwar nur fast 2\% (siehe Abb. \ref{fig:Relative-Deviation-Energy-Interval-No-Condition}}), sind aber nicht vernachl\"assigbar. 
 
+
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{allenergydeviation1303}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalAllPhotonsDeviation}
 		\caption{Die errechneten Werte der $\pi^0$ wurden gegen die Energie der Photonen aufgetragen. Keine Bedingung; es wurden alle Photonen ber\"ucksichtigt}
 		\label{fig:Energy-Intervall-No-Condition-Deviation-1303}
 	\end{center}
@@ -469,7 +469,7 @@ Zum besseren Vergleich der beiden Ergebnisse, wurden die relative Abweichungen m
 \label{sec:Z-Vertex-Abaengigkeit}
 Ein weiterer Abspekt der \"Uberpr\"uft wurde, war die Abh\"angigkeit zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
- Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
+% Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
  
 Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Im Zentrum des Targets befand sich der Ursprung des Koordinatensystems, so lag am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgte z=-4 cm bis z=-3 cm usw. 
 
@@ -480,7 +480,7 @@ Das 3-D Z-Vertex Histogramm wurde dann mit den Daten aus der Cocktail Simulation
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{ZVertex3DHisto}
-		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse die Energie der Photonen aufgetragen.}
+		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse die Energie der Photonen aufgetragen. Dieses Histogramm konnte leider nicht farbig dargestellt werden}
 		\label{fig:Z-Vertex-3D-Histogramm}
 	\end{center}
 \end{figure}
@@ -531,8 +531,8 @@ Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{allfitsenergyintervallwithCondition1303}
-		\caption{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln. Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalSymmetricPhotonsAllFits}
+		\caption{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln.}
 		\label{fig:similarenergyallfits}
 	\end{center}
 \end{figure}
@@ -542,7 +542,7 @@ Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{relativedependency0903}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalSymmetricPhotonsRelativeDeviation}
 		
 		\caption{Die relative Abweichung des errechneten $\pi^0$-Peaks aus Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} von dem Literaturwert. Die Abweichung wurde in Prozent gegen die Energie der Photonen aufgetragen.  Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen. Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden}			
 		\label{fig:RelativEnergyDependency}	
@@ -552,7 +552,7 @@ Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{allphotons2Dhist1303}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalAllPhotonsHist}
 		\caption{Zwei zweidimensionales Histogramm. Auf der x-Achse ist die errechnete invariante Masse aufgetragen, auf der y-Achse sind die Energien der Photonen. Das Histogramm wurde mit jedem Photonenpaar gefüllt. Es gab also keine Einschränkung }
 		\label{fig:Energy-Intervall-Hist-All-Energys-No-Condition}
 	\end{center}
@@ -561,7 +561,7 @@ Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast 
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{allfitsallenergy1303}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalAllPhotonsAllFits}
 		\caption{Alle Fits der Energieintervalle, ohne die Bedingung, dass die beiden Photonen energetisch ähnlich waren. Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
 		\label{fig:allenergyallfits}
 	\end{center}
@@ -569,7 +569,7 @@ Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast 
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=100mm]{allenergyrelativedeviation1303}
+		\includegraphics[width=100mm]{RealDataEnergyIntervalAllPhotonsRelativeDeviation}
 		\caption{Die relative Abweichung der errechneten $\pi^0$ Position, ohne die Bedingung, dass die Photonen sich energetisch ähneln}
 		\label{fig:Relative-Deviation-Energy-Interval-No-Condition}
 	\end{center}
