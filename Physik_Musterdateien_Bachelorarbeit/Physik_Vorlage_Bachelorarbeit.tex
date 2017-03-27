@@ -31,7 +31,7 @@
 \usepackage{hyperref}
 \usepackage{endnotes}
 \usepackage{amsmath}
-
+\usepackage{color}
 
 
 
@@ -362,7 +362,7 @@ Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch all
 \section{Energie-Interval Abhängigkeit}
 \label{sec:Energie-Interval-Abhaengigkeit}
 
-Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit aus dem Jahr 2014 genommen. Aus diesen Daten konnte mit der Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} die invariante Masse des $\pi^0$ berechnet werden. 
+Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit Oktober 2014 genommen. Aus diesen Daten konnte mit der Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} die invariante Masse des $\pi^0$ berechnet werden. 
 
 Mit diesen Daten konnte schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
@@ -398,7 +398,31 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 	\end{center}
 \end{figure}
 
- Beim Fit wurde zuerst der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden, was den einen besseren Gauß-Fit (grün) des Peaks ermöglichte. Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). Folglich konnte aus den Fitdaten die Position des $\pi^0$-Peaks abgelesen werden. 
+ Beim Fit wurde zuerst der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden, was den einen besseren Gauß-Fit (grün) des Peaks ermöglichte. Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). In dieser Abbildung ist ebenfalls der $\eta$-Meson bei einer Masse von ungef\"ahr 550 MeV zu erkennen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort und da die Position dieses Teilchens auch wichtig war, sollte das $\eta$ auch ber\'ucksichtigt werden. Um nun den Untergrund zu reduzieren, wurde eine weitere Bedingung eingef\"uhrt, die die gemessenen Teilchen erf\"ullen mussten. Nun wurde auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besa{\ss}en, wenn ja, dann handelte es sich bei denen nicht um Photonen und sie wurden nicht in das Histogramm eingef\"ugt. Auch \"uber dieses Histogramm wurde f\"ur das $\pi^0$ von 125 MeV bis 425 MeV gefittet.
+ 
+ \colorbox{yellow}{Bild von Uncharged Beispielfit; Gau{\ss}}
+
+ \colorbox{yellow}{Herangezoomtes Bild des Fits einf\"ugen, damit man sehen kann, das die Position nicht}
+ \colorbox{yellow}{ganz stimmt (Gau{\ss} ist nicht das richtige Modell)}
+
+Als man die Position des $\pi^0$-Peaks aus den Rohdaten, mit der des Fits, mit dem Auge verglich, stellte man bereits fest, dass die Position bei allen Fits etwas nach rechts verschoben war, und damit zu einem systematischen Fehler f\"uhrte. Das lag daran, dass die Form des Peaks keinem Gau{\ss} entsprach, wie es im Fit angenommen wurde.
+
+Deswegen wurde die Fitfunktion auf die Crystal-Ball-Funktion umgestellt. Dabei handelte es sich um eine Dichtefunktion einer asymmetrischen Wahscheinlichkeitsverteilung. Diese Funktion war in zwei Bereiche aufgeteilt. Im Zentralen Bereich entsprach sie einer Gau{\ss}form. Dieser geht f\"ur kleine Werte in eine Potenzreihe \"uber.
+
+\begin{equation}
+	f(x|\alpha,n,\bar{x},\sigma)=N\begin{cases}exp(-\frac{(x-\bar{x})^2}{2\sigma^2}), \textnormal{  falls $\frac{x-\bar{x}}{\sigma}> -\alpha$} \\
+	A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma}\leqslant -\alpha$} 
+	\end{cases}
+	\label{eq:Crystal-Ball-Funktion}
+\end{equation}
+
+Dabei war $N$ der Normierungsfaktor, $\bar{x}$ ist der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gab die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"uber geht\cite{NBI15}.
+Root stellte diese Funktion gr\"o{\ss}tenteils bereits, lediglich die Normierung musste hinzugef\"ugt werden.
+
+Der Untergrund wurde weiterhin mit einem Polynom vierten Grades ungen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
+\colorbox{yellow}{Bild von Crystall-Ball-Funktion Fit $\pi^0$. Vielleicht auch das herangezoomte nebendran}
+
+ Aus diesen Fitdaten konnte dann die Position des $\pi^0$ bestimmt werden. 
  
  \begin{figure}[h!]
  	\begin{center}
@@ -416,8 +440,7 @@ In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen d
   
 Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie vorlag, wenn sich die Photonen energetisch ähnelten.
 
-Daraufhin wurde das gleiche Verfahren nochmal angewendet, allerdings wurde dieses mal die Bedingung weggelassen, dass die Photonen sich energetisch ähneln sollen. Das heißt, aus den beiden Photonen wurde die invariante Masse berechnet und dann wurden beide Photonen in das Histogramm  \ref{fig:Energy-Intervall-Hist-All-Energys-No-Condition} eingetragen.
-Die Fits der einzelnen Intervalle sind in Abbildung \ref{fig:allenergyallfits} zu sehen. 
+Daraufhin wurde das gleiche Verfahren nochmal angewendet, allerdings wurde dieses mal die Bedingung weggelassen, dass die Photonen sich energetisch ähneln sollten. Alle anderen Bedingungen galten weiterhin, so durften die registrierten Teilchen keine Ladung tragen. Die errechnete invariante Masse der photonen wurde in Abbildung \ref{fig:Energy-Intervall-Hist-All-Energys-No-Condition} eingetragen. Die Energieintervalle wurden direkt mit der Crystal-Ball-Funktion gefittet. Zu sehen in Abbildung \ref{fig:allenergyallfits}. 
 
 Nun wurden die errechneten invarianten Massen des $\pi^0$ gegen die Energien der Photonen aufgetragen, zu sehen in Abbildung \ref{fig:Energy-Intervall-No-Condition-Deviation-1303}. 
 
@@ -435,23 +458,26 @@ Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwe
 \section{Vernachl\"assigung der Detektoren am Rand}
 \label{sec:Varnachlaessigung-der-Detektoren-am-Rand}
 
-Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal kalibriert werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. Diesesmal wurden keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
+Ein weiteres Problem war, der Aufbau des Crystal-Ball Detektors. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal kalibriert werden. Deswegen wurden zur Untersuchung in diesem Kapitel die Detektoren am Rand nicht ber\"ucksichtigt. 
 
-Da es sich hierbei um  Simulationen handelte, wusste man, welche Photonen durch welchen Prozess erzeugt wurden. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
+%Diesesmal wurden keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. In diesem Fall auf den sogenannten Cocktail. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert. Durch diese beiden Simulationen konnte das Rauschen minimiert und so der $\pi^0$-Peak genauer bestimmt werden.
 
-In erster Linie war es wichtig einen Vergleich zwischen der $\pi^0$ Position mit und ohne Ber\"ucksichtigung der Detektoren am Rand zu erhalten. Zus\"atzlich wurde, wie in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, die Energie der Photonen in Intervallen betrachtet, ohne die Bedingung, dass die Histogramme nur gef\"ullt werden d\"urfen, wenn sich die Energie der Photonen im gleichem Intervall befand. 
+%Da es sich hierbei um  Simulationen handelte, wusste man, welche Photonen durch welchen Prozess erzeugt wurden. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=100mm]{EnergyAngle2DHistoNoEdgePi0Position1403}
-		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse ist der Energie der Photonen aufgetragen. Die y-Achse ist in Energieintervalle der Breite 25 MeV unterteilt}
-		\label{fig:2D-Hist-Angle-Energy-Position-Pi0}
-	\end{center}
-\end{figure}
+In erster Linie war es wichtig einen Vergleich zwischen der $\pi^0$ Position mit und ohne Ber\"ucksichtigung der Detektoren am Rand zu erhalten. Es sollte herausgefunden werden, ob so die Messung verbessert werden konnte. Zus\"atzlich galten, wie in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, die Bedingungen, dass die Energie der Photonen sich im gleichem Energieinterval befand und dass die registrierten Teilchen ungeladen sein m\"ussen. 
+%ohne die Bedingung, dass die Histogramme nur gef\"ullt werden d\"urfen, wenn sich die Energie der Photonen im gleichem Intervall befand. 
 
-Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man auch direkt, dass simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
+%\begin{figure}[h!]
+%	\begin{center}
+%		\includegraphics[width=100mm]{EnergyAngle2DHistoNoEdgePi0Position1403}
+%		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse ist der Energie der Photonen aufgetragen. Die y-Achse ist in Energieintervalle der Breite 25 MeV unterteilt}
+%		\label{fig:2D-Hist-Angle-Energy-Position-Pi0}
+%	\end{center}
+%\end{figure}
 
-Die Vermutung war, wie bereits erw\"ahnt, dass die Detektoren am Rand schlecht kalibriert waren. Deswegen wurden diese nicht betrachtet, dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehr Photonen besa{\ss}en, welche einen Winkel von 30° oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20°. Folglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10°. 
+%Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man auch direkt, dass simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
+
+Die Vermutung war, wie bereits erw\"ahnt, dass die Detektoren am Rand schlecht kalibriert waren. Deswegen durften diese nicht betrachtet werden, dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehrere Photonen besa{\ss}en, welche einen Winkel von 30° oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20°. Folglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10°. 
 
 Sowohl f\"ur den Strahlenein- als auch ausgang wurden die Detektoren am Rand vernachl\"assigt. 
 Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:Energy-Intervall-2D-Hist-30-Edge-1403}) und die einzelnen Positionen wurden dann gefittet (Abb.: \ref{fig:Alle-Fits-ohne-Detektoren-am-Rand}), um die Position des $\pi^0$ zu bestimmen. Das Energieintervall das betrachtet und gefittet wurde entsprach dem aus Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, damit ein besserer war ein besserer Vergleich zwischen den verschiedenen Effekte m\"oglich.
@@ -473,9 +499,13 @@ Ein weiterer Abspekt der \"Uberpr\"uft wurde, war die Abh\"angigkeit zwischen de
  
 Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Im Zentrum des Targets befand sich der Ursprung des Koordinatensystems, so lag am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgte z=-4 cm bis z=-3 cm usw. 
 
- Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse. Hier ist schließlich  dann auch die im Programm falsch angegebene Binzahl aufgefallen, die dafür gesorgt hat, das die Energie der Photon in Intervalle mit etwas krummen Zahlen aufgeteilt wurden, sodass diese geändert wurden. Die neuen Intervalle reichten von 125 MeV bis 450 MeV und hatten eine Breite von 25 MeV.
+Diesesmal wurden allerdings keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. Der Grund daf\"ur war, dass aus den im Experiment genommenen Daten nicht der Ort bestimmt werden konnte, an dem das $\pi^0$ zerfallen ist. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. In diesem Fall wurde auf den sogenannten Cocktail zur\"uckgegriffen. Im Cocktail waren alle m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. 
 
-Das 3-D Z-Vertex Histogramm wurde dann mit den Daten aus der Cocktail Simulation gefüllt. Auch hier wurden nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet.
+Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete der Cocktail 250 Millionen Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
+
+Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
+
+ Anschließend wurde mit den Daten aus dem Cocktail ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse. 
 
 \begin{figure}[h!]
 	\begin{center}
@@ -499,7 +529,7 @@ Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-V
 Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichungen des Peaks. So war die Abweichung gr\"o{\ss}er, wenn die Bedingung galt, dass das $\pi^0$ am Rand des Targets zerf\"allt, als wenn nur Zerf\"alle in der Mitte des Targets betrachtet wurden. Dies lag daran, das zur Kalibrierung des Crystal-Ball angenommen wurde, dass das Meson im Zentrum des Targets zerf\"allt. Das hatte zur Folge, dass der Winkel aus Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} verf\"alscht wurde, wenn ein Zerfall au{\ss}erhalb des Zentrum des Targets betrachtet wurde. Der Grund daf\"ur war, dass beim Zerfall des $\pi^0$ die meisten Photonen in Strahlrichtung entstehen. Folglich hebten sich die Abweichungen im Winkel nicht mit der Statistik weg, sondern es gab eine inhomogene Verteilung der Winkel. 
 %So war der wirkliche Winkel der Photonen, die am Anfang des Targets entstanden, meistens kleiner, als der angenommene, was dazu f\"uhrte, dass die berechnete invariante Masse gr\"o{\ss}er, als die tats\"achliche Masse war. F\"ur Prozesse am Ende des Targets galt genau das Umgekehrte.
   
-Auch zu sehen ist, dass der Abstand der Linien war f\"ur niedrige Energie, fast durchgehend, ca. 1\% betr\"agt, ausgenommen ist das Intervall von -5 cm bis -4 cm. Auch war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
+Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durchgehend, ca. 1\% betrug, ausgenommen ist das Intervall von -5 cm bis -4 cm. Ebenfalls war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
 
 
 %_______________________________________________________________________________
@@ -663,7 +693,7 @@ Internetseite \url{http://www.kph.uni-mainz.de/a2.php} (Stand 11.03.2017)
 
 \bibitem[De15]{De15} Skript \& Übungsblätter zur Vorlesung Experimentalphysik Vb WS15/16 Johannes-Gutenberg Universi\"at Mainz, Prof. Denig \url{https://reader.uni-mainz.de/WiSe2015-16/08-128-055-00/_layouts/15/start.aspx#/Lists/DocumentLib/Forms/AllItems.aspx?RootFolder=}, (Stand: 14.03.2017)
 
-
+\bibitem[NBI15]{NBI15} Einf\"urung in die Programmierung mit Root von Manuel Calderon de la Barca Sanchez \url{http://www.nbi.dk/~petersen/Teaching/Stat2015/PythonRootIntro/ROOT_TipsAndTricks.pdf} (Stand: 27.03.2017)
 
 
 
