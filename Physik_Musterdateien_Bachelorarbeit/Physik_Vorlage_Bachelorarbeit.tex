@@ -227,8 +227,11 @@ Wie bereits erw\"ahnt besa{\ss} MAMI drei dieser RTMs. Die erste Stufe MAMI A be
 
 Damit dennoch h\"ohere Energien erreicht werden konnten, war ein neues Konzept erforderlich. MAMI C war folglich kein RTM mehr, sondern ein HDSM. Das hei{\ss}t, es bestand aus vier 90° Dipolen, welche jeweils 250 t schwer waren und einem zus\"atzlichen Linearbeschleuniger. F\"ur dieses HDSM wurde der erste Linearbeschleuniger der Welt entwickelt, der mit einer Fequenz von 4,9 GHz laufen konnte, betrieben wurde er allerdings, wie die beiden voherigen RTMs mit einer Frequenz von 2,45 GHz.
 %\newline
+
 \begin{table}[h!]
-	\begin{center}
+\centering
+
+
 		\begin{tabular}{|l|c|c|c|c|}
 			\hline
 			& RTM1 & RTM2 & RTM3 & HDSM \\
@@ -241,9 +244,10 @@ Damit dennoch h\"ohere Energien erreicht werden konnten, war ein neues Konzept e
 			
 	
 		\end{tabular}
+
 		\caption{Technische Daten der MAMI-Beschleunigerstufen \cite{Un08}}
 		\label{tab.MAMIstufen}
-	\end{center}
+
 \end{table}
 
  Am Ende der Beschleunigung hatte der Elektronenstrahl eine Energie von ca. 1,5 GeV, diese konnte in Schritten von etwa 15 MeV eingestellt werden und sein Durchmesser lag im Mikrometerbereich, was sehr gute Voraussetzungen f\"ur Pr\"azisionsexperimente waren.\cite{KPh07}. 
@@ -268,7 +272,7 @@ Damit dennoch h\"ohere Energien erreicht werden konnten, war ein neues Konzept e
  Diese Tagger-Elektronenleiter bestand aus 353 Szintillatoren, welche sich jeweils zur H\"alfte \"uberlappten.
  Dadurch ergaben sich 352 Kan\"ale mit einer Energieaufl\"osung von $\Delta E \approx$  2 MeV bzw. 4 MeV bei einer Strahlenenergie von $E_e=$ 800 MeV bzw. 1.5 GeV. 
  
- Folglich lie{\ss} sich der Impuls durch Kenntnis des Auftrefforts der Elektronen auf der Tagger-Leiter und der St\"arke des Magnetfeldes bestimmen und dadurch ihre Energie. Die Energie der Photonen konnte dann mit Gleichung \ref{eq.Photonenenergie} errechnet werden.
+ Folglich lie{\ss} sich der Impuls durch Kenntnis des Auftrefforts des Elektron auf der Tagger-Leiter und der St\"arke des Magnetfeldes bestimmen und dadurch auch seine Energie. Die Energie der Photonen konnte dann mit Gleichung \ref{eq.Photonenenergie} errechnet werden.
 \newline 
 \begin{figure}[h!]
 	\begin{center}
@@ -311,45 +315,6 @@ Au{\ss}erhalb des PIDs waren die MWPCs angebracht. Dabei handelte es sich um zwe
 
 Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei \textit{L\"ocher} f\"ur einen Strahleneingang und -ausgang besa{\ss}, wurde die TAPS-Wand entwickelt. Diese deckte einen Polarwinkel zur Strahlenachse von 1,2° bis 20° ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und bestand aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. Somit konnte mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt werden.
 
-\chapter{Herleitung der Formel zur Berechnung der invarianten Masse}
-
-Man betrachte die drei Viererimpulse f\"ur den Prozess: $\pi^0\rightarrow \gamma\gamma $
-\begin{equation}
-p_{\pi^0}^{\mu}=\left(\begin{array}{c}E_{\pi^0}\\\overrightarrow{p_{\pi^0}}\end{array}\right) \textnormal{,  }
-p_{1}^{\mu}=\left(\begin{array}{c}E_{1}\\\overrightarrow{p_{1}}\end{array}\right) \textnormal{ und  } p_{2}^{\mu}=\left(\begin{array}{c}E_{2}\\\overrightarrow{p_{2}}\end{array}\right)
-\end{equation}
-
-Dabei sind $E_{1}$ und $E_{2}$ die Energien und $\overrightarrow{p_{1}}$ und $\overrightarrow{p_{2}}$ die Impulse der beiden Photonen und $E_{\pi^0}$ die Energie und $\overrightarrow{p_{\pi^0}}$ der Impuls des Pion.
-
-Aufgrund der Energie- und Impulserhaltung gilt:
-\begin{equation}
-p^{\mu}_{\pi^0} = p^{\mu}_1 + p^{\mu}_2
-\end{equation}
-
-Diese Gleichung kann nun quadriert werden:
-
-\begin{equation}
-\begin{split}
-\rightarrow \underbrace{p^{\mu^2}_{\pi^0}}_{m_{\pi^0}^2}=& (p_{1}^{\mu}+p_{2}^{\mu})^2 \\ 
-\rightarrow m_{\pi^0}^2=& \underbrace{p_{1}^{\mu^2}}_{=m_1^2}+\underbrace{p_{2}^{\mu^2}}_{=m_2^2}-2p_{1}^{\mu}p_{2}^{\mu} \\ 
-=& m_1^2+m_2^2-2E_1E_2+2\overrightarrow{p_1}\overrightarrow{p_2} \\ 
-=& m_1^2+m_2^2-2E_1E_2+2|\overrightarrow{p_1}| |\overrightarrow{p_2}| cos(\vartheta) \\
-&\textnormal{mit } \vartheta=\sphericalangle(\overrightarrow{p_1},\overrightarrow{p_2})
-\end{split}
-\end{equation}
-
-Da mit dem Crystal-Ball nur Photonen detektiert werden konnten, wird angenommen, dass es sich bei den beiden  registrierten Teilchen um Photonen handelt. Daraus folgt das $|\overrightarrow{p_1}|=E_1$ und $|\overrightarrow{p_2}|=E_2$ und $m_1=m_2=0$ gilt.
-
-Damit lässt sich die invariante Masse des Pions, welchen in die beiden Photonen zerfallen ist, durch
-\begin{equation}
-\begin{split}
-\Rightarrow{m_{\pi^0}=\sqrt{2E_1E_2(1-cos(\vartheta))}}
-\label{eq:Formel-zur-Berechnung-der-Invariante-Masse}
-\end{split}
-\end{equation}
-berechnen.
-
-Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konnte die Energie der Photonen bestimmt werden und durch Kenntnis des Auftreffortes der Photonen im Crystal-Ball konnte der Winkel zwischen den beiden Photonen errechnet werden, dazu musste allerdings angenommen werden, dass das $\pi^0$ im Zentrum des Targets zerfällt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
 
 \chapter{Studien zur Kalibrierung des Crystal-Ball}
 
@@ -362,7 +327,18 @@ Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch all
 \section{Energie-Interval Abhängigkeit}
 \label{sec:Energie-Interval-Abhaengigkeit}
 
-Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Dazu wurden die Daten der Strahlzeit Oktober 2014 genommen. Aus diesen Daten konnte mit der Gleichung \ref{eq:Formel-zur-Berechnung-der-Invariante-Masse} die invariante Masse des $\pi^0$ berechnet werden. 
+Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Diese Bedingung wurde eingef\"uhrt, da man auf diese Weise herausfinden konnte, ob die Kalibirierung auch noch f\"ur zum Beispiel hoch energetische Photonen stimmt, da man wei{\ss}, dass beide Photonen eine hohe Energie besa{\ss}en. Anders konnte man nicht diese Folgerung treffen, da man sonst eine '\textit{Mischung}' der Energien hat und man nicht sagen kann, welcher Effekt durch welche Energie verursacht wurde.
+
+Zur Untersuchung wurden die Daten aus der Strahlzeit Oktober 2014 betrachtet. Aus diesen Daten konnte mit folgender Gleichung die invariante Masse des $\pi^0$ berechnet werden.
+ \begin{equation}
+ \begin{split}
+ {m_{\pi^0}=\sqrt{2E_1E_2(1-cos(\vartheta))}}
+ \label{eq:Formel-zur-Berechnung-der-invarianten-Masse}
+ \end{split}
+ \end{equation}
+
+Hier ist $m_{\pi^0}$ die berechnete Masse aus den beiden Energien $E_1$ und $E_2$ der Photonen. $\vartheta$ ist der Winkel zwischen den beiden Photonen. Um diesen zu berechnen musste angenommen werden, dass das Pion im Ursprung zerf\"allt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
+Die Herleitung der Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} befindet sich im Anhang \ref{sec:Herleitung-der-Formel-zur-Berechnung-der-invarianten-Masse}.
 
 Mit diesen Daten konnte schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
 
@@ -387,18 +363,38 @@ Dieser Bereich wurde bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des 
 Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 50 MeV bis 220 MeV mit Hilfe von ROOT gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit.
 
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=100mm]{20172803SymmetricGaussianFitExample}
-		
-		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
-		Zu erkennen ist der Untergrundfit (Blau), der Gau{\ss}fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
-	}
-		\label{fig:fitexampleenergyinterval0903}	
-	\end{center}
-\end{figure}
 
- Beim Fit wurde auf zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses bestand aus einer Kombination von zwei Fits. Zuerst wurde der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden. Nun wurde \"uber die verbleibenden Daten ein Gau{\ss}fit angewand (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). In dieser Abbildung  und in Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} ist ebenfalls das $\eta$-Meson bei einer Masse von ungef\"ahr 550 MeV zu erkennen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. Daher wurde eine weitere Bedingung eingef\"uhrt, die die gemessenen Teilchen erf\"ullen mussten. Nun wurde auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besa{\ss}en, wenn ja, dann handelte es sich bei denen nicht um Photonen und sie wurden nicht in das Histogramm eingef\"ugt. 
+ Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses war eine Kombination aus einem Gau{\ss} und einer Potenzreihe. Allerdings entspricht die Form des Peaks nicht der einer Gau{\ss}verteilung, weswegen eine alternative Fitfunktion gesucht werden musste. 
+ 
+ Bei dieser neuen Funktion handelte es sich um die Crystal-Ball-Funktion, welche nach der Crystal-Ball Kollaboration benannt wurde. Diese Funktion war eine Dichtefunktion einer asymmetrischen Wahrscheinlichkeitsverteilung und war in zwei Bereiche aufgeteilt. Im zentralen Bereich entsprach sie einer Gau{\ss}form, diese ging f\"ur kleine Werte in eine Potenzreihe \"uber.
+ 
+ \begin{equation}
+ f(x|\alpha,n,\bar{x},\sigma)=N\begin{cases}exp(-\frac{(x-\bar{x})^2}{2\sigma^2}), \textnormal{  falls $\frac{x-\bar{x}}{\sigma}> -\alpha$} \\
+ A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma}\leqslant -\alpha$} 
+ \end{cases}
+ \label{eq:Crystal-Ball-Funktion}
+ \end{equation}
+ 
+ Dabei war $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gab die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"uber geht\cite{NBI15}. 
+ 
+ ROOT stellte diese Funktion bereits gr\"o{\ss}tenteils zur Verf\"ugung, lediglich die Normierung musste noch nachtr\"aglich hinzugef\"ugt werden.
+ 
+ Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
+ 
+ \begin{figure}[h!]
+ 	\begin{center}
+ 		\includegraphics[width=100mm]{20172803SymmetricGaussianFitExample}
+ 		
+ 		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
+ 			Zu erkennen ist der Untergrundfit (Blau), der Gau{\ss}fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
+ 		}
+ 		\label{fig:fitexampleenergyinterval0903}	
+ 	\end{center}
+ \end{figure}
+ 
+  Zuerst wurde der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden. Nun wurde \"uber die verbleibenden Daten der Crystal-Ball-Fit angewand (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). In dieser Abbildung  und in Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} ist ebenfalls das $\eta$-Meson bei einer Masse von ungef\"ahr 550 MeV zu erkennen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. Daher wurde eine weitere Bedingung eingef\"uhrt, die die gemessenen Teilchen erf\"ullen mussten. 
+  
+  Nun wurde auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besa{\ss}en, wenn ja, dann handelte es sich bei denen nicht um Photonen und sie wurden nicht in das Histogramm eingef\"ugt. 
  
 \begin{figure}[h!]
 	\begin{center}
@@ -409,41 +405,8 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 \end{figure}
  
  Bereits an diesem neuem Histogramm war zu erkennen, dass die St\"orung durch den Untergrund stark reduziert wurde, was einen besseren Fit f\"ur sowohl das $\pi^0$ als auch das $\eta$ erm\"oglichte.
- Nun wurde auch \"uber dieses Histogramm f\"ur das $\pi^0$ von 125 MeV bis 425 MeV gefittet.
  
-
-\begin{figure}[!tp]
-	\centering
-		\begin{minipage}[b]{0.4\textwidth}
-			\includegraphics[width=50mm]{20172803SymmetricUnchargedGaussianFitExample}
-		
-		\end{minipage}
-		\hfill
-		\begin{minipage}[b]{0.4\textwidth}
-			\includegraphics[width=50mm]{20172803SymmetricUnchargedGaussianFitExampleZommed}
-		\end{minipage}
-	\caption{Beispiel eines Gau{\ss}fits. Rechts ist der gleiche Fit zu sehen nur herangezoomet. Man kann eine leichte Tendenz des Fits nach rechts erkennen}
-\end{figure}
-
-Als man die Position des $\pi^0$-Peaks aus den Rohdaten, mit der des Fits, mit dem Auge verglich, stellte man bereits fest, dass die Position bei allen Fits etwas nach rechts verschoben war, und damit zu einem systematischen Fehler f\"uhrte. Das lag daran, dass die Form des Peaks keinem Gau{\ss} entsprach, wie es im Fit angenommen wurde.
-
-Deswegen wurde die Fitfunktion auf die Crystal-Ball-Funktion umgestellt. Dabei handelte es sich um eine Dichtefunktion einer asymmetrischen Wahscheinlichkeitsverteilung. Diese Funktion war in zwei Bereiche aufgeteilt. Im Zentralen Bereich entsprach sie einer Gau{\ss}form, diese ging f\"ur kleine Werte in eine Potenzreihe \"uber.
-
-\begin{equation}
-	f(x|\alpha,n,\bar{x},\sigma)=N\begin{cases}exp(-\frac{(x-\bar{x})^2}{2\sigma^2}), \textnormal{  falls $\frac{x-\bar{x}}{\sigma}> -\alpha$} \\
-	A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma}\leqslant -\alpha$} 
-	\end{cases}
-	\label{eq:Crystal-Ball-Funktion}
-\end{equation}
-
-Dabei war $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gab die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"uber geht\cite{NBI15}. 
-
-ROOT stellte diese Funktion bereits gr\"{\ss}tenteils zur Verf\"ugung, lediglich die Normierung musste noch nachtr\"glich hinzugef\"ugt werden.
-
-Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
-
-\colorbox{yellow}{Bild von Crystall-Ball-Funktion Fit $\pi^0$. Vielleicht auch das herangezoomte nebendran}
-
+ Nun wurde auch \"uber dieses Histogramm f\"ur das $\pi^0$ von 125 MeV bis 425 MeV gefittet.
  Aus diesen Fitdaten konnte dann die Position des $\pi^0$ bestimmt werden. 
  
  \begin{figure}[h!]
@@ -569,6 +532,46 @@ Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durc
 %_______________________________________________________________________________
 \begin{appendix}
 \chapter{Anhang}
+\section{Herleitung der Formel zur Berechnung der invarianten Masse}
+\label{sec:Herleitung-der-Formel-zur-Berechnung-der-invarianten-Masse}
+
+Man betrachte die drei Viererimpulse f\"ur den Prozess: $\pi^0\rightarrow \gamma\gamma $
+\begin{equation}
+p_{\pi^0}^{\mu}=\left(\begin{array}{c}E_{\pi^0}\\\overrightarrow{p_{\pi^0}}\end{array}\right) \textnormal{,  }
+p_{1}^{\mu}=\left(\begin{array}{c}E_{1}\\\overrightarrow{p_{1}}\end{array}\right) \textnormal{ und  } p_{2}^{\mu}=\left(\begin{array}{c}E_{2}\\\overrightarrow{p_{2}}\end{array}\right)
+\end{equation}
+
+Dabei sind $E_{1}$ und $E_{2}$ die Energien und $\overrightarrow{p_{1}}$ und $\overrightarrow{p_{2}}$ die Impulse der beiden Photonen und $E_{\pi^0}$ die Energie und $\overrightarrow{p_{\pi^0}}$ der Impuls des Pion.
+
+Aufgrund der Energie- und Impulserhaltung gilt:
+\begin{equation}
+p^{\mu}_{\pi^0} = p^{\mu}_1 + p^{\mu}_2
+\end{equation}
+
+Diese Gleichung kann nun quadriert werden:
+
+\begin{equation}
+\begin{split}
+\rightarrow \underbrace{p^{\mu^2}_{\pi^0}}_{m_{\pi^0}^2}=& (p_{1}^{\mu}+p_{2}^{\mu})^2 \\ 
+\rightarrow m_{\pi^0}^2=& \underbrace{p_{1}^{\mu^2}}_{=m_1^2}+\underbrace{p_{2}^{\mu^2}}_{=m_2^2}-2p_{1}^{\mu}p_{2}^{\mu} \\ 
+=& m_1^2+m_2^2-2E_1E_2+2\overrightarrow{p_1}\overrightarrow{p_2} \\ 
+=& m_1^2+m_2^2-2E_1E_2+2|\overrightarrow{p_1}| |\overrightarrow{p_2}| cos(\vartheta) \\
+&\textnormal{mit } \vartheta=\sphericalangle(\overrightarrow{p_1},\overrightarrow{p_2})
+\end{split}
+\end{equation}
+
+Da man sich nur f\"ur die Photonen interessierte, konnte angenommen werden, dass es sich bei den Teilchen um Photonen handelt. Daraus folgt das $|\overrightarrow{p_1}|=E_1$ und $|\overrightarrow{p_2}|=E_2$ und $m_1=m_2=0$ gilt.
+
+Damit lässt sich die invariante Masse des Pions, welches in die beiden Photonen zerfallen ist, durch
+\begin{equation}
+\begin{split}
+\Rightarrow{m_{\pi^0}=\sqrt{2E_1E_2(1-cos(\vartheta))}}
+\label{eq:Formel-zur-Berechnung-der-Invariante-Masse-Herleitung}
+\end{split}
+\end{equation}
+berechnen.
+
+Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konnte die Energie der Photonen bestimmt werden und durch Kenntnis des Auftreffortes der Photonen im Crystal-Ball konnte der Winkel zwischen den beiden Photonen errechnet werden, dazu musste allerdings angenommen werden, dass das $\pi^0$ im Zentrum des Targets zerfällt. Siehe dazu \ref{sec:Z-Vertex-Abaengigkeit}.
 
 \section{Tabellen und Abbildungen}
 
