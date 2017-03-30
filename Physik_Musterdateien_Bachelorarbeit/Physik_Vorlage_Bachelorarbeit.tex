@@ -2,6 +2,7 @@
 %_______________________________________________________________________________
 %class
 %_______________________________________________________________________________
+
 %\documentclass[a4paper,11pt,onecolumn,final,german,openbib]{scrbook}
 \documentclass[a4paper,11pt,oneside,final,german,openbib,pdftex]{scrbook}
 %_______________________________________________________________________________
@@ -32,7 +33,18 @@
 \usepackage{endnotes}
 \usepackage{amsmath}
 \usepackage{color}
+%\usepackage{microtype}
+\usepackage{nicefrac}
+%\usepackage{wasysym,pifont}
+%\usepackage{wrapfig}
+%\usepackage{tikz}
+%\usepackage{textcomp}
+\usepackage{relsize}
+\usepackage{bm}
 
+
+%\usepackage{pxfonts}
+%\usepackage{textgreek}
 
 
 %_______________________________________________________________________________
@@ -86,7 +98,16 @@
 \begin{titlepage}
   \vspace*{6mm}
   \begin{center}
-     {\afont Systematische Studien zur $\pi^0$ Kalibrierung des Crystal-Ball Detektor}
+     {\afont Systematische Studien zur 
+     	$
+     	\mathlarger{\mathlarger{\mathlarger{\mathlarger{\mathlarger{\mathlarger{
+     									\boldsymbol
+     									{
+     										\pi^0
+     									}
+     								}}}}}}
+     	$ 
+     	Kalibrierung des Crystal-Ball Detektor}
      \\[3.5cm]
      {\large von}
      \\[3.5cm]
@@ -502,7 +523,6 @@ So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, b
 In diesem Fall wurden die Daten aus dem sogenanntem Cocktail genommen. Im Cocktail waren alle physikalisch m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. 
 
 Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete der Cocktail 250 Millionen Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
-\newline
 
 Zun\"achst musste also \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu wurde ein Histogramm mit den Bedingungen aus Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gef\"ullt, da mit diesen Bedingungen kleinste Abweichung erzielt wurde. \"Uber dieses Histogramm wurde dann wieder gefittet, um die $\pi^0$ Position zu bestimmen.
@@ -511,6 +531,7 @@ Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so einges
 
 \colorbox{yellow}{Hist von Simulierten Daten + Abweichung Simulierte Daten ohne Dek. am Rand}
 Am Histogramm erkannte man auch, dass es sich bei den verwendeten Daten um simulierte handelte, da der $\eta$-Peak nicht vorhanden ist. 
+
 Auch hier ist die Abweichung zu erkennen. Folglich k\"onnen nun weitere Aspekte mit der Simulation \"uberpr\"uft werden.
 %Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 \subsection{Z-Vertex Abh\"angigkeit}
@@ -523,7 +544,7 @@ Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wass
 
 Hier wurde ein weiterer Vorteil der Simulation ausgenutzt.
 %Diesesmal wurden allerdings keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. Der Grund daf\"ur war, dass 
-Aus den im Experiment genommenen Daten konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. 
+Aus den, im Experiment genommenen Daten, konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. 
 
  Anschließend wurde mit den Daten aus dem Cocktail ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse. 
 
