@@ -522,31 +522,48 @@ Der Grund daf\"ur war, dass alle Prozesse in simulierten Daten genau bekannt war
 
 So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, bis die Ursache f\"ur die Abweichung bestimmt war.
 
-In diesem Fall wurden die Daten aus dem sogenanntem Cocktail genommen. Im Cocktail waren alle physikalisch m\"oglichen Prozesse enthalten, daher hatte er auch seinen Namen. 
+In diesem Fall wurden zuerst die Daten aus dem sogenanntem Cocktail genommen. 
 
-Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete der Cocktail 250 Millionen Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
+Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hatte er auch seinen Namen. Folglich waren im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen.
+
+Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug Prozesse enthielt, und nachdem alle Photonenpaare rausgefiltert wurde, die sich nicht energetisch \"ahnelten, musste ein neues Packet mit mehr Prozessen erstellt werden.
+
+Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete der dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
 
 Zun\"achst musste also \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu wurde ein Histogramm mit den Bedingungen aus Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gef\"ullt, da mit diesen Bedingungen die kleinste Abweichung erzielt wurde. \"Uber dieses Histogramm wurde dann wieder gefittet, um die $\pi^0$ Position zu bestimmen.
 
-Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so eingestellt, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma\ $ Prozesse betrachtet wurden.
+%Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so eingestellt, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma\ $ Prozesse betrachtet wurden.
 
 \colorbox{yellow}{Hist von Simulierten Daten + Abweichung Simulierte Daten ohne Dek. am Rand}
 Am Histogramm erkannte man auch, dass es sich bei den verwendeten Daten um simulierte handelte, da der $\eta$-Peak nicht vorhanden ist. 
 
 Auch hier ist die Abweichung zu erkennen. Folglich k\"onnen nun weitere Aspekte mit der Simulation \"uberpr\"uft werden.
 %Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
+
+\subsection{Zerfall von $\pi^0$ im Ursprung}
+
+Zun\"achst wurde \"uberpr\"uft, wie sich die Detektoren verhielten, wenn das $\pi^0$ im Ursprung zerf\"allt, dabei durfte das Pion einen Boost in eine beliebige Raumrichtung haben, wodurch es keine ausgezeichneten Detektoren mehr gab. Somit konnte ein Vergleich gezogen werden, ob sich alle Detektoren gleich verhalten. 
+
+F\"ur diese Untersuchung gab es allerdings kein vorgefertigtes Packet, weshalb ein eigenes geschrieben werden musste. 
+
+Die Zerf\"alle wurden dieses mal allerdings etwas anders erstellt.
+
+In Pluto wurde zun\"achst ein $\pi^0$ erstellt. Dieses zerfiel in seinem Ruhesystem in zwei Photonen im 180° Winkel zueinander. Anschlie{\ss}end erhielten beide Photonen einen zuf\"allig starken Boost in eine zuf\"allige Richtung.
+
+ Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, da sie diese Bedingung nicht erf\"ullten. Au{\ss}erdem ben\"otigt das Simulieren des Crystal-Balls sehr viel Zeit und w\"urde durch die verworfenen Prozesse noch l\"anger dauern. deswegen wurde beim Erstellen der Simulation \"uber Pluto, bereits hier \"uberpr\"uft, ob die beiden Photonen sich energetisch \"ahnelten. Nur dann wurde der Zerfall von Pluto eingetragen. Nur diese Daten wurden dann \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
+
+
+
 \subsection{Z-Vertex Abh\"angigkeit}
 
-Zun\"achst wurde die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. Da die Lebenszeit eines Pions nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
+Zun\"achst wurde die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. Da die Lebenszeit eines $\pi^0$ nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
 % Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
  
 Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. Im Zentrum des Targets befand sich der Ursprung des Koordinatensystems, so lag am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgte z=-4 cm bis z=-3 cm usw. 
 
-Hier wurde ein weiterer Vorteil der Simulation ausgenutzt.
-%Diesesmal wurden allerdings keine reellen Daten aus Strahlzeiten genommen, sondern es wurde auf Simulationen zur\"uckgegriffen. Der Grund daf\"ur war, dass 
-Aus den, im Experiment genommenen Daten, konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. 
+Hier wurde ein weiterer Vorteil der Simulation ausgenutzt.Aus den, im Experiment genommenen Daten, konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen war. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. 
 
  Anschließend wurde mit den Daten aus dem Cocktail ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse. 
 
@@ -574,8 +591,6 @@ Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichung
 Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durchgehend, ca. 1\% betrug, ausgenommen ist das Intervall von -5 cm bis -4 cm. Ebenfalls war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Reelle-Daten} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
 
 Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
-
-\subsection{Zerfall eines ruhenden $\pi^0$ im Ursprung}
 
 
 %_______________________________________________________________________________
