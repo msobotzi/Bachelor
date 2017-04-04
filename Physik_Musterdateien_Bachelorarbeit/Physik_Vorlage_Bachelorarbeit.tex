@@ -322,8 +322,7 @@ Nach seiner Erzeugung traf der Photonenstrahl auf ein ca. 10 cm langes Flüssig-
 Ursprünglich wurde der Crystal-Ball Detektor Anfang der 70er Jahre am SPEAR\footnote{Stanford Positron Electron Asymmetric Ring} zur Entdeckung des $J/\Psi$-Mesons entwickelt. Später wurde mit seiner Hilfe das Bottom-Quark am DESY\footnote{Deutsches Elektronen-Synchrotron} und Baryonenresonanzen am BNL\footnote{Brookhaven National Laboratory} untersucht.
 Seit November 2002 stand der Crystal-Ball Detektor der A2-Kollaboration am MAMI für Experimente mit reellen Photonen zur Verfügung.
 \newline
-Der Crystal-Ball war ein Kalorimeter bestehend aus 672 Natriumiodid (NaI) Szintillatoren, welche so angeordnet waren, dass 93,3\% des Raumwinkels abgedeckt werden konnte. 
-Die Geometrie basierte auf der Form eines Ikosaeders, ein W\"urfel bestehend aus 20 gleichgro{\ss}en  gleichseitigen Dreiecken. Jedes dieser Dreiecke war weiter aufgeteilt in in vier kleinere gleichseitige Dreiecke, welche wiederum jeweils in neun gleichseitige Dreiecke unterteilt waren. Somit ergaben sich 720 gleichseitige Fl\"achen. Aufgrund der hohen Zahl der Fl\"achen erinnerte der Crystal-Ball an eine Hohlkugel mit einem au{\ss}en Radius von ca. 66 cm und einen Innenradius von ca. 25 cm. 
+Der Crystal-Ball war ein Kalorimeter bestehend aus 672 Natriumiodid (NaI) Szintillatoren, welche so angeordnet waren, dass 93,3\% des Raumwinkels abgedeckt werden konnte. Die Geometrie basierte auf der Form eines Ikosaeders, ein W\"urfel bestehend aus 20 gleichgro{\ss}en  gleichseitigen Dreiecken. Jedes dieser Dreiecke war weiter aufgeteilt in in vier kleinere gleichseitige Dreiecke, welche wiederum jeweils in neun gleichseitige Dreiecke unterteilt waren. Somit ergaben sich 720 gleichseitige Fl\"achen. Aufgrund der hohen Zahl der Fl\"achen erinnerte der Crystal-Ball an eine Hohlkugel mit einem au{\ss}en Radius von ca. 66 cm und einen Innenradius von ca. 25 cm. 
 
 Da der Crystal-Ball Detektor urspr\"unglich in $e^+e^-$ Streuexperimenten verwendet wurde, mussten sowohl, f\"ur den Strahleneingang, als auch -ausgang 24 dieser Fl\"achen entfernt werden, wodurch insgesamt 672 Detektoren angebracht werden konnten. Die Detektoren bestanden aus NaI-Szintillatorkristallen und waren ca. 40 cm ($\sim$15,7 Strahlungsl\"angen) lang, hatten die Form eines Pyramidenstumpfes mit dreieckiger Grundfl\"ache und einer Seitenl\"ange von etwa 5 cm am schmalen und ca. 13 cm am dicken Ende. Jeder dieser Kristalle deckte etwa 0,14 \% des Raumwinkels ab und wurde durch einen eigenen Photoelektronenvervielfacher (PMT\footnote{PhotoMultiplier-Tube}) ausgelesen. 
 
@@ -348,12 +347,13 @@ Zur Analyse wurde ANT\footnote{Analysis Toolkit} benutzt. Damit konnten auch all
 
 \section{Reelle Daten}\
 \label{sec:Reelle-Daten}
+
 Im folgenden Abschnitt werden die gemessenen Daten aus der Strahlzeit Oktober 2014 verwendet.
 
 \subsection{Energie-Interval Abhängigkeit}
 \label{sec:Energie-Interval-Abhaengigkeit}
 
-Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Diese Bedingung wurde eingef\"uhrt, da man auf diese Weise herausfinden konnte, ob die Kalibirierung auch noch f\"ur zum Beispiel hoch energetische Photonen stimmt, da man wei{\ss}, dass beide Photonen eine hohe Energie besa{\ss}en. Anders konnte sonst nicht die Folgerung getroffen werden, da man sonst eine '\textit{Mischung}' der Energien hat und man nicht sagen kann, welcher Effekt durch welche Energie verursacht wurde.
+Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Das hei{\ss}t, die Differenz der Energie der beiden Photonen betr\"agt maximal 25 MeV. Diese Bedingung wurde eingef\"uhrt, da man auf diese Weise herausfinden konnte, ob die Kalibirierung auch noch f\"ur zum Beispiel hoch energetische Photonen stimmt, da man wei{\ss}, dass beide Photonen eine hohe Energie besa{\ss}en. Anders konnte sonst nicht die Folgerung getroffen werden, da man sonst eine '\textit{Mischung}' der Energien hat und man nicht sagen kann, welcher Effekt durch welche Energie verursacht wurde.
 
 Zur Untersuchung konnten dann aus den Daten der Strahlzeit, die invariante Masse des $\pi^0$ mit folgender Gleichung berechnet werden.
 
@@ -374,12 +374,12 @@ Mit diesen Daten konnte schließlich ein zweidimensionales Histogramm mit der in
 	\begin{center}
 		\includegraphics[width=100mm]{20172803IM_CB_Symmetric}
 	
-		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn sich die Energie beider Photonen im gleichen Intervall befanden.}
+		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn die Energiedifferenz der beiden Photonen kleiner als 25 MeV war.}
 			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
 
-Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen im gleichen Intervall befanden.
+Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen um maximal 25 MeV unterschieden.
 
 Im folgenden wurden nur die Energieintervalle f\"ur Photonen von 125 MeV bis 425 MeV ber\"ucksichtigt.
 Dieser Bereich wurde bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\pi^0$ zu stark durch das Rauschen gest\"ort wurde und somit die Position nicht eindeutig bestimmt werden konnte. F\"ur Energien oberhalb von 425 MeV lagen nicht mehr genug Ereignisse vor, sodass h\"ohere Energieintervalle ebenfalls verworfen werden mussten. 
@@ -389,7 +389,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 
 
 
- Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses war eine Kombination aus einem Gau{\ss} und einer Potenzreihe. Allerdings entspricht die Form des Peaks nicht der einer Gau{\ss}verteilung, weswegen eine alternative Fitfunktion gesucht werden musste. 
+ Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses war eine Kombination aus einer Gau{\ss}funktion und einer Potenzreihe. Allerdings entspricht die Form des Peaks nicht der einer Gau{\ss}verteilung, weswegen eine alternative Fitfunktion gesucht werden musste. 
  
  Bei dieser neuen Funktion handelte es sich um die Crystal-Ball-Funktion, welche nach der Crystal-Ball Kollaboration benannt wurde. Diese Funktion war eine Dichtefunktion einer asymmetrischen Wahrscheinlichkeitsverteilung und war in zwei Bereiche aufgeteilt. Im zentralen Bereich entsprach sie einer Gau{\ss}form, diese ging f\"ur kleine Werte in eine Potenzreihe \"uber.
  
@@ -503,15 +503,19 @@ Ein Grund daf\"ur war, dass hochenergetische Photonen dann erzeugt werden, wenn 
 
 Um das zu erkl\"aren betrachte man zun\"achst ein ruhendes $\pi^0$. Dieses zerf\"allt in 2 Photonen in zuf\"alliger Richtung mit einem Winkel von 180° zueinander und mit einer Energie von jeweils etwa 67,5 MeV. Gibt man dem $\pi^0$ nun einen Boost in z-Richtung, so erhalten auch die beiden Photonen einen Boost in diese Richtung.
 Zur Veranschaulichung betrachte man nun zwei extrem Beispiele:
+
 \begin{enumerate}
 	\item Im Ruhesystem des $\pi^0$ werden die Photonen in einem Winkel von 90° zur Strahlenachse ausgesandt. Wird nun ein Boost in z-Richtung angewandt, so erhalten beide Photonen einen gleich gro{\ss}en Impuls in z-Richtung und haben folglich beide die gleiche Energie und den gleichen Winkel zur z-Achse.
 	\item Werden die Photonen allerdings entlang der z-Achse ausgesandt. Bewirkt ein Boost in z-Richtung, dass das Photon in z-Richtung Energie dazu erh\"alt, w\"ahrend das Photon entgegengesetzt zur z-Richtung Energie '\textit{verliert}'. Die Energiedifferenz nimmt also zu.
 \end{enumerate}
-F\"ur h\"ohere Energien werden diese Effekte verst\"arkt und alles in allem werden mehr Photonen in Strahlenrichtung gemessen. Daraus folgt, dass Photonen mit niedrieger Energie sich eher isotrop im Raum verteilen, w\"ahrend hochenergetische Photonen h\"aufiger am Strahlenausgang des Crystal-Balls auftreten.
+
+F\"ur h\"ohere Energien werden diese Effekte verst\"arkt und alles in allem werden mehr Photonen in Strahlenrichtung gemessen. Daraus folgt, dass Photonen mit niedrieger Energie sich eher gleichm\"a{\ss}ig im Raum verteilen, w\"ahrend hochenergetische Photonen h\"aufiger am Strahlenausgang des Crystal-Balls auftreten.
 
 Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energetischen Photonen wahrscheinlicher am Strahlenausgang vorliegen, werden nicht alle Detektoren im Crystal-Ball gleich ber\"ucksichtigt. So liegen, am Strahleneingang fast keine hochenergetische Photonen vor.
 
-\colorbox{yellow}{2 Histogramme Polar Azimut Energie Anh\"angigkeit}
+\colorbox{yellow}{Symmetrische Photonen: Polarwinkel vs. Energie der Photonen}
+
+In dieser Abbildung erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahnelt. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
 
 Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand folgte, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren, sondern nur bis zu einem Prozent. 
 Aussagen \"uber die Detektoren am Strahleneingang konnten ebenfalls nicht getroffen werden.
@@ -521,6 +525,7 @@ Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
 
 \section{Simulation}
 \label{sec:Z-Vertex-Abaengigkeit}
+
 Da mit reellen Daten keine Ursache gefunden werden konnte, wodurch die Abweichung entstand, wurde auf simulierte Daten zur\"uckgegriffen. 
 
 Der Grund daf\"ur war, dass alle Prozesse in simulierten Daten genau bekannt waren. Das hei{\ss}t von jedem registriertem Teilchen war bekannt, um welches Teilchen es sich gehandelt und aus welchem Prozess es entstanden ist. 
@@ -551,13 +556,17 @@ Auch hier ist die Abweichung zu erkennen. Folglich k\"onnen nun weitere Aspekte 
 Zun\"achst wurde \"uberpr\"uft, wie sich die Detektoren verhielten, wenn das $\pi^0$ im Ursprung zerf\"allt, dabei durfte das Pion einen Boost in eine beliebige Raumrichtung haben, wodurch es keine ausgezeichneten Detektoren mehr gab. Somit konnte ein Vergleich gezogen werden, ob sich alle Detektoren gleich verhalten. 
 
 F\"ur diese Untersuchung gab es allerdings kein vorgefertigtes Packet, weshalb ein neues geschrieben werden musste. 
-
 Die Zerf\"alle wurden dieses mal allerdings etwas anders erstellt.
 
 In Pluto wurde zun\"achst ein $\pi^0$ erstellt. Dieses zerfiel in seinem Ruhesystem in zwei Photonen im 180° Winkel zueinander. Anschlie{\ss}end erhielten beide Photonen einen zuf\"allig starken Boost in eine zuf\"allige Richtung.
 
- Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, da sie diese Bedingung nicht erf\"ullten. Au{\ss}erdem ben\"otigt das Simulieren des Crystal-Balls sehr viel Zeit und w\"urde durch die verworfenen Prozesse noch l\"anger dauern. deswegen wurde beim Erstellen der Simulation \"uber Pluto, bereits hier \"uberpr\"uft, ob die beiden Photonen sich energetisch \"ahnelten. Nur dann wurde der Zerfall von Pluto eingetragen. Nur diese Daten wurden dann \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
+Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, da sie diese Bedingung nicht erf\"ullten. Au{\ss}erdem ben\"otigt das Simulieren des Crystal-Balls sehr viel Zeit und w\"urde durch die verworfenen Prozesse noch l\"anger dauern. deswegen wurde beim Erstellen der Simulation \"uber Pluto, bereits hier \"uberpr\"uft, ob die beiden Photonen sich energetisch \"ahnelten. Nur dann wurde der Zerfall von Pluto eingetragen und anschlie{\ss}end \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
 
+Als erstes wurde \"uberpr\"uft, ob die Photonen auch wirklich gleichm\"a{\ss}ig im Raum verteilt wurden, sieh dazu Abb
+
+\colorbox{yellow}{Histogramm mit Abb f\"ur Verteilung der Photonen im Raum}
+
+Hier ist zu erkennen, dass sich die Photonen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gibt. Also wurde alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden konnte.
 
 
 \subsection{Z-Vertex Abh\"angigkeit}
