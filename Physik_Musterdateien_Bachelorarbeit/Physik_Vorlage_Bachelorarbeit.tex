@@ -448,7 +448,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
  	
  		\caption{Die errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen.
  			Es galt die Bedingung, dass die gemessenen Teilchen ungeladen sein mussten und dass die Energie der Photonen sich \"ahneln sollte.
- 			%Gr\"o{\ss}ere Energieintervalle wurden aufgrund zu kleiner Statistik nicht ber\"ucksichtigt. F\"ur kleinere Energien konnten keine $\pi^0$ Teilchen erzeugt werden
+ 			%
  		} 
  		\label{fig.Energydependency_pion}
  	\end{center}
@@ -509,7 +509,12 @@ Zur Veranschaulichung betrachte man nun zwei extrem Beispiele:
 \end{enumerate}
 F\"ur h\"ohere Energien werden diese Effekte verst\"arkt und alles in allem werden mehr Photonen in Strahlenrichtung gemessen. Daraus folgt, dass Photonen mit niedrieger Energie sich eher isotrop im Raum verteilen, w\"ahrend hochenergetische Photonen h\"aufiger am Strahlenausgang des Crystal-Balls auftreten.
 
-Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand folgte, dass die Detektoren am Rand nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren, sondern nur bis zu einem Prozent. 
+Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energetischen Photonen wahrscheinlicher am Strahlenausgang vorliegen, werden nicht alle Detektoren im Crystal-Ball gleich ber\"ucksichtigt. So liegen, am Strahleneingang fast keine hochenergetische Photonen vor.
+
+\colorbox{yellow}{2 Histogramme Polar Azimut Energie Anh\"angigkeit}
+
+Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand folgte, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren, sondern nur bis zu einem Prozent. 
+Aussagen \"uber die Detektoren am Strahleneingang konnten ebenfalls nicht getroffen werden.
 
 Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
 
@@ -528,7 +533,7 @@ Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, 
 
 Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug Prozesse enthielt, und nachdem alle Photonenpaare rausgefiltert wurde, die sich nicht energetisch \"ahnelten, musste ein neues Packet mit mehr Prozessen erstellt werden.
 
-Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete der dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
+Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
 
 Zun\"achst musste also \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu wurde ein Histogramm mit den Bedingungen aus Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gef\"ullt, da mit diesen Bedingungen die kleinste Abweichung erzielt wurde. \"Uber dieses Histogramm wurde dann wieder gefittet, um die $\pi^0$ Position zu bestimmen.
