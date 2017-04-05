@@ -513,7 +513,22 @@ F\"ur h\"ohere Energien werden diese Effekte verst\"arkt und alles in allem werd
 
 Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energetischen Photonen wahrscheinlicher am Strahlenausgang vorliegen, werden nicht alle Detektoren im Crystal-Ball gleich ber\"ucksichtigt. So liegen, am Strahleneingang fast keine hochenergetische Photonen vor.
 
-\colorbox{yellow}{Symmetrische Photonen: Polarwinkel vs. Energie der Photonen}
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_125}
+		
+		\label{fig:Symmetric-Uncharged-Hist-No-Cut}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_400}
+	\end{minipage}
+\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 425 MeV bis 450 MeV. }
+\end{figure}
 
 In dieser Abbildung erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahnelt. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
 
@@ -536,9 +551,9 @@ In diesem Fall wurden zuerst die Daten aus dem sogenanntem Cocktail genommen.
 
 Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hatte er auch seinen Namen. Folglich waren im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen.
 
-Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug Prozesse enthielt, und nachdem alle Photonenpaare rausgefiltert wurde, die sich nicht energetisch \"ahnelten, musste ein neues Packet mit mehr Prozessen erstellt werden.
+Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug Prozesse enthielt, nachdem alle Photonenpaare rausgefiltert wurden, die sich nicht energetisch \"ahnelten. Deshalb musste ein neues Packet mit mehr Prozessen erstellt werden.
 
-Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, um das Durchdringen von Partikeln durch Materie zu beschreiben, simuliert.
+Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie zu beschreibt, simuliert.
 
 Zun\"achst musste also \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu wurde ein Histogramm mit den Bedingungen aus Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gef\"ullt, da mit diesen Bedingungen die kleinste Abweichung erzielt wurde. \"Uber dieses Histogramm wurde dann wieder gefittet, um die $\pi^0$ Position zu bestimmen.
@@ -560,18 +575,18 @@ Die Zerf\"alle wurden dieses mal allerdings etwas anders erstellt.
 
 In Pluto wurde zun\"achst ein $\pi^0$ erstellt. Dieses zerfiel in seinem Ruhesystem in zwei Photonen im 180° Winkel zueinander. Anschlie{\ss}end erhielten beide Photonen einen zuf\"allig starken Boost in eine zuf\"allige Richtung.
 
-Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, da sie diese Bedingung nicht erf\"ullten. Au{\ss}erdem ben\"otigt das Simulieren des Crystal-Balls sehr viel Zeit und w\"urde durch die verworfenen Prozesse noch l\"anger dauern. deswegen wurde beim Erstellen der Simulation \"uber Pluto, bereits hier \"uberpr\"uft, ob die beiden Photonen sich energetisch \"ahnelten. Nur dann wurde der Zerfall von Pluto eingetragen und anschlie{\ss}end \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
+Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, da sie diese Bedingung nicht erf\"ullten. Au{\ss}erdem ben\"otigt das Simulieren des Crystal-Balls sehr viel Zeit und w\"urde durch die verworfenen Prozesse noch l\"anger dauern. Deswegen wurde beim Erstellen der Simulation \"uber Pluto, bereits hier \"uberpr\"uft, ob die beiden Photonen sich energetisch \"ahnelten. Nur dann wurde der Zerfall von Pluto eingetragen und anschlie{\ss}end \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
 
 Als erstes wurde \"uberpr\"uft, ob die Photonen auch wirklich gleichm\"a{\ss}ig im Raum verteilt wurden, sieh dazu Abb
 
-\colorbox{yellow}{Histogramm mit Abb f\"ur Verteilung der Photonen im Raum}
+\colorbox{yellow}{Histogramm mit Abb f\"ur Verteilung der Photonen im Raum; niedrige und hohe Energie}
 
 Hier ist zu erkennen, dass sich die Photonen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gibt. Also wurde alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden konnte.
 
 
 \subsection{Z-Vertex Abh\"angigkeit}
 
-Zun\"achst wurde die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. Da die Lebenszeit eines $\pi^0$ nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
+Auch wurde die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. Da die Lebenszeit eines $\pi^0$ nur etwa $8,5*10^{-17}$ Sekunden betr\"agt, w\"urde ein Pion bei Lichtgeschwindigkeit eine Strecke von ca. 25 nm zur\"ucklegen. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
 % Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
  
