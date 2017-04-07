@@ -295,7 +295,7 @@ Damit dennoch h\"ohere Energien erreicht werden konnten, war ein neues Konzept e
  
  Folglich lie{\ss} sich der Impuls durch Kenntnis des Auftrefforts des Elektron auf der Tagger-Leiter und der St\"arke des Magnetfeldes bestimmen und dadurch auch die Energie der Elektronen.
  
- Da die Energie des Elektronenstrahls und die der gestreuten Elektronen bekannt war, konnte die Energie der Photonen mit Gleichung ref{eq.Photonenenergie} errechnet werden.
+ Da die Energie des Elektronenstrahls und die der gestreuten Elektronen bekannt war, konnte die Energie der Photonen mit Gleichung \ref{eq.Photonenenergie} errechnet werden.
 \newline 
 \begin{figure}[h!]
 	\begin{center}
@@ -521,15 +521,14 @@ Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energeti
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_125}
-		
-		\label{fig:Symmetric-Uncharged-Hist-No-Cut}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_400}
 	\end{minipage}
-\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 425 MeV bis 450 MeV. }
+	
+	\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV. }
 \end{figure}
 
 In diesen Abbildungen erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
@@ -543,19 +542,61 @@ Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
 \section{Simulation}
 \label{sec:Z-Vertex-Abaengigkeit}
 
-Da mit reellen Daten keine Ursache gefunden werden konnte, wodurch die Abweichung entstand, wurde auf simulierte Daten zur\"uckgegriffen. 
+Da mit reellen Daten keine Ursache gefunden werden konnte, wodurch diese gro{\ss}e Abweichung entstand, wurde auf simulierte Daten zur\"uckgegriffen. 
 
 Der Grund daf\"ur war, dass alle Prozesse in simulierten Daten genau bekannt waren. Das hei{\ss}t von jedem registriertem Teilchen war bekannt, um welches Teilchen es sich gehandelt und aus welchem Prozess es entstanden ist. 
 
-So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, bis die Ursache f\"ur die Abweichung bestimmt war.
+So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, um leichter die Ursache f\"ur die Abweichung zu suchen.
 
-In diesem Fall wurden zuerst die Daten aus dem sogenanntem Cocktail genommen. 
+\subsection{Vorbereitung der Simulation}
 
-Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hatte er auch seinen Namen. Folglich waren im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen.
+Als erstes wurden die Daten aus dem sogenanntem Cocktail entnommen.
 
-Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enthielt, nachdem alle unerw\"unschten heraus gefiltert wurden. Deshalb musste ein neues Packet mit mehr Prozessen erstellt werden.
+Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hatte er auch seinen Namen. Folglich waren im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. Die Zerf\"alle im Cocktail waren berteits komplett durchsimuliert, wodurch er wie real genommene Daten behandelt werden konnte.
 
-Diese Prozesse wurden durch Pluto, eine Monte-Carlo basierende Simulation, generiert. Insgesamt beinhaltete dieses neue Packet ca 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie zu beschreibt, simuliert.
+Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enthielt, nachdem alle unerw\"unschten heraus gefiltert wurden. Deshalb wurde zun\"achst ein neues Packet mit mehr Prozessen erstellt.
+
+Dieses Packet beinhaltete Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Insgesamt beinhaltete es 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie zu beschreibt, simuliert.
+
+Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. Daher dauerte das Simulieren von 100000 Prozessen etwa zwei Stunden. Auch von diesen mussten die meisten verworfen werden, weil Photonen entstanden, deren Energie sich nicht \"ahnelte. So kam es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enthielt und da man noch gr\"o{\ss}ere simulierte Pakete vermeiden wollte, wurde nach einem anderen Weg gesucht.
+\newline
+
+Dieser war, dass eine neue $\pi^0$-Gun geschrieben wurde.
+Bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgte und so mussten die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch Geant simuliert werden. 
+
+Da man aber trotzdem keine Informationen \"uber den Prozess verlieren wollte, musste er Schritt f\"ue Schritt in dieses neue Modell eingebaut werden. Dazu musste man sich den Zerfall nochmal genauer anschauen:
+
+\begin{equation}
+\gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
+\end{equation}
+
+Da das einfallende Photon durch Bremstrahlung erzeugt wurde, war seine Energie nicht eindeutig, sondern lag in einem gewissen Interval. Also musste als erstes die Energie des Photons gew\"urfelt werden.
+
+Dann begab man sich ins Schwerpunktsystem des Einfallenden Photons und des ruhenden Protons $p$. 
+Von diesem System konnte dann die Schwerpunktsenergie ausgerechnet werden.
+
+\begin{equation}
+\sqrt{s}= \sqrt{2E_{\gamma}m_p+2m_p^2}
+\end{equation}
+
+Anschlie{\ss}end wurde angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wurde, wurde auch wieder mit einem Zufallsgenerator bestimmt. 
+
+Aufgrund der Impulserhaltung musste gelten, dass der Impuls des Protons in die entgegengesetzte Richtung zum $\pi^0$ zeigte und dass der Betrag der beiden Impulse gleich sein muss. Auch musste aufgrund der Energieerhaltung gelten, dass die Energie der beiden Teilchen gleich der Schwerpunktsenergie war. Es lagen also die folgende Formel vor:
+
+	\begin{equation}
+	\sqrt{s}=\sqrt{m_{\pi^0}^2+\overrightarrow{p}^2} + \sqrt{m_{p}^2+\overrightarrow{p}^2}
+	\end{equation}
+
+Diese Gleichung konnte nach $|p|$ aufgel\"ost werden. Somit war die Masse der beiden Teilchen und ihr Impuls bekannt. Also konnte ihre Energie mit $E=\sqrt{m^2+p^2}$ ausgerechnet werden.
+
+Weiter musste angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abw\"agig, die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also war die Annahme berechtigt.
+
+Um die Photonen zu erzeugen, begab man sich ins Ruhesystem des $\pi^0$. Die Richtungen, in der die Photonen ausgestrahlt wurden, wurden ebenfalls zuf\"allig bestimmt. Anschlie{\ss}end verlie{\ss} man das Ruhesystem, dazu erhielten die beiden Photonen den Boost des $\pi^0$.
+\newline
+
+In diesem Tool wurde die Energie des Strahls in einem homogenen Interval gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Bremsstrahlung nicht gleichm\"a{\ss}ig ist, sondern im gew\"unschtem Interval eher an eine $1/x$-Verteilung erinnerte. Folglich entsprach auch die Energieverteilung der ausgesandten Photonen nicht der Realit\"at. Dies ist allerdings auch nur nebens\"achlich, f\"ur es meine Untersuchungen unwichtig ist, welche Form die Energieverteilung der Photonen ist, solange alle im Experiment m\"oglichen Photonen enstehen k\"onnen.
+
+
 
 Zun\"achst musste also \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu wurde ein Histogramm mit den Bedingungen aus Kapitel \ref{sec:Varnachlaessigung-der-Detektoren-am-Rand} gef\"ullt, da mit diesen Bedingungen die kleinste Abweichung erzielt wurde. \"Uber dieses Histogramm wurde dann auch wieder mit der Crystal-Ball-Funktion gefittet, um die $\pi^0$ Position zu bestimmen.
@@ -578,7 +619,7 @@ Die Zerf\"alle wurden dieses mal allerdings etwas anders erstellt.
 In Pluto wurde zun\"achst ein $\pi^0$ erstellt. Dieses zerfiel in seinem Ruhesystem in zwei Photonen im 180° Winkel zueinander. Anschlie{\ss}end erhielten beide Photonen einen zuf\"allig starken Boost in eine zuf\"allige Richtung.
 
 Da auch dieses mal nur Photonen betrachtet werden sollten, die eine \"ahnliche Energie aufwiesen, mussten sehr viele Zerf\"alle verworfen werden, die diese Bedingung nicht erf\"ullten.
-Au{\ss}erdem ben\"otigte das Simulieren des Crystal-Balls sehr viel Zeit. So dauerte es zum Simulieren von 100000 Prozessen etwa zwei Stunden. Von diesen mussten die meisten verworfen werden, weil Photonen entstanden, deren Energie sich nicht \"ahnelte. Folglich w\"urde man ein Packet mit mehreren Millionen reinen $\pi^0 \rightarrow \gamma \gamma $ Prozessen ben\"otigen, um genug Ereignisse zu erhalten. So wurde ein Paket benutzt, welches 10 Millionen dieser Prozesse beinhaltete, allerdings war es trotzdem nicht gro{\ss} genug, um eine gute Statistik zu erhalten. gr\"o{\ss}ere Pakete existierten nicht.
+%Au{\ss}erdem ben\"otigte das Simulieren des Crystal-Balls sehr viel Zeit. So dauerte es zum Simulieren von 100000 Prozessen etwa zwei Stunden. Von diesen mussten die meisten verworfen werden, weil Photonen entstanden, deren Energie sich nicht \"ahnelte. Folglich w\"urde man ein Packet mit mehreren Millionen reinen $\pi^0 \rightarrow \gamma \gamma $ Prozessen ben\"otigen, um genug Ereignisse zu erhalten. So wurde ein Paket benutzt, welches 10 Millionen dieser Prozesse beinhaltete, allerdings war es trotzdem nicht gro{\ss} genug, um eine gute Statistik zu erhalten. gr\"o{\ss}ere Pakete existierten nicht.
 
 Um nun  eine lange Simulaiton zu vermeiden, wurde beim Erstellen der Simulation \"uber Pluto, bereits hier die Energie der beiden Photonen \"uberpr\"uft. Nur dann wurde der Zerfall von Pluto eingetragen und anschlie{\ss}end \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
 
