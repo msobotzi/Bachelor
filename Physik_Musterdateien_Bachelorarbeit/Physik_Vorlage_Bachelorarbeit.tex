@@ -560,7 +560,9 @@ Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simul
  
  Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und so mussten die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch Geant simuliert werden. 
 
-Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden.
+Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden. 
+
+
 
 \begin{equation}
 \gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
@@ -590,10 +592,12 @@ Weiter musste angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zer
 Um die Photonen zu erzeugen, begab man sich ins Ruhesystem des $\pi^0$. Die Richtungen, in der die Photonen ausgestrahlt wurden, wurden ebenfalls zuf\"allig bestimmt. Anschlie{\ss}end verlie{\ss} man das Ruhesystem, dazu erhielten die beiden Photonen den Boost des $\pi^0$. 
 \newline
 
+
 In diesem Tool wurde die Energie des Strahls in einem homogenen Interval gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Photonen, welche durch Bremsstrahlung erzeugt werden, nicht gleichm\"a{\ss}ig ist, sondern im gew\"unschtem Interval eher an eine $1/x$-Verteilung erinnert. Folglich wurden in meinem Tool deutlich mehr hochenergetische Bremsstrahlphotonen erzeugt. Dies war allerdings nur nebensächlich, da ich in meinen Untersuchungen nur sicherstellen musste, das alle im Experiment auftretenden Photonen auch in meiner Simulation auftreten.
 
-Es musste also noch überprüft werden, ob die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wurde die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt war, dadurch war ein einfacherer Vergleich möglich. 
+Da in vielen Schritten eine Raumrichtung oder ein Energieinterval gew\"urfelt werden musste und die neue Gun einer alten basierte, wurde erst das bereits benutzte TRandom aus ROOT zur\"uckgegriffen. Dieses besa{\ss} eine Periodizit\"at von $10^9$ und ben\"otigte zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete ist, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstanden, was darauf hindeutete, dass der Generator immmer wieder die gleichen Prozesse w\"urfelte (vgl. dazu Abb. \ref{fig:Schlechte-Verteilung-der-Daten}). Folglich musste es ausgetauscht und durch das ebenfalls von ROOT bereitgestellten TRandom3 ersetzt werden. Dessen Periodizit\"at lag bei $10^{6000}$. Zwar ben\"otigte er mit 45 ns pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entsprach die Verteilung mehr der erwarteten.
 
+Schlie{\ss}lich musste noch überprüft werden, ob die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wurde die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt war, dadurch war ein einfacherer Vergleich möglich. 
 
 \begin{figure}[h!]
 	\centering
@@ -607,23 +611,41 @@ Es musste also noch überprüft werden, ob die Form der Verteilung der neuen $\p
 		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
 	\end{minipage}
 	
-	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen.}
+	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
 	\label{fig:Vergleich-der-beiden-Guns}
 \end{figure}
 
-In diesen beiden Abbildungen erkennt man, dass sich die Form der Verteilung stark ähneln. Also konnte angenommen werden, dass die neue $\pi^0$-Gun wie gewünscht funktionierte.
-\newline
+In Abbildungen \ref{fig:Vergleich-der-beiden-Guns} erkennt man, dass sich die Form der Verteilung stark ähneln. Also konnte angenommen werden, dass die neue $\pi^0$-Gun wie gewünscht funktionierte.
+
+
+
+%Nach einer gr\"o{\ss}eren Simulation mit 1000 Paketen, welche jeweils 10000 Prozesse beinhalteten, insgesamt also 10 Millionen Prozesse, stellte sich allerdings heraus, dass die Verteilung der Ereignisse nicht wie erwartet war.
+
+
+
 
 Als nächstes musste noch \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftrat. 
 Dazu wurden zwei Histogramme mit den Bedingungen aus den jeweiligen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand und eins ohne.
 
-\colorbox{yellow}{Die beiden Histogramme aus den Simulierten Daten}
-
-An den beiden Histogrammen erkennt man, dass es sich bei den verwendeten Daten um Simulierte gehandelt hat, da der $\eta$-Peak nicht vorhanden ist. Man hat nur noch einen Peak bei $\pi^0$. 
-
- \"Uber diese wurde dann auch wieder mit der Crystal-Ball-Funktion gefittet, um die $\pi^0$ Position zu bestimmen.
+Anschlie{\ss}end wurde \"uber diese dann auch wieder mit der Crystal-Ball-Funktion gefittet, um die $\pi^0$ Position zu bestimmen.
 
 Auch hier wurden die beiden Abweichungen zum besseren Vergleich in einen einzelnen Graphen gezeichnet.
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171104HistPi0Gun}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171104MitOhneCutLongTargetBeamDeviation}
+	\end{minipage}
+\end{figure}
+%An den beiden Histogrammen erkennt man, dass es sich bei den verwendeten Daten um Simulierte gehandelt hat, da der $\eta$-Peak nicht vorhanden ist. Man hat nur noch einen Peak bei $\pi^0$. 
+
+ 
 
 %Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so eingestellt, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma\ $ Prozesse betrachtet wurden.
 
@@ -633,7 +655,7 @@ Auch hier wurden die beiden Abweichungen zum besseren Vergleich in einen einzeln
 Auch hier ist die Abweichung zu erkennen. Folglich k\"onnen nun weitere Aspekte mit der Simulation \"uberpr\"uft werden.
 %Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 
-\subsection{Zerfall von $\pi^0$ im Ursprung}
+\subsection{Isotroper Zerfall von $\pi^0$ im Ursprung}
 
 Als erstes wurde \"uberpr\"uft, wie sich die Detektoren verhielten, wenn das $\pi^0$ im Ursprung zerf\"allt, dabei durfte das Pion einen Boost in eine beliebige Raumrichtung haben, wodurch es keine ausgezeichneten Detektoren mehr gab. Somit konnte ein Vergleich gezogen werden, ob sich alle Detektoren gleich verhielten. 
 
@@ -665,6 +687,9 @@ Nun wurde \"uberpr\"uft, wie sich die Abweichung des $\pi^0$-Peaks verhielt, wen
 
 \colorbox{yellow}{Weitere Auswertung fehlt noch}
 
+\subsection{Zerfall von $\pi^0$ im Ursprung mit Boost in z-Richtung}
+
+\subsection{Isotroper Zerfall von $\pi^0$ in einem langen Target}
 
 \subsection{Z-Vertex Abh\"angigkeit}
 
@@ -799,45 +824,19 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 	\end{center}
 \end{figure}
 
-
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=100mm]{NoEdgeAngleAllFits1403}
-		\caption{Alle Fits der Energieintervalle zur Bestimmung des $\pi^0$. Es galt keine weitere Bedingung. Daten stammen aus einer Simulation (Cocktail). Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
-	\end{center}
-\end{figure}
-
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{30DegreeEdge1403}
-		\caption{Energie der Photonen gegen die errechnete invariante Masse mit der Bedingung, dass die Detektoren am Rand nicht ber\"ucksichtigt werden}
-		\label{fig:Energy-Intervall-2D-Hist-30-Edge-1403}
+		\includegraphics[width=100mm]{20171104BadRandomGenerator}
 	\end{center}
+	\caption{Beispiel einer durch die Gun-Generierten Verteilung. Zu erkennen sind sehr viele Nadeln, was auf eine schlechte Verteilung hindeuted. Es handelt sich dabei um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details siehe \ref{sec:Z-Vertex-Abaengigkeit}}
+	\label{fig:Schlechte-Verteilung-der-Daten}
 \end{figure}
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=100mm]{30DegreeEdgeAllFits}
-		\caption{Alle Fits der Energieintervalle zur Bestimmung des $\pi^0$. Mit der Bedingung, dass die Detektoren am Rand vernachl\"assigt wurden. Daten stammen aus einer Simulation (Cocktail). Oben links ist wurde das Intervall 122 -155 MeV gefittet. Das nächste ist das Intervall von 155 - 278 MeV usw.}
-		\label{fig:Alle-Fits-ohne-Detektoren-am-Rand}
-	\end{center}
-\end{figure}
 
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=100mm]{ZVertex3DHisto}
-		\caption{Dreidmensionales Histogramm zur Untersuchung der Z-Vertex Abh\"angigkeit. Auf der z-Achse ist das Interval des Z-Vertex mit einer Breite von 1 cm aufgetragen. Auf der x-Achse ist die errechnete invariante Masse und auf der y-Achse die Energie der Photonen aufgetragen. Dieses Histogramm konnte leider nicht farbig dargestellt werden}
-		\label{fig:Z-Vertex-3D-Histogramm}
-	\end{center}
-\end{figure}
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=100mm]{FullZVertexDependenceAllFits}
-		\caption{Hier werden alle Fits zur Bestimmung der $\pi^0$ Position  für verschiedene Z-Vertizes aufgelistet. Die erste Zeile ist das Z-Vertex Intervall von -5 cm bis -4 cm das nächste von -4 cm bis -3 cm usw. Die Energienintervalle der Photonen sind in den Titeln der einzelnen Fits aufgetragen. Es wurden die Daten aus dem Cocktail benutzt.}
-		\label{fig:Z-Vertex-All-Fits}
-	\end{center}
-\end{figure}
+
+
+
 
 %_______________________________________________________________________________
 \section{Weiterf\"uhrende Details zur Arbeit}
@@ -898,7 +897,7 @@ Internetseite \url{http://www.kph.uni-mainz.de/a2.php} (Stand 11.03.2017)
 
 \bibitem[NBI15]{NBI15} Einf\"urung in die Programmierung mit Root von Manuel Calderon de la Barca Sanchez \url{http://www.nbi.dk/~petersen/Teaching/Stat2015/PythonRootIntro/ROOT_TipsAndTricks.pdf} (Stand: 27.03.2017)
 
-
+\bibitem[Ce17]{Ce17} Hilfeseite f\"ur Zufallsgeneratoren in Root \url{https://root.cern.ch/doc/master/classTRandom.html#a2007ae15ce828266aecb783ed3410e8b} (Stand: 11.04.2017)
 
 
 
