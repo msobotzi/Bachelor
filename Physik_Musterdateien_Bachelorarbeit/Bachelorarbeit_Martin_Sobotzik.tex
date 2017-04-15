@@ -371,7 +371,7 @@ Zur Untersuchung konnten dann aus den Daten der Strahlzeit, die invariante Masse
  \end{split}
  \end{equation}
 
-Hier ist $m_{\pi^0}$ die berechnete Masse aus den beiden Energien $E_1$ und $E_2$ der Photonen. $\vartheta$ ist der Winkel zwischen den beiden Photonen. Um diesen zu berechnen musste angenommen werden, dass das Pion im Ursprung zerf\"allt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abaengigkeit}.
+Hier ist $m_{\pi^0}$ die berechnete Masse aus den beiden Energien $E_1$ und $E_2$ der Photonen. $\vartheta$ ist der Winkel zwischen den beiden Photonen. Um diesen zu berechnen musste angenommen werden, dass das Pion im Ursprung zerf\"allt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}.
 Die Herleitung der Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} befindet sich im Anhang \ref{sec:Herleitung-der-Formel-zur-Berechnung-der-invarianten-Masse}.
 
 Mit diesen Daten konnte schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
@@ -574,7 +574,7 @@ Dieses Paket beinhaltete Prozesse, welche durch Pluto, eine Monte-Carlo basieren
 
 Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. So dauerte das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Auch von diesen mussten die meisten verworfen werden, weil Photonen entstanden, deren Energie sich nicht \"ahnelte. So kam es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enthielt.
  
- Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und so mussten die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch Geant simuliert werden. 
+ Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und so mussten die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch GEANT simuliert werden. 
 
 Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden. 
 
@@ -582,7 +582,7 @@ Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, m
 \gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
 \end{equation}
 
-Da das einfallende Photon durch Bremstrahlung erzeugt wurde, war seine Energie nicht eindeutig, sondern lag in einem gewissen Interval. Also musste als erstes die Energie des Photons gew\"urfelt werden.
+Da das einfallende Photon durch Bremsstrahlung erzeugt wurde, war seine Energie nicht eindeutig, sondern lag in einem gewissen Intervall. Also musste als erstes die Energie des Photons gew\"urfelt werden.
 
 Dann begab man sich ins Schwerpunktsystem des einfallenden Photons und des ruhenden Protons $p$. 
 Von diesem System konnte dann die Schwerpunktsenergie ausgerechnet werden.
@@ -674,8 +674,9 @@ Da nun aber trotzdem die Form der Abweichung bei den simulierten Daten ungefähr
 %Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
 
 \subsection{Isotroper Zerfall von $\pi^0$ im Ursprung}
+\label{sec:Isotroper-Zerfall-Ursprung}
 
-Als erstes wurde der einfachste Prozess \"uberpr\"uft. Dazu zerfiel ein $\pi^0$ im Ursprung und erhielt einen Boost in eine zufällige Richtung. Dadurch gab es keine ausgezeichnete Richtung. Folglich konnte damit überpruüft werden, ob sich alle Detektoren gleich verhielten. 
+Als erstes wurde der einfachste Prozess \"uberpr\"uft. Dazu zerfiel ein $\pi^0$ im Ursprung und erhielt einen Boost in eine zufällige Richtung. Dadurch gab es keine ausgezeichnete Richtung. Folglich konnte damit überprüft werden, ob sich alle Detektoren gleich verhielten. 
 
 Dazu wurde die neue $\pi^0$-Gun so eingestellt, dass es keinen Photonenstrahl und kein Proton mehr gab, lediglich der Boost des $\pi^0$ wurde gewürfelt. Die Photonen wurden dann anschließend wie in \ref{sec:Vorbereitung-der-Simulation} beschrieben gewürfelt und geboostet. 
 Als erstes wurde \"uberpr\"uft, ob die durch den Zerfall ausgesandten Photonen sich auch wirklich gleichm\"a{\ss}ig im Raum verteilten.
@@ -730,22 +731,29 @@ Daraus folgt, dass auf eine andere Weise nach der Ursache für die Abweichung ge
 
 %Nun wurde \"uberpr\"uft, wie sich die Abweichung des $\pi^0$-Peaks verhielt, wenn das $\pi^0$ einen zuf\"alligen Boost in eine beliebige Richtung erhielt. Dazu wurde ein dreidimensionales Histogramm angelegt, mit der errechneten invarianten Masse auf der x-Achse, der Energie der Photonen auf der y-Achse und der Energie des geboosteten Mesons auf der z-Achse. Es galt immer noch die Bedingung, dass die detektierten Photonen eine \"ahnliche Energie aufweisen mussten, um in das Histogramm gef\"ullt zu werden.
 
-\subsection{Unterschied zwischem gemessenem und tatsächlichem Öffnungswinkel}
-\label{sec:Unterschied-tatsaechlicher-gemessener-Oeffnungswinkel}
+\subsection{Unterschied zwischen generierten und gemessenen Winkeln}
+\label{sec:Unterschied-tatsaechlicher-gemessener-Winkel}
 
 Es gab die Vermutung, dass es einen Unterschied, zwischen dem gemessenen und dem tatsächlichem Öffnungswinkel der beiden Photonen gab.
 
-Die Detektoren des Crystal-Balls sollten alle so ausgerichtet sein, dass sie in Richtung des '\textit{Ursprungs}' zeigen. Damit ist der Mittelpunkt der Kugel gemeint. Ist dies nicht der Fall, so wird ein falscher Öffnungswinkel zwischen den beiden Photonen bestimmt und damit nach Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} eine falsche invariante Masse.
+Die Detektoren des Crystal-Balls sollten alle so ausgerichtet sein, dass sie in Richtung Zentrum des Targets zeigten. Damit ist der Mittelpunkt der Kugel gemeint. Ist dies nicht der Fall, so wird ein falscher Öffnungswinkel zwischen den beiden Photonen bestimmt und damit nach Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} eine falsche invariante Masse.
 
+Um diesen Unterschied zu untersuchen, wurde zuerst überprüft, ob ein von Null verschiedener Winkel zwischen dem generierten und dem gemessenen Teilchen vorlag.
 
+Dafür musste bestimmt werden, welches gemessene Teilchen zum generierten gehörte. Dazu hielt man ein generiertes Teilchen fest um bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Winkel. Wenn der Winkel am kleinsten war, dann handelte es sich wahrscheinlich um das gleiche Teilchen. Danach wurde dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckte, sondern \textit{Löcher} ohne Detektoren hatte, wurden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation konnte kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich konnten sie ohne große Bedenken vernachlässigt werden.
 
+\colorbox{yellow}{Detektoren am Rand nicht berücksichtigen; Symmetrische Photonen?}
+ 
+Dies hatte einen weiteren Vorteil. Dadurch konnten generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besaßen und damit nicht mehr im Crystal-Ball detektiert werden konnten, direkt verworfen werden. Das führte dazu das jedes generierte Photon auch im Crystal-Ball gemessen wurde. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
+
+\colorbox{yellow}{Auswertung weiter}
 
 \subsection{Z-Vertex Abh\"angigkeit}
 \label{sec:Z-Vertex-Abhaengigkeit}
 
 \colorbox{yellow}{Plot ist noch alt (alle Photonen); Auswertung des Plots auch}
 
-Auch wurde die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. 
+Zusätzlich wurde auch die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. 
 
 In Kapitel \ref{sec:Vorbereitung-der-Simulation} wurde gezeigt, dass das $\pi^0$ maximal 25 nm zurücklegen kann. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
@@ -773,9 +781,15 @@ Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichung
   
 Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durchgehend, ca. 1\% betrug, ausgenommen ist das Intervall von -5 cm bis -4 cm. Ebenfalls war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Reelle-Daten} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
 
-Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
+%Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
+
+\subsection{Mindestwinkel zwischen detektierten Photonen}
+Vermeidung von Überlagerung der Cluster
 
 \subsection{Betrachtung des höher energetischen Photons}
+
+\colorbox{yellow}{Sinnvoll? Ist doch das gleiche wie alle Photonen betrachten}
+
 
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
@@ -889,7 +903,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 		\centering
 		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
 	\end{minipage}
-\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details siehe \ref{sec:Z-Vertex-Abaengigkeit}}
+\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe \ref{sec:Z-Vertex-Abhaengigkeit}}
 \label{fig:Random-Verteilung}
 \end{figure}
 
@@ -950,7 +964,7 @@ anschlie{\ss}en, sind dies manchmal hilfreiche Informationen.
 \bibitem[KPh16]{KPh16} Internetseite der A2-Kollaboration {\em Reelle Photonen}
 Internetseite \url{http://www.kph.uni-mainz.de/a2.php} (Stand 11.03.2017)
 
-\bibitem[PDG16]{PDG16} Internetseite der PDG {\em Partivle Data Group} \url{http://pdg.lbl.gov/}, (Stand 20.03.2017)
+\bibitem[PDG16]{PDG16} Internetseite der PDG {\em Particle Data Group} \url{http://pdg.lbl.gov/}, (Stand 20.03.2017)
 
 \bibitem[De15]{De15} Skript \& Übungsblätter zur Vorlesung Experimentalphysik Vb WS15/16 Johannes-Gutenberg Universi\"at Mainz, Prof. Denig \url{https://reader.uni-mainz.de/WiSe2015-16/08-128-055-00/_layouts/15/start.aspx#/Lists/DocumentLib/Forms/AllItems.aspx?RootFolder=}, (Stand: 14.03.2017)
 
