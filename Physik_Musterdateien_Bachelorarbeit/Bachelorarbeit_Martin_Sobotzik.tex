@@ -769,7 +769,6 @@ Um diesen Unterschied zu untersuchen, wurde zuerst überprüft, ob ein von Null 
 
 Dafür musste bestimmt werden, welches gemessene Teilchen zum generierten gehörte. Dazu hielt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten war, dann handelte es sich wahrscheinlich um das gleiche Teilchen. Danach wurde dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckte, sondern '\textit{Löcher}' ohne Detektoren besaß, wurden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation konnte kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich konnten sie ohne große Bedenken vernachlässigt werden.
 
-\colorbox{yellow}{Detektoren am Rand nicht berücksichtigen; Symmetrische Photonen?}
  
 Dies hatte einen weiteren Vorteil. Dadurch konnten generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besaßen und damit nicht mehr im Crystal-Ball detektiert werden konnten, direkt verworfen werden. Das führte dazu das jedes generierte Photon auch im Crystal-Ball gemessen wurde. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
 
@@ -798,7 +797,7 @@ Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-V
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{FullZVertexDependence}
+		\includegraphics[width=100mm]{20171804ZVertexDeviation}
 		\caption{Die Abweichung der $\pi^0$-Peak Position für verschiedene Intervalle des Z-Vertex gegen die Energie der gemessenen Photonen. Beachte: Die unterste Linie repr\"asentiert das Intervall von -5 cm bis -4 cm, das dar\"uber von -4 cm bis -3 cm usw.}
 		\label{fig:Z-Vertex-Multi-Graph}
 	\end{center}
@@ -811,13 +810,13 @@ Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durc
 %Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
 
 \subsection{Mindestwinkel zwischen detektierten Photonen}
-Vermeidung von Überlagerung der Cluster
+Vermeidung von zu starker Überlagerung der Cluster
 
 \subsection{Betrachtung des höher energetischen Photons}
 
 \colorbox{yellow}{Sinnvoll? Ist doch das gleiche wie alle Photonen betrachten}
 
-
+Vielleicht besser direkter Vergleich zwischen der Energie von den generierten und detektierten Teilchen
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
 
@@ -934,7 +933,32 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \label{fig:Random-Verteilung}
 \end{figure}
 
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{20171804NoCutAllFits}
+		\caption{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen.}
+		\label{fig:Sim-No-Cut-All-Fits}
+	\end{center}
+\end{figure}
 
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{2017180430DegreeCut}
+		\caption{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen. Au{\ss}erdem werden die Detektoren am Rand nicht ber\"ucksichtigt.}
+		\label{fig:Sim-30-Degree-Cut-All-Fits}
+	\end{center}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{20171804ZVertexAllFits}
+		\caption{Alle Fits f\"ur die Betrachtung der Z-Vertex Abh\"angigkeit. In jeder Zeile ist ein einzelnes Z-Vertex-Intervall aufgetragen.}
+		\label{fig:ZVertex-All-Fits}
+	\end{center}
+\end{figure}
 
 
 
