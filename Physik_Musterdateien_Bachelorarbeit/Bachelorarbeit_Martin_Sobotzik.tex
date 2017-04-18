@@ -471,7 +471,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 \caption{Links ist das 2-D Histogramm zu sehen, f\"ur welches \"uberpr\"uft wurde, ob die gemessenen Teilchen ungelafen waren. Rechts ist ein Beispielfit aus diesem Historgramm mit der Crystal-Ball-Funktion zu sehen. Sowohl der $\pi^0$, als auch der $\eta$-Peak sind deutlich ausgepr\"agter.}
 \end{figure}
  
- Bereits an diesem neuem Histogramm war zu erkennen, dass die St\"orung durch den Untergrund stark reduziert wurde, was einen besseren Fit f\"ur sowohl das $\pi^0$ als auch das $\eta$ erm\"oglichte.
+ Bereits an diesem neuem Histogramm war zu erkennen, dass die St\"orung durch den Untergrund stark reduziert wurde, was einen besseren Fit f\"ur sowohl das $\pi^0$ als auch das $\eta$ erm\"oglichte. %Deswegen wurden nun, auch in den folgenden kapiteln, die Teilchen auch auf \"uberpr\"uft.
  
  Nun wurde auch \"uber dieses Histogramm f\"ur das $\pi^0$ von 125 MeV bis 425 MeV gefittet.
  Aus diesen Fitdaten konnte dann die Position des $\pi^0$ bestimmt werden. 
@@ -767,17 +767,57 @@ Die Detektoren des Crystal-Balls sollten alle so ausgerichtet sein, dass sie in 
 
 Um diesen Unterschied zu untersuchen, wurde zuerst überprüft, ob ein von Null verschiedener Winkel zwischen dem generierten und dem gemessenen Teilchen vorlag.
 
-Dafür musste bestimmt werden, welches gemessene Teilchen zum generierten gehörte. Dazu hielt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten war, dann handelte es sich wahrscheinlich um das gleiche Teilchen. Danach wurde dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckte, sondern '\textit{Löcher}' ohne Detektoren besaß, wurden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation konnte kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich konnten sie ohne große Bedenken vernachlässigt werden.
+Dafür musste bestimmt werden, welches gemessene Teilchen zum generierten gehörte. Dazu hielt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten war, dann handelte es sich wahrscheinlich um das gleiche Teilchen. Danach wurde dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckte, sondern '\textit{Löcher}' ohne Detektoren besaß, wurden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation konnte kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich konnten sie ohne große Bedenken vernachlässigt werden. Dies hatte einen weiteren Vorteil. Dadurch konnten generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besaßen und damit nicht mehr im Crystal-Ball detektiert werden konnten, direkt verworfen werden. Das führte dazu das jedes generierte Photon auch im Crystal-Ball gemessen wurde. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
 
- 
-Dies hatte einen weiteren Vorteil. Dadurch konnten generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besaßen und damit nicht mehr im Crystal-Ball detektiert werden konnten, direkt verworfen werden. Das führte dazu das jedes generierte Photon auch im Crystal-Ball gemessen wurde. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{20171804TrueCandsAngleDeviation}
+		\caption{Der Winkel zwischen dem generierten und dem gemessenen Photon wurde gegen die Energie der Photonen aufgetragen. Es wurden nur Photonen mit einer \"ahnlichen Energie ber\"ucksichtigt.}
+	\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171804MCTrueCandidatsAngleDeviation125MeV}
+		
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171804MCTrueCandidatsAngleDeviation400MeV}
+	\end{minipage}
+	\caption{Abweichung in Grad f\"ur verschiedene Energieintervalle. Links besa{\ss}en die detektierten Photonen eine Energie zwischen 125 MeV bis 150 MeV, rechts 400 MeV bis 425 MeV.}
+	
+\end{figure}
+H\"ohere Energien erzeugen gr\"o{\ss}eren Schauer $\rightarrow$ leichter den Tats\"achlichen Ort zu bestimmen, Abweichung nimmt mit zunehmender Energie ab.
+
+Vergleich zwischen dem generierten und den rekonstruierten \"Offnungswinkel 
+
+\colorbox{yellow}{die beiden plots auch wie die oberen beiden machen}
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171804RecGenOpeningAngle125MeV}
+	\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{20171804RecGenOpeningAngle40MeV}
+\end{minipage}
+\caption{Der rekonstruierte \"Offnungswinkel wurde gegen den generierten aufgetragen. Links besa{\ss}en die detektierten Photonen eine Energie zwischen 125 MeV bis 150 MeV, rechts 400 MeV bis 425 MeV. }
+\end{figure}
+
 
 \colorbox{yellow}{Auswertung weiter}
-
 \subsection{Z-Vertex Abh\"angigkeit}
 \label{sec:Z-Vertex-Abhaengigkeit}
 
-\colorbox{yellow}{Plot ist noch alt (alle Photonen); Auswertung des Plots auch}
+\colorbox{yellow}{Auswertung des Plots ist alt}
 
 Zusätzlich wurde auch die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. 
 
@@ -788,11 +828,11 @@ In Kapitel \ref{sec:Vorbereitung-der-Simulation} wurde gezeigt, dass das $\pi^0$
 Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. 
 Im Zentrum des Targets befand sich der Ursprung des Koordinatensystems, so lag am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgte z=-4 cm bis z=-3 cm usw. 
 
-Hier wurde ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen war. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt. So wusste man auch von jeden Prozess an welchem Ort er sich ereignete. 
+Hier wurde ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen war. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt, so wusste man auch von jedem Prozess an welchem Ort er sich ereignete. 
 
- Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse angelegt. 
+Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse angelegt. (Abb.: \ref{fig:Z-Vertex-3D-Hist})
 
-Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen berechnet.
+Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen berechnet. (Abb.: \ref{fig:ZVertex-All-Fits})
 Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-Vertex-Multi-Graph} eingetragen.
 
 \begin{figure}[h!]
@@ -803,20 +843,27 @@ Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-V
 	\end{center}
 \end{figure}
 
-Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichungen des Peaks. So war die Abweichung gr\"o{\ss}er, wenn die Bedingung galt, dass das $\pi^0$ am Rand des Targets zerf\"allt, als wenn nur Zerf\"alle in der Mitte des Targets betrachtet wurden. Dies lag daran, das zur Kalibrierung des Crystal-Ball angenommen wurde, dass das Meson im Zentrum des Targets zerf\"allt. Das hatte zur Folge, dass der Winkel aus Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} verf\"alscht wurde, wenn ein Zerfall au{\ss}erhalb des Zentrum des Targets betrachtet wurde. Der Grund daf\"ur war, dass beim Zerfall des $\pi^0$ die meisten hochenergetischen Photonen in Strahlrichtung entstehen\footnote{Siehe dazu Kapitel \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} Ende}. Folglich hoben sich die Abweichungen im Winkel nicht mit der Statistik weg, sondern es gab eine inhomogene Verteilung der Winkel. 
-  
-Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durchgehend, ca. 1\% betrug, ausgenommen ist das Intervall von -5 cm bis -4 cm. Ebenfalls war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Reelle-Daten} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
+Hier ist zu erkennen, 
+%Wie zu erwarten war, ergaben verschiedene Z-Vertices unterschiedliche Abweichungen des Peaks. So war die Abweichung gr\"o{\ss}er, wenn die Bedingung galt, dass das $\pi^0$ am Rand des Targets zerf\"allt, als wenn nur Zerf\"alle in der Mitte des Targets betrachtet wurden. Dies lag daran, das zur Kalibrierung des Crystal-Ball angenommen wurde, dass das Meson im Zentrum des Targets zerf\"allt. Das hatte zur Folge, dass der Winkel aus Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} verf\"alscht wurde, wenn ein Zerfall au{\ss}erhalb des Zentrum des Targets betrachtet wurde. Der Grund daf\"ur war, dass beim Zerfall des $\pi^0$ die meisten hochenergetischen Photonen in Strahlrichtung entstehen\footnote{Siehe dazu Kapitel \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} Ende}. Folglich hoben sich die Abweichungen im Winkel nicht mit der Statistik weg, sondern es gab eine inhomogene Verteilung der Winkel. Auch zu sehen ist, dass der Abstand der Linien f\"ur niedrige Energie, fast durchgehend, ca. 1\% betrug, ausgenommen ist das Intervall von -5 cm bis -4 cm. Ebenfalls war zu erkennen, dass die einzelnen Abweichungen sich f\"ur gr\"o{\ss}ere Energien der ca. 2\% Abweichung ann\"aherten. Eine solche Abweichung war bereits in Kapitel \ref{sec:Reelle-Daten} zu erkennen, dort wurde der Z-Vertex nicht in Intervalle unterteilt, sondern als ganzes betrachtet.
 
 %Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
 
 \subsection{Mindestwinkel zwischen detektierten Photonen}
 Vermeidung von zu starker Überlagerung der Cluster
 
-\subsection{Betrachtung des höher energetischen Photons}
+\colorbox{yellow}{\"Offnungswinkel ist mindestens 30 Grad; Mit Detektoren Am Rand}
 
-\colorbox{yellow}{Sinnvoll? Ist doch das gleiche wie alle Photonen betrachten}
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{20171804MinOpeningAngleDeviation}
+		\caption{Revative Abweichung der errechneten invarianten Masse von der $\pi^0$-Masse. Der \"Offnugnswinkel zwischen den detektierten Teilchen musste mindestens 30° betragen.}
+	\end{center}
+\end{figure}
 
-Vielleicht besser direkter Vergleich zwischen der Energie von den generierten und detektierten Teilchen
+
+\subsection{Direkter Vergleich zwischen der Energie von generierten und detektierten Photonen}
+\label{sec-Vergleich-Energie-gen-rec}
+
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
 
@@ -951,15 +998,30 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \end{figure}
 
 
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{20171804ZVertex3DHist}
+		\caption{Darstellung der Abh\"angigkeit der errechneten $\pi^0$-Masse (x-Achse) von der Energie der detektierten Photonen (y-Achse) und dem Ort an dem das $\pi^0$ im Target zerfallen ist (z-Achse).
+		Leider war es nicht m\"oglich dieses Histogramm besser dazustellen.}
+	\label{fig:Z-Vertex-3D-Hist}
+	\end{center}
+\end{figure}
+
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{20171804ZVertexAllFits}
-		\caption{Alle Fits f\"ur die Betrachtung der Z-Vertex Abh\"angigkeit. In jeder Zeile ist ein einzelnes Z-Vertex-Intervall aufgetragen.}
+		\caption{Alle Fits f\"ur die Betrachtung der Z-Vertex Abh\"angigkeit. In jeder Zeile ist ein einzelnes Z-Vertex-Intervall aufgetragen. Die Detektoren am Rand wurden ber\"ucksichtigt}
 		\label{fig:ZVertex-All-Fits}
 	\end{center}
 \end{figure}
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=100mm]{20171804MinOpeningAngleAllFits}
+		\caption{Alle Fits f\"ur die Bedingung, dass der \"Offnungswinkel zwischen den detektierten Teilchen mindestens 30° betr\"agt. }
+	\end{center}
+\end{figure}
 
 
 %_______________________________________________________________________________
