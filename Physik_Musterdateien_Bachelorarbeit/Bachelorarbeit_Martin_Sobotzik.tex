@@ -45,7 +45,7 @@
 \usepackage{caption}
 %\usepackage{subfig}
 \usepackage{mwe}
-
+\usepackage{verbatim}
 
 %\usepackage{pxfonts}
 %\usepackage{textgreek}
@@ -573,7 +573,8 @@ Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energeti
 		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_400}
 	\end{minipage}
 	
-	\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV. }
+	\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV.}
+	\label{fig:Verteilung-im-CB}
 \end{figure}
 
 In diesen Abbildungen erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
@@ -583,6 +584,7 @@ Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren, sondern nur bis
 Aussagen \"uber die Detektoren am Strahleneingang konnten ebenfalls nicht getroffen werden, da diese, im Vergleich zum Strahleneingang, nur sehr selten getroffen wurden.
 
 Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
+
 
 
 \section{Simulation}
@@ -706,6 +708,7 @@ Schon am zweidimensionalem Histogramm aus Abbildung \ref{fig:Simulierte-Daten-Ab
 Ebenfalls war die bei den reellen Daten gefundene Abweichung auch hier größtenteils zu erkennen. So war die Form sehr ähnlich, aber auch anders. So war die Abweichung f\"ur kleine Photonenenergien ebensfalls klein und weniger als -1\%, nahm aber auch f\"ur Energien bis 300 MeV nicht zu, sondern blieb fast konstant. F\"ur Energien oberhalb von 300 MeV nahm die Abweichung mit \"uber +2\% pro 50 MeV zu. So wurde die maximale Abweichung bei einer Photonenenergie von 425 MeV erreicht. Eine Abflachung, wie sie bei den Daten aus der Strahlzeit zu erkennen war, lag hier nicht vor. 
 
 Auch ergab sich kein Unterschied in den Abweichung für simulierte Daten, wenn die Detektoren am Rand vernachlässigt wurden. So musste dieser Grund dafür auch bestimmt werden. Folglich wurde damit die Vermutung widerlegt, dass die Detektoren am Rand schlecht eingestellt wurden.
+
 
 %Allerdings war hier der Anstieg der Abweichung im Energieintervall von 200 MeV bis 300 MeV Photonenenergie nur so gering bis nicht vorhanden. Dafür flachte die Abweichung bei den reellen Daten ab einer Photonenenergie von ungefähr 375 MeV ab, während sie bei den simulierten Daten weiter '\textit{linear}' mit einer '\textit{Steigung}' von ca. 3\% - 4\% pro 50 MeV Photonenenergie anstieg. Die maximale Abweichung wurde bei einer Energie von 425 MeV erreicht und betrug fast 9\%. Damit war die Abweichung der errechneten Masse aus simulierten Daten größer, als aus reell gemessenen. Auch ergab sich kein Unterschied in den Abweichung für simulierte Daten, wenn die Detektoren am Rand vernachlässigt wurden. So musste dieser Grund dafür auch bestimmt werden. Folglich wurde damit die Vermutung widerlegt, dass die Detektoren am Rand schlecht eingestellt wurden.
 
@@ -861,9 +864,16 @@ Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-V
 	\end{center}
 \end{figure}
 
-Auch hier hatte die Abweichung zwischen der errechneten invarianten Masse und der $\pi^0$ Masse die gleiche Form. So lag nur eine geringe Abweichung f\"ur alle Z-Vertices bei niedrigen Photonenenergien vor. Diese betrug maximal etwa -0,5\%. Nahm die Photonenenergie allerdings zu
+Auch hier hatte die Abweichung zwischen der errechneten invarianten Masse und der $\pi^0$ Masse die gleiche Form. So lag nur eine geringe Abweichung f\"ur alle Z-Vertices bei niedrigen Photonenenergien vor. Diese betrug maximal etwa -0,5\%. 
 
-\colorbox{yellow}{Form total komisch; Kreuzung und hintere Ausreisser}
+Die Abweichungen treffen sich alle bei einer Energie von etwa 200 MeV. Dort haben alle Z-Vertices eine Abweichung von etwa -0,5\%. An diesem Punkt erfolgt eine Vertauschung der Ordnung der Z-Vertices. Vor 200 MeV hat das Intervall von 4 cm bis 5 cm die gr\"o{\ss}te Abweichung und nach 200 MeV hat es die kleinste. F\"ur das Intervall von -4 cm bis -5 cm gilt genau das Umgekehrte. Das liegt daran, dass f\"ur niedriege Photonenenergien auch das $\pi^0$ eine niedrige Energie besitzen muss. Das hei{\ss}t es ist wahrscheinlich, dass das $\pi^0$ in entgegengesetzer Richtung zum Strahl ausgesandt wird, da es sonst mehr Energie besitzen w\"urde. Somit kann es sein, dass die meisten gemessenen niederenergetischen Teilchen einen Polarwinkel besitzen, der gr\"o{\ss}er 90$^{\circ}$ ist. Folglich wird der \"Offnungswinkel f\"ur $\pi^0$ die am Anfang des Targets entstehen, als zu gro{\ss} angenommen. F\"ur $\pi^0$ die am Ende des Targets entstehen wird dann folglich ein zu kleiner \"Offnungswinkel gemessen. 
+
+Bei einer Photonenenergie von \"uber 200 MeV m\"ussen die $\pi^0$ ebenfalls mehr Energie besitzen. Folglich werden mehr $\pi^0$ in Strahlrichtung betrachtet und somit werden mehr Photonen ebenfalls in Strahlrichtung ausgesandt. Die Photonenenergie von 200 MeV ist der Umkehrpunkt.
+Ab hier wird f\"ur ein am Anfang des Targets entstehendes Teilchen ein zu kleiner \"Offnungswinkel gemessen und vise versa.
+
+Ab 200 MeV f\"achert sich die Abweichung auch immer weiter auf. Bei 425 MeV betr\"agt sie fast 2\%. Das wiederum bedeuetet, dass die r\"aumliche Ausdehnung des Target nur einen kleinen Effekt, im Gegensatz zur bereits festgestellten Abweichung besitzt.
+
+Die maximale Abweichung wird ebenfalls bei 425 MeV erreicht und betr\"agt ca. 7\%.
 
 %Auch hier hat die Abweichung der errechneten invarianten Masse zur $\pi^0$-Masse die gleiche Form. So lag nur eine geringe Abweichung für niedrige Photonenenergien vor. Diese nahm im Energieintervall von 125 MeV bis 200 MeV leicht zu. In diesem Intervall liegen die Abweichungen für verschiedene Z-Vertices sehr nahe beieinander. Im nächsten Photonenenergieintervall von 200 MeV bis 300 MeV nahm die Abweichung für Intervalle nahe Strahleneingang sehr schwach zu, während sie für Intervalle in der Nähe vom Strahlenausgang fast konstant blieb. Dadurch wurden die einzelnen Linien aufgefächert. Ab 300 MeV nahm die Abweichung wieder für alle Z-Vertices gleichmäßig zu, sodass sie nicht weiter aufgefächert wurden. Die maximale Abweichung von fast 9\% erreichte man bei einer Photonenenergie von 425 MeV, wenn man das Z-Vertex-Intervall von -5 cm bis -4 cm betrachtete. Dies ist nicht weiter verwunderlich, da die meisten Teilchen für hohe Photonenenergien in der Nähe des Strahlenausgangs detektiert werden. (Siehe dazu \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand}) Betrachtet man nun ein Z-Vertex-Intervall in der Nähe des Strahlenausgangs, so ist der tatsächliche Öffnungswinkel zwischen den beiden detektierten Photonen als der berechnete. Daraus folgt mit Gleichung zur Berechnung der invarianten Masse \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse}, dass die berechnete invariante Masse größer, als die tatsächliche ist. Für das Z-Vertex-Intervall von 4 cm bis 5 cm erreichte man bei einer Photonenenergie von 425 MeV eine Abweichung von etwa 7,5\%. Das heißt die Auffächerung betrug nur etwas mehr als 1\%. Das wiederum bedeutete, dass die räumliche Ausdehnung des Targets keinen allzu großen Effekt auf die Abweichung hat.
 
@@ -893,9 +903,13 @@ Deswegen wurde hier darauf geachtet, dass die registrierten Photonen einen \"Off
 
 Wie in Abbildung \ref{fig:Relative-Abweichung-Min-Opening-Angle} zu erkennen ist, hatte die Abweichung zwischen der errechneten invarianten Masse und der tats\"achlichen die gleiche Form, wie in den Kapiteln zuvor. Folglich brachte auch diese Bedingung keine Verbesserung.
 
+
+
+
+%Direkter Vergleich
+\begin{comment}
 \subsection{Direkter Vergleich zwischen der Energie der generierten und detektierten Photonen}
 \label{sec-Vergleich-Energie-gen-rec}
- $E_{gen} - E_{rec}$
  
  Da mit den Betrachtungen keine Ursache f\"ur die starke Abweichung gefunden werden konnte, wurde auch einmal die Energie der detektierten Teilchen mit der tats\"achlichen Energie verglichen. Diese Betrachtung geschah aus reinem Interesse, da mit diesem Ergebnis nicht auf eine Abweichung vom $\pi^0$-Peak geschlussfolgert werden konnte. 
  
@@ -919,11 +933,85 @@ Wie in Abbildung \ref{fig:Relative-Abweichung-Min-Opening-Angle} zu erkennen ist
 \label{fig:Erec-Egen}
 \end{figure}
  
- 
- In den Plots von Abbildung \ref{fig:Erec-Egen} wurde die tats\"achliche Energie der Teilchen von der detektierten abgezogen. Sprich liegt eine positive Abweichung vor, dann wurde zu viel Energie im Detektor registriert nud vise versa.
+
+ In den Plots von Abbildung \ref{fig:Erec-Egen} wurde die tats\"achliche Energie der Teilchen von der detektierten abgezogen. Sprich liegt eine positive Abweichung vor, dann wurde zu viel Energie im Detektor registriert und vise versa.
  
  Zu sehen ist hier allerdings, dass die im Detektor registrierte Energie in der Regel kleiner war, als die tats\"achliche Energie der Teilchen.
- 
+ Also selbst wenn man aus dem direkten Vergleich zwischen detektierter Energie und tats\"achlicher Energie einen Schluss ziehen k\"onnte, k\"onnte man damit nicht erkl\"aren, warum f\"ur hohe Photonenenergien eine zu gro{\ss}e $\pi^0$ Masse berechnet wird, da die gemessene Energie sogar kleiner als die tats\"achliche ist.
+\end{comment}
+
+\chapter{Weitere Erkenntnisse}
+\label{sec:Weitere-Erkenntnisse}
+
+\section{Dead- und Hot-Crystals}
+
+Ein Hot-Crystal ist ein Detektorkristall, der Events registriert, obwohl es kein einfallendes Teilchen gab. Durch diese St\"orung der Detektoren, konnten also Teilchen falsch zugeordnet werden, was zu einer falschen berechneten invarianten Masse f\"uhrte. 
+Ein Dead-Crystal auf der anderen Seite ist ein Kristall, welcher nicht mehr funktioniert und kein Signal mehr von sich gibt.
+
+Betrachtete man sich Abbildung \ref{fig:Verteilung-im-CB} links, so entstand bereits hier die Vermutung, dass es mindestens einen Hot-Crystal im Crystal-Ball Detektor gab. Der beste Kandidat war bei einem Azimutwinkel von 160$^{\circ}$ und einem Polarwinkel von 95$^{\circ}$ zu finden.
+
+Um nun mehrere dieser Hot-Crystals zu finden, wurde Abbildung \ref{fig:Verteilung-im-CB} noch einmal mit einer anderen Photonenenergie dargestellt. Es wurden die Daten aus der Strahlzeit genommen.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitClusterSize0Marker}
+	\end{center}
+	\caption{Verteilung der detektierten Teilchen im Crystal-Ball. Die Energie der Teilchen musste \"ahnlich sein und lag im Intervall von 0 MeV bis 100 MeV. Markiert sich m\"ogliche Hot-Crystals}
+	\label{fig:Markierte-Hot-Crystals}
+\end{figure}
+
+In Abbildung \ref{fig:Markierte-Hot-Crystals} ist die Verteilung der registrierten Teilchen im Crystal-Ball f\"ur eine Photonenenergie von 0 MeV bis 100 MeV dargestellt. Hier wurden 3 m\"ogliche Kandidaten f\"ur Hot-Crystals mit roten Kreisen makiert. 
+
+
+Um sich nun besser orientieren zu k\"onnen, wurde mit den gleichen Daten eine Karte des Crystal-Balls gef\"ullt, auf der jeder Detektor dargestellt war.
+
+
+Anschlie{\ss}end wurde versucht die Position der Hot-Crystals auch auf dieser Karte zu finden und zuzuordnen.
+
+
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitClusterSize0MarkerMap}
+		\caption{Crystal-Ball Map f\"ur eine Photonenenergie von 0 MeV bis 100 MeV. Makiert sich die gleichen Kristalle, wie in Abbildung \ref{fig:Markierte-Hot-Crystals}}
+		\label{fig:Makierte-Kristalle-Map}
+	\end{center}
+\end{figure}
+
+Wie in Abbildung \ref{fig:Makierte-Kristalle-Map} zu sehen ist, handelte es sich bei den vermuteten Hot-Crystals um Dead-Crystals. Diese waren allerdings von Kristallen umgeben, die deutlich mehr Events registriert haben als erwartet.
+
+Die violett umkreisten Detektoren sind auch tote Kristalle, diese verhalten sich allerdings anders, als die rot eingekreisten, da sie in Abbildung \ref{fig:Markierte-Hot-Crystals} nicht auffallen.
+
+Wenn man sich nun diese Karten mit durch Monte-Carlo generierten Daten anschaut, f\"allt auf, dass die Nachbarn der toten Kristalle auch bei nierdriegen Energien nicht aufleuchten. Sie verhalten sich wie zu erwarten war.
+
+Die Ursache dieses Ph\"amomens muss noch bestimmt werden.
+
+
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitDeadCrystalMarked}
+		
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitDeadCrystalMarkedMap}
+	\end{minipage}
+	\caption{}
+	
+\end{figure}
+
+F\"ur h\"ohere Energien verhielten sich alle Nachbarn von toten Kristallen wie erwartet. Es war kein aufleuchten mehr zu erkennen.
+
+Da diese St\"orung auch nur f\"ur niedrige Energien auftritt, ist sie bei der Betrachtung der Abweichung vom $\pi^0$-Peak f\"ur Photonen mit \"ahnlicher Energie nicht weiter wichtig gewesen, da die starke Abweichung nur f\"ur Photonenenergien auftritt, die gr\"o{\ss}er als 300 MeV sind.
+
+\section{$\phi$-Verteilung im Crystal-Ball}
+
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
 
