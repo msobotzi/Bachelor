@@ -1,4 +1,5 @@
 % !TeX spellcheck = de_DE
+% E = mc^2
 %_______________________________________________________________________________
 %class
 %_______________________________________________________________________________
@@ -101,7 +102,6 @@
 %_______________________________________________________________________________
 
 %_______________________________________________________________________________
-
 \begin{document}
 \pagenumbering{roman}
 
@@ -300,7 +300,7 @@ Um dennoch höhere Energien zu erreichen, ist ein anderes Konzept erforderlich. 
   \end{equation}
  Dabei ist $E_e$ die Energie des Elektronenstrahls und $E_{e^-}$ die Energie der gestreuten Elektronen, welche durch den Glasgow-Mainz-Tagger (siehe Abbilding \ref{fig.TAGGER}) bestimmt wird.
  % dieser trennt zus\"atzlich den Photonen- von dem Elektronenstrahl. Durch einen Dipol wurden die Elektronen ohne Bremsstrahlung, das hei{\ss}t ohne Energieverlust, abgelenkt und, je nach Energie, auf einen bestimmten Abschnitt des Tagger-Elektronenleiters fokussiert.  
- Dieser ist ein impulsselektierendes, magnetisches Spektrometer, in dem ein magnetisches Feld angelegt ist, welches die Elektronen auf Fokalebene lenkt, hinter der sich die Tagger-Elektronenleiter befindet. Dadurch wird zus\"atzlich der Elektronenstrahl von dem Photonenstrahl getrennt. Dieses Magnetfeld ist außerdem so eingestellt, dass Elektronen, welche keine Energie durch Bremsstrahlung verloren haben, direkt in den Strahlenfang abgelenkt werden. Die restlichen Elektronen werden dann, je nach Impuls, auf einen anderen Abschnitt der Tagger-Leiter fokussiert
+ Dieser ist ein impulsselektierendes, magnetisches Spektrometer, in dem ein magnetisches Feld angelegt ist, welches die Elektronen auf Fokalebene lenkt, hinter der sich die Tagger-Elektronenleiter befindet. Dadurch wird zus\"atzlich der Elektronenstrahl von dem Photonenstrahl getrennt. Dieses Magnetfeld ist außerdem so eingestellt, dass Elektronen, welche keine Energie durch Bremsstrahlung verloren haben, direkt in den Strahlenfang\footnote{engl. Beam-Dump} abgelenkt werden. Die restlichen Elektronen werden dann, je nach Impuls, auf einen anderen Abschnitt der Tagger-Leiter fokussiert
  
  Diese Tagger-Elektronenleiter besteht aus 353 Szintillatoren, welche sich jeweils zur H\"alfte \"uberlappen.
  Dadurch ergeben sich 352 Kan\"ale mit einer Energieaufl\"osung von $\Delta E \approx$  2 MeV bzw. 4 MeV bei einer Strahlenenergie von $E_e=$ 800 MeV bzw. 1,6 GeV. 
@@ -378,6 +378,153 @@ R_M = 21 \textnormal{ MeV}\cdot \frac{X_0}{E_c}
 
 95\% aller im Schauer entstanden Teilchen, befinden sich innerhalb von zwei Molière-Radien. 
 
+\chapter{Vorbereitung}
+
+\section{Umstellung auf die Crystal-Ball-Fitfunktion}
+Um die Masse des $\pi^0$ zu bestimmen, werden Histogramme erzeugt. Auf einer Achse dieser Histogramme wird die mit Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} errechnete invariante Masse aufgetragen. Anschlie{\ss}end wird \"uber diese Hstogramme mit einer Funktion gefittet.
+
+Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses ist eine Kombination aus einer Gau{\ss}funktion und einer Potenzreihe vierten Grades. Allerdings entspricht die Form des $\pi^0$-Peaks nicht der einer Gau{\ss}verteilung, weswegen nach einer alternativen Fitfunktion gesucht werden muss. 
+
+Bei dieser neuen Funktion handelt es sich um die Crystal-Ball-Funktion, welche nach der Crystal-Ball Kollaboration benannt ist. Diese Funktion ist eine Dichtefunktion einer asymmetrischen Wahrscheinlichkeitsverteilung und ist in zwei Bereiche aufgeteilt. Im zentralen Bereich entspricht sie einer Gau{\ss}form, diese geht f\"ur kleine Werte in eine Potenzreihe \"uber.
+
+\begin{equation}
+f(x|\alpha,n,\bar{x},\sigma)=N\begin{cases}exp(-\frac{(x-\bar{x})^2}{2\sigma^2}), \textnormal{  falls $\frac{x-\bar{x}}{\sigma}> -\alpha$} \\
+A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma}\leqslant -\alpha$} 
+\end{cases}
+\label{eq:Crystal-Ball-Funktion}
+\end{equation}
+
+Dabei ist $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gibt die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"ubergeht\cite{NBI15}. 
+
+ROOT stellt diese Funktion bereits gr\"o{\ss}tenteils zur Verf\"ugung, lediglich die Normierung muss noch hinzugef\"ugt werden.
+
+Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealIntervalFitExample}
+		
+		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
+			Zu erkennen ist der Untergrundfit (Blau), der Crystal-Ball-Fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
+		}
+		\label{fig:fitexampleenergyinterval0903}	
+	\end{center}
+\end{figure}
+
+Zuerst wird der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten kann dann damit der Untergrund abgezogen werden. Nun wird \"uber die verbleibenden Daten der Crystal-Ball-Fit angewand (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot).
+
+
+\section{Reduzierung des Untergrunds}
+a
+
+
+\section{Umstellung auf eine neue $\pi^0$-Gun}
+\label{sec:Vorbereitung-der-Simulation}
+
+Da viele Informationen \"uber die Prozesse nicht im Detektor bestimmt werden k\"onnen, ist es hilfreich, auf Simulationen zur\"uckzugreifen. Daf\"ur liegen verschiedene Packete zur Verf\"ugung, in denen unterschiedliche Prozesse simuliert wurden.
+
+So gab es bereits vorgefertigte Pakete, wie den Cocktail.
+Im diesem sind ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hat er auch seinen Namen. Folglich sind im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. Die Zerf\"alle im Cocktail sind bereits komplett durchsimuliert, wodurch er wie eine reale Strahlzeit behandelt werden kann.
+
+Da in dieser Arbeit der Hauptaugenmerk auf Photonen liegt, die eine \"ahniche Energie besitzen, stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enth\"alt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
+
+Deshalb wurde zun\"achst ein neues Packet mit mehr Prozessen erstellt. 
+Dieses Paket beinhaltet 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie beschreibt, simuliert.
+
+Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. So dauerte das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Da nur Photonen mit einer \"ahnlichen Energie betrachtet, m\"ussen auch von diesem Packet die meisten Zerf\"alle verworfen werden. So kommt es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enth\"alt.
+
+Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch GEANT simuliert wurden. 
+
+Damit die neue Gun auch alle relevanten Informationen beinhaltet, muss man sich folgenden Prozess anschauen.
+%Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden. 
+
+\begin{equation}
+\gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
+\end{equation}
+
+Da das einfallende Photon durch Bremsstrahlung erzeugt wird, ist seine Energie nicht eindeutig, sondern liegt in einem gewissen Intervall. Also muss als erstes die Energie des Photons gew\"urfelt werden.
+
+Dann begibt man sich ins Schwerpunktsystem des einfallenden Photons und des ruhenden Protons $p$. 
+Von diesem System kann dann die Schwerpunktsenergie $\sqrt{s}$ ausgerechnet werden.
+
+\begin{equation}
+\sqrt{s}= \sqrt{2E_{\gamma}m_p+2m_p^2}
+\end{equation}
+
+Anschlie{\ss}end wird angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wird, wird auch wieder mit einem Zufallsgenerator bestimmt. 
+
+Aufgrund der Impulserhaltung muss gelten, dass der Impuls des Protons in die entgegengesetzte Richtung zum $\pi^0$ zeigt, und dass der Betrag der beiden Impulse gleich sein muss. Auch muss aufgrund der Energieerhaltung gelten, dass die Energie der beiden Teilchen addiert gleich der Schwerpunktsenergie ist. Es liegen also die folgenden Formeln vor:
+
+
+\begin{equation}
+|\overrightarrow{p_{\pi^0}}|=|\overrightarrow{p_p}| = |\overrightarrow{p}| \textnormal{  und  } \sqrt{s}=\sqrt{m_{\pi^0}^2+\overrightarrow{p}^2} + \sqrt{m_{p}^2+\overrightarrow{p}^2}
+\end{equation}
+
+
+Diese Gleichung kann nach dem Impuls $|\overrightarrow{p}|$ aufgel\"ost werden. Da die Masse der beiden Teilchen bekannt ist, kann ihr Impuls und damit auch ihre Energie über $E=\sqrt{m^2+p^2}$ ausgerechnet werden. 
+
+Weiter muss angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abw\"agig, da die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also ist die Annahme berechtigt.
+
+Um die Photonen zu erzeugen, begiebt man sich nun in das Ruhesystem des $\pi^0$. Dann wird eine zuf\"allige Richtung bestimmt, in dem ein Photon ausgestrahlt wird. Das andere Photon wird in die genau entgegengesetzte Richtung ausgestrahlt. Anschlie{\ss}end verl\"asst man wieder das Ruhesystem, dazu erhalten die beiden Photonen den Boost des $\pi^0$. 
+\newline
+
+
+In diesem Tool wird die Energie des Strahls in einem homogenen Intervall gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Photonen, welche durch Bremsstrahlung erzeugt werden, nicht gleichm\"a{\ss}ig ist, sondern in dem im Experiment betrachtetem Intervall eher an eine $1/x$-Verteilung erinnert. Folglich werden in meinem Tool deutlich mehr hochenergetische Bremsstrahlphotonen erzeugt. Dies st\"ort allerdings nicht weiter, da in diesen Untersuchungen nur sichergestellt werden muss, das alle im Experiment auftretenden Photonen auch in der Simulation auftreten.
+
+Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden muss und die neue Gun auf einer alten basierte, wurde zun\"achst auf das bereits benutzte TRandom aus ROOT zur\"uckgegriffen. Dieses besitzt eine Periodizit\"at von $10^9$ und ben\"otigt zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet war, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstehen, was darauf hindeutet, dass der Generator immmer wieder die gleichen Prozesse w\"urfelt (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). 
+
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171104BadRandomGenerator}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
+	\end{minipage}
+	\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe \ref{sec:Z-Vertex-Abhaengigkeit}}
+	\label{fig:Random-Verteilung}
+\end{figure}
+
+
+
+Folglich musste es ausgetauscht und durch das ebenfalls von ROOT bereitgestellten TRandom3 ersetzt werden. Dieser besitzt mit $10^{6000}$ eine deutlich höhere Periodizität als TRandom. Zwar ben\"otigt es mit 45 ns pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entspricht die Verteilung mehr der erwarteten. Zu sehen ist dies rechts in der Abbildung.
+
+Schlie{\ss}lich muss noch überprüft werden, ob die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wird die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist, dadurch ist ein einfacherer Vergleich möglich. 
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_New}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
+	\end{minipage}
+	
+	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
+	\label{fig:Vergleich-der-beiden-Guns}
+\end{figure}
+
+In Abbildungen \ref{fig:Vergleich-der-beiden-Guns} erkennt man, dass sich die Form der Verteilung stark ähneln. Also konnte angenommen werden, dass die neue $\pi^0$-Gun wie gewünscht funktionierte.
+
+
+
+%Nach einer gr\"o{\ss}eren Simulation mit 1000 Paketen, welche jeweils 10000 Prozesse beinhalteten, insgesamt also 10 Millionen Prozesse, stellte sich allerdings heraus, dass die Verteilung der Ereignisse nicht wie erwartet war.
+
+
+
+
+
+
+
+
 \chapter{Studien zur Kalibrierung des Crystal-Ball}
 
 Zerf\"allt ein $\pi^0$, so werden nach Reaktion \ref{eq.pi0decay} zwei Photonen frei. Diese Photonen werden an der A2 durch den Crystal-Ball Detektor nachgewiesen. Dabei wird, sowohl der Winkel zwischen den beiden Photonen, als auch die Energie der Photonen bestimmt, um die invariante Masse des $\pi^0$ ausrechnen zu k\"onnen.
@@ -428,35 +575,7 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
 
 
 
- Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses war eine Kombination aus einer Gau{\ss}funktion und einer Potenzreihe. Allerdings entspricht die Form des Peaks nicht der einer Gau{\ss}verteilung, weswegen eine alternative Fitfunktion gesucht werden musste. 
- 
- Bei dieser neuen Funktion handelte es sich um die Crystal-Ball-Funktion, welche nach der Crystal-Ball Kollaboration benannt wurde. Diese Funktion war eine Dichtefunktion einer asymmetrischen Wahrscheinlichkeitsverteilung und war in zwei Bereiche aufgeteilt. Im zentralen Bereich entsprach sie einer Gau{\ss}form, diese ging f\"ur kleine Werte in eine Potenzreihe \"uber.
- 
- \begin{equation}
- f(x|\alpha,n,\bar{x},\sigma)=N\begin{cases}exp(-\frac{(x-\bar{x})^2}{2\sigma^2}), \textnormal{  falls $\frac{x-\bar{x}}{\sigma}> -\alpha$} \\
- A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma}\leqslant -\alpha$} 
- \end{cases}
- \label{eq:Crystal-Ball-Funktion}
- \end{equation}
- 
- Dabei war $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gab die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"ubergeht\cite{NBI15}. 
- 
- ROOT stellte diese Funktion bereits gr\"o{\ss}tenteils zur Verf\"ugung, lediglich die Normierung musste noch nachtr\"aglich hinzugef\"ugt werden.
- 
- Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
- 
- \begin{figure}[h!]
- 	\begin{center}
- 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealIntervalFitExample}
- 		
- 		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
- 			Zu erkennen ist der Untergrundfit (Blau), der Crystal-Ball-Fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
- 		}
- 		\label{fig:fitexampleenergyinterval0903}	
- 	\end{center}
- \end{figure}
- 
-  Zuerst wurde der Untergrund mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} blau dargestellt. Von den Daten konnte damit der Untergrund abgezogen werden. Nun wurde \"uber die verbleibenden Daten der Crystal-Ball-Fit angewand (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot). In dieser Abbildung  und in Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} ist ebenfalls das $\eta$-Meson bei einer Masse von ungef\"ahr 550 MeV zu erkennen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
+  In dieser Abbildung  und in Abbildung \ref{fig:Energy-Interval-Hist-All-Bins} ist ebenfalls das $\eta$-Meson bei einer Masse von ungef\"ahr 550 MeV zu erkennen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
   
  Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besa{\ss}en, wenn ja, dann handelte es sich nicht um Photonen und sie wurden nicht in das Histogramm eingef\"ugt. 
  
@@ -596,92 +715,12 @@ Der Grund daf\"ur war, dass alle Prozesse in simulierten Daten genau bekannt war
 
 So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, um leichter nach der Ursache f\"ur die Abweichung zu suchen.
 
-\subsection{Vorbereitung der Simulation}
-\label{sec:Vorbereitung-der-Simulation}
+Als erstes muss \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
+Dazu werden zwei Histogramme mit den Bedingungen aus den jeweiligen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand (Abb. \ref{fig:Simulierte-Daten-Abweichung} links) und eins ohne (Abb. \ref{fig:Sim-Data-2DHist-30-Degree-Edge}).
 
-Als erstes wurden die Daten aus dem sogenanntem Cocktail entnommen.
+Anschlie{\ss}end wird \"uber diese dann auch wieder mit der Crystal-Ball-Funktion gefittet, um die $\pi^0$ Position zu bestimmen. Alle Fits ohne Detektoren am Rand sind in Abbildung \ref{fig:Sim-No-Cut-All-Fits} und alle Fits mit Detektoren am Rand in Abbildung \ref{fig:Sim-30-Degree-Cut-All-Fits} zu sehen.
 
-Im Cocktail waren ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hatte er auch seinen Namen. Folglich waren im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. Die Zerf\"alle im Cocktail waren bereits komplett durchsimuliert, wodurch er wie eine reale Strahlzeit behandelt werden konnte.
-
-Allerdings stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enthielt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
-Deshalb wurde zun\"achst ein neues Packet mit mehr Prozessen erstellt. 
-Dieses Paket beinhaltete Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Insgesamt beinhaltete es 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie beschreibt, simuliert.
-
-Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. So dauerte das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Da man nur Photonen mit einer \"ahnlichen Energie betrachten wollte, mussten auch von diesem Packet die meisten Zerf\"alle verworfen werden. So kam es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enthielt.
- 
- Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und wurden die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch GEANT simuliert. 
-
-Damit die neue Gun auch alle relevanten Informationen beinhaltete, musste man sich folgenden Prozess anschauen.
-%Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden. 
-
-\begin{equation}
-\gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
-\end{equation}
-
-Da das einfallende Photon durch Bremsstrahlung erzeugt wurde, war seine Energie nicht eindeutig, sondern lag in einem gewissen Intervall. Also musste als erstes die Energie des Photons gew\"urfelt werden.
-
-Dann begab man sich ins Schwerpunktsystem des einfallenden Photons und des ruhenden Protons $p$. 
-Von diesem System konnte dann die Schwerpunktsenergie $\sqrt{s}$ ausgerechnet werden.
-
-\begin{equation}
-\sqrt{s}= \sqrt{2E_{\gamma}m_p+2m_p^2}
-\end{equation}
-
-Anschlie{\ss}end wurde angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wurde, wurde auch wieder mit einem Zufallsgenerator bestimmt. 
-
-Aufgrund der Impulserhaltung musste gelten, dass der Impuls des Protons in die entgegengesetzte Richtung zum $\pi^0$ zeigte, und dass der Betrag der beiden Impulse gleich sein muss. Auch musste aufgrund der Energieerhaltung gelten, dass die Energie der beiden Teilchen addiert gleich der Schwerpunktsenergie war. Es lagen also die folgenden Formeln vor:
-
-
-\begin{equation}
-	|\overrightarrow{p_{\pi^0}}|=|\overrightarrow{p_p}| = |\overrightarrow{p}| \textnormal{  und  } \sqrt{s}=\sqrt{m_{\pi^0}^2+\overrightarrow{p}^2} + \sqrt{m_{p}^2+\overrightarrow{p}^2}
-\end{equation}
-
-
-Diese Gleichung konnte nach dem Impuls $|\overrightarrow{p}|$ aufgel\"ost werden. Da die Masse der beiden Teilchen bekannt war, konnte ihr Impuls und damit auch ihre Energie über $E=\sqrt{m^2+p^2}$ ausgerechnet werden. 
-
-Weiter musste angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abw\"agig, die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also war die Annahme berechtigt.
-
-Um die Photonen zu erzeugen, begab man sich ins Ruhesystem des $\pi^0$.Dann wurde eine zuf\"allige Richtung bestimmt, in dem ein Photon ausgestrahlt wird. Das andere Photon wurde in die genau entgegengesetzte Richtung ausgestrahlt. Anschlie{\ss}end verlie{\ss} man wieder das Ruhesystem, dazu erhielten die beiden Photonen den Boost des $\pi^0$. 
-\newline
-
-
-In diesem Tool wurde die Energie des Strahls in einem homogenen Intervall gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Photonen, welche durch Bremsstrahlung erzeugt werden, nicht gleichm\"a{\ss}ig ist, sondern in dem im Experiment betrachtetem Intervall eher an eine $1/x$-Verteilung erinnert. Folglich wurden in meinem Tool deutlich mehr hochenergetische Bremsstrahlphotonen erzeugt. Dies st\"orte allerdings nicht weiter, da in diesen Untersuchungen nur sichergestellt werden musste, das alle im Experiment auftretenden Photonen auch in der Simulation auftreten.
-
-Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden musste und die neue Gun einer alten basierte, wurde zun\"achst auf das bereits benutzte TRandom aus ROOT zur\"uckgegriffen. Dieses besa{\ss} eine Periodizit\"at von $10^9$ und ben\"otigte zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet war, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstanden, was darauf hindeutete, dass der Generator immmer wieder die gleichen Prozesse w\"urfelte (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). Folglich musste es ausgetauscht und durch das ebenfalls von ROOT bereitgestellten TRandom3 ersetzt werden. Dieser hatte mit $10^{6000}$ eine deutlich höhere Periodizität als TRandom. Zwar ben\"otigte er mit 45 ns pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entsprach die Verteilung mehr der erwarteten. Zu sehen ist dies rechts in der Abbildung.
-
-Schlie{\ss}lich musste noch überprüft werden, ob die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wurde die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt war, dadurch war ein einfacherer Vergleich möglich. 
-
-\begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_New}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
-	\end{minipage}
-	
-	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
-	\label{fig:Vergleich-der-beiden-Guns}
-\end{figure}
-
-In Abbildungen \ref{fig:Vergleich-der-beiden-Guns} erkennt man, dass sich die Form der Verteilung stark ähneln. Also konnte angenommen werden, dass die neue $\pi^0$-Gun wie gewünscht funktionierte.
-
-
-
-%Nach einer gr\"o{\ss}eren Simulation mit 1000 Paketen, welche jeweils 10000 Prozesse beinhalteten, insgesamt also 10 Millionen Prozesse, stellte sich allerdings heraus, dass die Verteilung der Ereignisse nicht wie erwartet war.
-
-
-
-
-Als nächstes musste noch \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftrat. 
-Dazu wurden zwei Histogramme mit den Bedingungen aus den jeweiligen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand (Abb. \ref{fig:Simulierte-Daten-Abweichung} links) und eins ohne (Abb. \ref{fig:Sim-Data-2DHist-30-Degree-Edge}).
-
-Anschlie{\ss}end wurde \"uber diese dann auch wieder mit der Crystal-Ball-Funktion gefittet, um die $\pi^0$ Position zu bestimmen. Alle Fits ohne Detektoren am Rand sind in Abbildung \ref{fig:Sim-No-Cut-All-Fits} und alle Fits mit Detektoren am Rand in Abbildung \ref{fig:Sim-30-Degree-Cut-All-Fits} zu sehen.
-
-Auch hier wurden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich in einen einzelnen Graphen gezeichnet.
+Auch hier werden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich in einen einzelnen Graphen gezeichnet.
 
 \begin{figure}[h!]
 	\centering
@@ -694,12 +733,12 @@ Auch hier wurden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimBothDeviation}
 	\end{minipage}
-\caption{Links ist als Beispiel das Histogramm aus den simulierten Daten dargestellt. Für dieses Histogramm galt die Bedingung, dass auch die Detektoren am Rand berücksichtigt wurden. Rechts sind die Abweichungen vom $\pi^0$-Peak mit (rot) und ohne (schwarz) Berücksichtigung der Detektoren am Rand.}
-\label{fig:Simulierte-Daten-Abweichung}
+	\caption{Links ist als Beispiel das Histogramm aus den simulierten Daten dargestellt. Für dieses Histogramm gilt die Bedingung, dass auch die Detektoren am Rand berücksichtigt werden. Rechts sind die Abweichungen vom $\pi^0$-Peak mit (rot) und ohne (schwarz) Berücksichtigung der Detektoren am Rand zu sehen.}
+	\label{fig:Simulierte-Daten-Abweichung}
 \end{figure}
 %An den beiden Histogrammen erkennt man, dass es sich bei den verwendeten Daten um Simulierte gehandelt hat, da der $\eta$-Peak nicht vorhanden ist. Man hat nur noch einen Peak bei $\pi^0$. 
 
- 
+
 
 %Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so eingestellt, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma\ $ Prozesse betrachtet wurden.
 
@@ -973,7 +1012,7 @@ Anschlie{\ss}end wurde versucht die Position der Hot-Crystals auch auf dieser Ka
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitClusterSize0MarkerMap}
+		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map100MeV}
 		\caption{Crystal-Ball Map f\"ur eine Photonenenergie von 0 MeV bis 100 MeV. Makiert sich die gleichen Kristalle, wie in Abbildung \ref{fig:Markierte-Hot-Crystals} und in lila zwei weitere tote Kristalle}
 		\label{fig:Makierte-Kristalle-Map}
 	\end{center}
@@ -983,9 +1022,26 @@ Wie in Abbildung \ref{fig:Makierte-Kristalle-Map} zu sehen ist, handelte es sich
 
 Die violett umkreisten Detektoren sind auch tote Kristalle, diese verhalten sich allerdings anders, als die rot eingekreisten, da sie in Abbildung \ref{fig:Markierte-Hot-Crystals} nicht auffallen.
 
-Wenn man sich nun diese Karten mit durch Monte-Carlo generierten Daten anschaut, f\"allt auf, dass die Nachbarn der toten Kristalle auch bei nierdriegen Energien nicht aufleuchten. Sie verhalten sich wie zu erwarten war.
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map100MeV}
+		
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map400MeV}
+	\end{minipage}
+	\caption{ Es sind die gleichen Kristalle, wie in der vorherigen Abb. markiert. Allerdings sind die Kristalle die vorher rot makiert waren, hier gr\"un makiert, da man sie sonst nicht erkennen kann. }
+\end{figure}
 
-Die Ursache dieses Ph\"amomens muss noch bestimmt werden.
+
+
+Wenn man sich nun diese Karten mit durch Monte-Carlo generierten Daten anschaut, f\"allt auf, dass die Nachbarn der toten Kristalle auch bei nierdriegen Energien nicht aufleuchten. Sie verhalten sich wie zu erwarten war. Das hei{\ss}t es ist sehr wahrscheinlich, dass die Hardware gest\"ort ist. 
+
+Die genaue Ursache dieses Ph\"amomens muss allerdings noch bestimmt werden.
 
 
 
@@ -1000,7 +1056,7 @@ Die Ursache dieses Ph\"amomens muss noch bestimmt werden.
 	\hfill
 	\begin{minipage}{0.45\textwidth}
 		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitDeadCrystalMarkedMap}
+		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map400MeV}
 	\end{minipage}
 	\caption{ Es wurden die gleichen Kristalle, wie in der vorherigen Abb. markiert, allerdings ist die Photonenenergie hier von 300 MeV bis 400 MeV.}
 	
@@ -1011,6 +1067,23 @@ F\"ur h\"ohere Energien verhielten sich alle Nachbarn von toten Kristallen wie e
 Da diese St\"orung auch nur f\"ur niedrige Energien auftritt, ist sie bei der Betrachtung der Abweichung vom $\pi^0$-Peak f\"ur Photonen mit \"ahnlicher Energie nicht weiter wichtig gewesen, da die starke Abweichung nur f\"ur Photonenenergien auftritt, die gr\"o{\ss}er als 300 MeV sind.
 
 \section{$\phi$-Verteilung im Crystal-Ball}
+
+Auch ist die Verteilung, welche die Photonen im Crystal-Ball haben, sehr ungew\"ohnlich.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/ThetaPhiVerteilung/20172404ThetaPhi200MeVBeam}
+		\caption{Verteilung der Photonen im Crystal-Ball}
+		\label{fig:Verteilung-der-Photonen-im-CB}
+	\end{center}
+\end{figure}
+Zu sehen ist diese Verteilung in Abbildung \ref{fig:Verteilung-der-Photonen-im-CB}. Eigentlich w\"urde man erwarten, dass sich die Photonen unabh\"angig vom $\phi$-Winkel im Raum verteilen. Das liegt daran, das der eingehende Photonenstrahl in z-Richtung verl\"auft, und damit werden alle anschlie{\ss}end entstehenden Teilchen in z-Richtung geboostet. Folglich sind sie unabh\"angig von $\phi$. 
+Allerdings sieht man in dieser Abbildung, dass die meisten Teilchen in der unteren H\"alfte des Crystal-Balls bei einem $\phi$ Winkel von ca. -100$^{\circ}$ detektiert werden.
+
+Als Ursache f\"ur diese Verteilung werden die Neutronen vermutet, die durch hochenergetische Elektronen im Beam-Dump ausgel\"ost werden. 
+
+Auch hierf\"ur muss die genaue Ursache noch herausgefunden werden.
+
 
 %_______________________________________________________________________________
 \chapter{Zusammenfassung und Ausblick}
@@ -1113,20 +1186,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \end{figure}
 
 
-\begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20171104BadRandomGenerator}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
-	\end{minipage}
-\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe \ref{sec:Z-Vertex-Abhaengigkeit}}
-\label{fig:Random-Verteilung}
-\end{figure}
+
 
 
 
