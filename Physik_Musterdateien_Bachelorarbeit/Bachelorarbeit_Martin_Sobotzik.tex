@@ -387,9 +387,9 @@ R_M = 21 \textnormal{ MeV}\cdot \frac{X_0}{E_c}
 \chapter{Vorbereitung}
 
 \section{Umstellung auf die Crystal-Ball-Fitfunktion}
-Um die Masse des $\pi^0$ zu bestimmen, werden Histogramme erzeugt. Auf einer Achse dieser Histogramme wird die mit Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} errechnete invariante Masse aufgetragen. Anschlie{\ss}end wird \"uber diese Hstogramme mit einer Funktion gefittet.
+Um die Masse des $\pi^0$ zu bestimmen, werden Histogramme erzeugt. Auf einer Achse dieser Histogramme wird die mit Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} errechnete invariante Masse aufgetragen. Anschlie{\ss}end wird \"uber diese Histogramme mit einer Funktion gefittet.
 
-Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses ist eine Kombination aus einer Gau{\ss}funktion und einer Potenzreihe vierten Grades. Allerdings entspricht die Form des $\pi^0$-Peaks nicht der einer Gau{\ss}verteilung, weswegen nach einer alternativen Fitfunktion gesucht werden muss. 
+Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses ist eine Kombination aus einer Gau{\ss}funktion und einem Polynom vierten Grades. Allerdings entspricht die Form des $\pi^0$-Peaks nicht der einer Gau{\ss}verteilung, weswegen nach einer alternativen Fitfunktion gesucht werden muss. 
 
 Bei dieser neuen Funktion handelt es sich um die Crystal-Ball-Funktion, welche nach der Crystal-Ball Kollaboration benannt ist. Diese Funktion ist eine Dichtefunktion einer asymmetrischen Wahrscheinlichkeitsverteilung und ist in zwei Bereiche aufgeteilt. Im zentralen Bereich entspricht sie einer Gau{\ss}form, diese geht f\"ur kleine Werte in eine Potenzreihe \"uber.
 
@@ -404,7 +404,7 @@ Dabei ist $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ d
 
 ROOT stellt diese Funktion bereits gr\"o{\ss}tenteils zur Verf\"ugung, lediglich die Normierung muss noch hinzugef\"ugt werden.
 
-Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewand wurde.
+Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, bevor die Crystal-Ball-Funktion angewandt wurde.
 
 \begin{figure}[h!]
 	\begin{center}
@@ -439,20 +439,20 @@ Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung bes
  Hier erkennt man direkt, dass sich der Untergrund vermindert hat, sodass die beiden Peaks deutlich zu erkennen sind. Daraus folgt, dass auch besser \"uber diese Peaks gefittet werden kann.
 
 
-\section{Umstellung auf eine neue $\pi^0$-Gun}
+\section{Umstellung auf einen neun Ereignisgenerator}
 \label{sec:Vorbereitung-der-Simulation}
 
 Da viele Informationen \"uber die Prozesse nicht im Detektor bestimmt werden k\"onnen, ist es hilfreich, auf Simulationen zur\"uckzugreifen. Daf\"ur liegen verschiedene Packete zur Verf\"ugung, in denen unterschiedliche Prozesse simuliert wurden.
 
 So gibt es bereits vorgefertigte Pakete, wie den Cocktail.
-Im diesem sind ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten, daher hat er auch seinen Namen. Folglich sind im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. 
+Im diesem sind ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten. Folglich sind im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. 
 
 Die Zerf\"alle im Cocktail sind bereits komplett durchsimuliert, wodurch er wie eine reale Strahlzeit behandelt werden kann.
 
 Da in dieser Arbeit der Hauptaugenmerk auf Photonen liegt, die eine \"ahniche Energie besitzen, stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enth\"alt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
 
 Deshalb wurde zun\"achst ein neues Packet mit mehr Prozessen erstellt. 
-Dieses Paket beinhaltet 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Partikeln durch Materie beschreibt, simuliert.
+Dieses Paket beinhaltet 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Teilchen durch Materie beschreibt, simuliert.
 
 Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. So dauerte das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Da nur Photonen mit einer \"ahnlichen Energie betrachtet, m\"ussen auch von diesem Packet die meisten Zerf\"alle verworfen werden. So kommt es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enth\"alt.
 
@@ -486,7 +486,7 @@ Aufgrund der Impulserhaltung muss gelten, dass der Impuls des Protons in die ent
 
 Diese Gleichung kann nach dem Impuls $|\overrightarrow{p}|$ aufgel\"ost werden. Da die Masse der beiden Teilchen bekannt ist, kann ihr Impuls und damit auch ihre Energie über $E=\sqrt{m^2+p^2}$ ausgerechnet werden. 
 
-Weiter muss angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abw\"agig, da die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also ist die Annahme berechtigt.
+Weiter muss angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abwegig, da die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also ist die Annahme berechtigt.
 
 Um die Photonen zu erzeugen, begiebt man sich nun in das Ruhesystem des $\pi^0$. Dann wird eine zuf\"allige Richtung bestimmt, in dem ein Photon ausgestrahlt wird. Das andere Photon wird in die genau entgegengesetzte Richtung ausgestrahlt. Anschlie{\ss}end verl\"asst man wieder das Ruhesystem, dazu erhalten die beiden Photonen den Boost des $\pi^0$. 
 \newline
@@ -509,7 +509,7 @@ Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt w
 		\centering
 		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
 	\end{minipage}
-	\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe \ref{sec:Z-Vertex-Abhaengigkeit}}
+	\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}}
 	\label{fig:Random-Verteilung}
 \end{figure}
 
@@ -530,7 +530,7 @@ Schlie{\ss}lich muss noch überprüft werden, ob die Form der Verteilung der neu
 		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
 	\end{minipage}
 	
-	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
+	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der $\theta$-Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
 	\label{fig:Vergleich-der-beiden-Guns}
 \end{figure}
 
@@ -695,7 +695,7 @@ Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.:
 
 Zum besseren Vergleich der beiden Ergebnisse wurden die relative Abweichungen mit und ohne Bedingung zusammen in einen Graphen gezeichnet. 
 
-In diesem (Abb.\ref{fig:Vernachlaessigung-Detektoren-am-Rand}) erkennt man, dass der Unterschied f\"ur Photonenenergien unterhalb von 275 MeV nur sehr klein ist und weniger als 0,2\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30$^{\circ}$ eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
+In der Abbildung\ref{fig:Vernachlaessigung-Detektoren-am-Rand} erkennt man, dass der Unterschied f\"ur Photonenenergien unterhalb von 275 MeV nur sehr klein ist und weniger als 0,2\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30$^{\circ}$ eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
 
 F\"ur Photonenenergien oberhalb von ca. 275 MeV ist eine deutliche Verbesserung der Abweichung zu erkennen. So betrug der Unterschied teilweise fast 2\%.
 
@@ -707,7 +707,7 @@ Gibt man dem $\pi^0$ nun einen Boost in z-Richtung, so erhalten auch die beiden 
 Zur Veranschaulichung betrachte man nun zwei extrem Beispiele:
 
 \begin{enumerate}
-	\item Im Ruhesystem des $\pi^0$ werden die Photonen in einem Winkel von 90$^{\circ}$ zur Strahlenachse ausgesandt. Wird nun ein Boost in z-Richtung angewandt, so erhalten beide Photonen einen gleich gro{\ss}en Impuls in z-Richtung und haben folglich beide die gleiche Energie und den gleichen Winkel zur z-Achse. Dieser Winkel wird kleiner, wenn der Boost str\"arker wird.
+	\item Im Ruhesystem des $\pi^0$ werden die Photonen in einem Winkel von 90$^{\circ}$ zur Strahlenachse ausgesandt. Wird nun ein Boost in z-Richtung angewandt, so erhalten beide Photonen einen gleich gro{\ss}en Impuls in z-Richtung und haben folglich beide die gleiche Energie und den gleichen Winkel zur z-Achse. Dieser Winkel wird kleiner, wenn der Boost st\"arker wird.
 	\item Werden die Photonen allerdings entlang der z-Achse ausgesandt, so bewirkt ein Boost in z-Richtung nun, dass das Photon in z-Richtung Energie dazu erh\"alt, w\"ahrend das Photon entgegengesetzt zur z-Richtung Energie '\textit{verliert}'. Die Energiedifferenz nimmt also zu.
 \end{enumerate}
 
@@ -732,10 +732,10 @@ Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energeti
 	\label{fig:Verteilung-im-CB}
 \end{figure}
 
-In diesen Abbildungen erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
+In den Plots in Abbildung \ref{fig:Verteilung-im-CB} erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
 
 Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand lag die Vermutung nahe, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. 
-Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren, sondern nur bis zu zwei Prozent. 
+Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren. 
 Aussagen \"uber die Detektoren am Strahleneingang konnten ebenfalls nicht getroffen werden, da diese, im Vergleich zum Strahleneingang, nur sehr selten getroffen wurden.
 
 Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
@@ -1042,7 +1042,7 @@ In Abbildung \ref{fig:Markierte-Hot-Crystals} ist die Verteilung der registriert
 Um sich nun besser orientieren zu k\"onnen, wurde mit den gleichen Daten eine Karte des Crystal-Balls gef\"ullt, auf der jeder Detektor dargestellt war.
 
 
-Anschlie{\ss}end wurde versucht die Position der Hot-Crystals auch auf dieser Karte zu finden und zuzuordnen.
+Anschlie{\ss}end wurde versucht die Position der Hot-Crystals auch auf Crystal-Ball Karte zu finden und zuzuordnen.
 
 
 
