@@ -166,7 +166,7 @@ D-55128 Mainz\\
 
 %_______________________________________________________________________________
 \chapter{Einleitung}
-In der folgenden Arbeit werden natürliche Einheiten verwendet, d.h. $\hbar=c=1$.
+
 \section{Motivation}
 {
 	Diese Bachelorarbeit beschäftigt sich mit Studien zur Kalibrierung des Crystal-Ball Detektors der A2-Kollaboration am Institut für Kernphysik an der Johannes-Gutenberg-Universität.
@@ -177,7 +177,7 @@ In der folgenden Arbeit werden natürliche Einheiten verwendet, d.h. $\hbar=c=1$
 	Der Crystal-Ball besteht aus 672 Natriumiodid Kristallen, die als Detektoren dienen und damit ca. 94\% des Raumwinkels abdecken.
 	Er besitzt zwei Bereiche ohne Detektor die als Strahlenein und -ausgang vorheriger Experimente fungierten.
 	
-	Um die Detektoren nun zu kalibrieren, betrachtet man folgende Prozesse:
+	Um die gemessene Energie Detektoren nun zu kalibrieren, betrachtet man folgende Prozesse:
 \begin{equation}
 	\gamma + p \rightarrow p + \pi^0
 	\label{eq.gammascattering}
@@ -188,8 +188,8 @@ Bei diesem Prozess absorbiert ein Proton $p$ ein hochenergetischen Photon $\gamm
 		\pi^0\rightarrow \gamma \gamma
 		\label{eq.pi0decay}
 	\end{equation}
-Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^- \gamma$. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter $10^{-5}$\% aufweisen. Im Crystal-Ball werden, sowohl die Energie der Photonen, als auch ihr Auftreffort bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lässt.
-Laut Literatur betr\"agt diese Masse 135 MeV \cite{PDG16}, folglich werden die Detektoren so eingestellt, dass sich der errechnete $\pi^0$-Peak bei dieser Masse befindet. 
+Das $\pi^0$-Meson zerfällt direkt zu 98,8\% in zwei Photonen und zu ca. 1,2\% in $e^+e^- \gamma$. Andere Modi können vernachlässigt werden, da sie nur Wahrscheinlichkeiten von unter $10^{-5}$\ aufweisen. Im Crystal-Ball werden, sowohl die Energie der Photonen, als auch ihr Auftreffort bestimmt, woraus sich die invariante Masse des $\pi^0$ berechnen lässt.
+Laut Literatur betr\"agt diese Masse ca. 135 MeV\footnote{Es werden in der ganzen Arbeit nat\"urliche Einheiten verwendet} \cite{PDG16}, folglich werden die Detektoren so eingestellt, dass sich der errechnete $\pi^0$-Peak bei dieser Masse befindet. 
 
 Das Hauptaugenmerk dieser Arbeit liegt bei der Untersuchung der Energieabh\"angigkeit des Crystal-Ball-Detektors. Es wird untersucht, wie sich die Kalibrierung des Detektors f\"ur verschiedene Energien verh\"alt und es wird nach der Ursache f\"ur diese Abweichungen gesucht. 
 %Eine Problematik ergab sich allerdings dadurch, dass zum Beispiel, ein Photon nicht seine gesamte Energie an einen Detektorkristall überträgt, sondern auch an die umliegenden. Nun hat aber nicht jeder Detektor gleich viele Nachbarn. Die Detektoren am Rand des Strahlenein- und ausgangs haben weniger Nachbarn, als die restlichen Detektoren. Folglich konnten sie nicht sehr gut kalibriert werden, da die Energie des Photons, welches diese Detektoren traf nicht vollständig bekannt war.
@@ -226,7 +226,7 @@ Die A2-Kollaboration untersucht vor allem die Struktur von Nukleonen mit Hilfe v
 \begin{figure}[h!]
 	
 	\includegraphics{grundriss}
-	\caption{Grundriss der Beschleunigeranlage MAMI. Zu sehen sind die drei RTMs, der HDSM der Tagger und die verschiedenen Experimentierhallen: A1 (Elektronenstreuung), A2 (Strukturanalyse von Nukleonen), A4 (Parit\"atsverletzung) und X1 (R\"ontgenstrahlung). \cite{KPh07}}
+	\caption[Grundriss der MAMI-Anlage]{Grundriss der Beschleunigeranlage MAMI. Zu sehen sind die drei RTMs, der HDSM der Tagger und die verschiedenen Experimentierhallen: A1 (Elektronenstreuung), A2 (Strukturanalyse von Nukleonen), A4 (Parit\"atsverletzung) und X1 (R\"ontgenstrahlung). \cite{KPh07}}
 	\label{fig.grundriss_anlage}
 \end{figure}
 
@@ -240,7 +240,7 @@ Im Laufe der Jahre wurde das MAMI um zwei weitere RTMs und einem HDSM\footnote{H
 Um unpolarisierte Elektronen zu erzeugen, wird eine Glühkathode auf 1000$^{\circ}$C erhitzt. Dadurch können Elektronen den Heizdraht aufgrund ihrer thermischen Bewegung verlassen. Diese Elektronen werden dann durch ein elektrisches Feld, welches zwischen einer heißen Kathode und einer Anode, erzeugt wird, zur Anode beschleunigt und treten dann durch ein Loch in der Anode aus und werden weiter durch einen Linearbeschleuniger mit einer Frequenz von 2,45 GHz auf ca. 3,5 MeV beschleunigt. Diese Frequenz ist für das MAMI typisch und macht es zu einem Dauerstrich-Elektronen-Beschleuniger. Das heißt die Frequenz, mit der die Elektronen-Pakete auftreten, ist größer, als die Frequenz, mit der die Detektoren einzelne Events auflösen können und somit wirkt der Strahl für die Detektoren kontinuierlich.
 Am MAMI ist es auch m\"oglich einen spinpolarisierten Elektronenstrahl zu erzeugen, dazu wird ein GaAs Kristall mit polarisiertem Laserlicht bestrahlt. 
 
-F\"ur die Experimente der A2-Kollaboration ist ein unpolarisierter Strahl allerdings ausreichend.
+Die Strahlzeit, welche in dieser Arbeit untersucht wird, besa{\ss} einen unpolarisierten Strahl.
 \newline
 Da die Elektronen mit einem Linearbeschleuniger nur einige MeV pro Meter beschleunigt werden k\"onnen, und man keine kilometerlangen Strecke bauen wollte, entschied man sich daf\"ur, die Elektronen mehrmals durch den gleichen Beschleunigerabschnitt zu beschleunigen. Dazu werden sie nachdem sie beschleunigt wurden, durch zwei 180$^{\circ}$ Dipole so umgeleitet, dass sie wieder am Anfang des Beschleunigerabschnitts sind und diese Bahn abermals durchlaufen können. Nun besitzen die Elektronen allerdings mehr Energie und werden in einer Bahn mit gr\"o{\ss}erem Radius durch die Dipole geleitet bis die gew\"unschte Energie erreicht wird und der Strahl in den n\"achsten Abschnitt umgeleitet wird. Die Struktur eines RTM erinnert an eine antike Pferderennbahn, daher hat es auch seinen Namen.
 
@@ -254,7 +254,7 @@ Wie bereits erw\"ahnt besitzt MAMI drei dieser RTMs. Die erste Stufe MAMI A best
 \begin{figure}[h!]
 	\begin{center}
 	\includegraphics{RTM}	
-	\caption{Prinzip eines RTM: Der Elektronenstrahl wird immer wieder durch den Linearbeschleuniger geschickt, bis die gew\"unschte Energie erreicht wird und der Strahl mittels eines sogenannten Kicker-Magnet zum n\"achstem Abschnitt weiter geleitet wird.\cite{KPh07} }
+	\caption[Prinzip eines RTM]{Prinzip eines RTM: Der Elektronenstrahl wird immer wieder durch den Linearbeschleuniger geschickt, bis die gew\"unschte Energie erreicht wird und der Strahl mittels eines sogenannten Kicker-Magnet zum n\"achstem Abschnitt weiter geleitet wird.\cite{KPh07} }
 	\label{fig.RTM}
 \end{center}
 \end{figure}
@@ -284,12 +284,14 @@ Zwar wird der Rest von MAMI mit einer Hochfrequenz von 2,45 GHz betrieben, aller
 	
 		\end{tabular}
 
-		\caption{Technische Daten der MAMI-Beschleunigerstufen \cite{Un08}}
+		\caption[Technische Daten der Mamibeschleunigerstufen]{Technische Daten der MAMI-Beschleunigerstufen \cite{Un08}}
 		\label{tab.MAMIstufen}
 
 \end{table}
 
  Am Ende der Beschleunigung besitzt der Elektronenstrahl eine Energie von ca. 1,6 GeV. Diese kann in Schritten von etwa 15 MeV eingestellt werden. Sein Durchmesser liegt im Mikrometerbereich, was sehr gute Voraussetzungen f\"ur Pr\"azisionsexperimente sind.\cite{KPh07}. 
+ 
+ Das MAMI ist mit \"uber 7000 Stunden im Jahr ca. 81\% des Jahres in Betrieb. Fast 6000 Stunden der Betriebszeit werden f\"ur Experimente genutzt. Wegen technischer Ausf\"alle ist MAMI ca. 200 Stunden pro Jahr au{\ss}er Betrieb. Die restliche Zeit wird zur Vorbereitung und Weiterentwicklung der Beschleunigeranlage genutzt.\cite{KPh11B}
  
  
  \section{Die Photonenmarkierungsanlage}
@@ -301,10 +303,10 @@ Zwar wird der Rest von MAMI mit einer Hochfrequenz von 2,45 GHz betrieben, aller
  \end{equation}
   Der R\"ucksto{\ss} des Kerns kann aufgrund seiner gro{\ss}en Masse vernachl\"assigt werden und die Energie der Photonen kann anschlie{\ss}end mit folgender Formel berechnet werden:
   \begin{equation}
-  E_{\gamma}= E_{e^{}}-E_{e^-}
+  E_{\gamma}= E_{e^{}}-E{'}_{e}
   \label{eq.Photonenenergie}
   \end{equation}
- Dabei ist $E_e$ die Energie des Elektronenstrahls und $E_{e^-}$ die Energie der gestreuten Elektronen, welche durch den Glasgow-Mainz-Tagger (siehe Abbilding \ref{fig.TAGGER}) bestimmt wird.
+ Dabei ist $E_e$ die Energie des Elektronenstrahls und $E'_{e}$ die Energie der gestreuten Elektronen, welche durch den Glasgow-Mainz-Tagger (siehe Abbilding \ref{fig.TAGGER}) bestimmt wird.
  % dieser trennt zus\"atzlich den Photonen- von dem Elektronenstrahl. Durch einen Dipol wurden die Elektronen ohne Bremsstrahlung, das hei{\ss}t ohne Energieverlust, abgelenkt und, je nach Energie, auf einen bestimmten Abschnitt des Tagger-Elektronenleiters fokussiert.  
  Dieser ist ein impulsselektierendes, magnetisches Spektrometer, in dem ein magnetisches Feld angelegt ist, welches die Elektronen auf Fokalebene lenkt, hinter der sich die Tagger-Elektronenleiter befindet. Dadurch wird zus\"atzlich der Elektronenstrahl von dem Photonenstrahl getrennt. Dieses Magnetfeld ist außerdem so eingestellt, dass Elektronen, welche keine Energie durch Bremsstrahlung verloren haben, direkt in den Strahlenfang\footnote{engl. Beam-Dump} abgelenkt werden. Die restlichen Elektronen werden dann, je nach Impuls, auf einen anderen Abschnitt der Tagger-Leiter fokussiert
  
@@ -317,9 +319,9 @@ Zwar wird der Rest von MAMI mit einer Hochfrequenz von 2,45 GHz betrieben, aller
 \newline 
 \begin{figure}[h!]
 	\begin{center}
-	\includegraphics{TAGGER}
+	\includegraphics{TAGGER-New}
 	
-	\caption{Der Glasgow-Mainz-Tagger: Am Radiator entstehen durch Bremsstrahlung Photonen, welche den Kollimator passieren und auf das Target treffen. Die Elektronen werden durch den Dipol auf den Elektronenleiter abgelenkt, wodurch sich ihre Energie bestimmen lässt.\cite{Un08}}
+	\caption[Prinzip des Glasgow-Mainz-Taggers]{Der Glasgow-Mainz-Tagger: Am Radiator entstehen durch Bremsstrahlung Photonen, welche den Kollimator passieren und auf das Target treffen. Die Elektronen werden durch den Dipol auf den Elektronenleiter abgelenkt, wodurch sich ihre Energie bestimmen lässt.\cite{Un08}}
 \label{fig.TAGGER}	
 \end{center}
 \end{figure}
@@ -331,13 +333,13 @@ Nach seiner Erzeugung trifft der Photonenstrahl auf ein ca. 10 cm langes Flüssi
 	\begin{center}
 		\includegraphics{crystal_ball}
 	
-		\caption{Anordnung des Detektorsystems: Im Zentrum des sph\"arischen Kalorimeters (CB) befinden sich der Detektor zur Teilchenidentifikation (PID) und zwei zur Bestimmung der Teilchen-Trajektorie (MWPC). Die TAPS-Wand befindet sich am Ausgang des CB und sorgt daf\"ur, dass der CB einen Raumwinkel von fast 4$\pi$ abdeckt.\cite{We13}}
+		\caption[Anordnung des Detektorsystems] {Anordnung des Detektorsystems: Im Zentrum des sph\"arischen Kalorimeters (CB) befinden sich der Detektor zur Teilchenidentifikation (PID) und zwei zur Bestimmung der Teilchen-Trajektorie (MWPC). Die TAPS-Wand befindet sich am Ausgang des CB und sorgt daf\"ur, dass der CB einen Raumwinkel von fast 4$\pi$ abdeckt.\cite{We13}}
 		\label{[fig.crystal_ball]}	
 \end{center}
 \end{figure}
 
 \subsection{Der Crystal-Ball-Detektor}
-Ursprünglich wurde der Crystal-Ball Detektor Anfang der 70er Jahre am SPEAR\footnote{Stanford Positron Electron Asymmetric Ring} zur Entdeckung des $J/\Psi$-Mesons entwickelt. Später wurde mit seiner Hilfe das Bottom-Quark am DESY\footnote{Deutsches Elektronen-Synchrotron} und die Baryonenresonanzen am BNL\footnote{Brookhaven National Laboratory} untersucht.
+Ursprünglich wurde der Crystal-Ball Detektor Anfang der 70er Jahre am SLAC\footnote{Stanford Linear Accelerator Center} entwickelt und zur Untersuchung des $J/\Psi$-Mesons am SPEAR\footnote{Stanford Positron Electron Asymmetric Ring} eingesetzt. Später wurde mit seiner Hilfe das Bottom-Quark am DESY\footnote{Deutsches Elektronen-Synchrotron} und die Baryonenresonanzen am BNL\footnote{Brookhaven National Laboratory} untersucht.
 Seit November 2002 steht der Crystal-Ball Detektor der A2-Kollaboration am MAMI für Experimente mit reellen Photonen zur Verfügung.
 \newline
 Der Crystal-Ball ist ein Kalorimeter, bestehend aus 672 Natriumiodid (NaI) Szintillatoren, welche so angeordnet sind, dass 93,3\% des Raumwinkels abgedeckt werden. Die Geometrie basiert auf der Form eines Ikosaeders, ein W\"urfel bestehend aus 20 gleichgro{\ss}en gleichseitigen Dreiecken. Jedes dieser Dreiecke ist weiter aufgeteilt in vier kleinere gleichseitige Dreiecke, welche wiederum jeweils in neun gleichseitige Dreiecke unterteilt sind. Somit ergeben sich 720 gleichseitige Fl\"achen. Aufgrund der hohen Anzahl der Fl\"achen erinnert der Crystal-Ball an eine Hohlkugel mit einem Au{\ss}enradius von ca. 66 cm und einen Innenradius von ca. 25 cm. 
@@ -352,9 +354,11 @@ Der PID besitzt eine zylindrische Form mit einem Durchmesser von 116,5 mm und be
 
 Au{\ss}erhalb des PIDs sind die MWPCs angebracht. Dabei handelt es sich um zwei, aus Anodendr\"ahten aufgebauten, Protortionalz\"ahler in Form von Zylindern. Die Anodendr\"ahte sind parallel zur Strahlenachse ausgerichtet und befinden sich zwischen zwei Lagen von spiralf\"ormigen Kathodenstreifen. 
 
-Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei '\textit{L\"ocher}' f\"ur einen Strahleneingang und -ausgang besitzt, wurde die TAPS-Wand entwickelt. Diese deckt einen Polarwinkel zur Strahlenachse von 1,2$^{\circ}$ bis 20$^{\circ}$ ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und besteht aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. 
+Da der Crystal-Ball zwei '\textit{L\"ocher}' f\"ur den Strahlenein- und Ausgang besitzt, wurde f\"ur die Fixed-Target Experimente die TAPS-Wand entwickelt.
+%Da die A2-Kollaboraions Experimente mit einem Fixed-Target untersucht und der Crystal-Ball zwei '\textit{L\"ocher}' f\"ur einen Strahleneingang und -ausgang besitzt, wurde die TAPS-Wand entwickelt. 
+Diese deckt einen Polarwinkel zur Strahlenachse von 1,2$^{\circ}$ bis 20$^{\circ}$ ab. Sie wurde etwa 1,5 m vom Mittelpunkt des CB entfernt positioniert und besteht aus 72 PbWO$_4$ und 366 BaF$_2$ Szintillatorkristallen. 
 
-Somit kann mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt werden.
+Somit wird mit diesem Detektorsystem ein Raumwinkel von fast 97\% abgedeckt.
 
 \section{Szintillatoren}
 \label{fig:Szintillatoren}
@@ -387,6 +391,8 @@ R_M = 21 \textnormal{ MeV}\cdot \frac{X_0}{E_c}
 \chapter{Vorbereitung}
 
 \section{Umstellung auf die Crystal-Ball-Fitfunktion}
+\label{sec:CB-Funktion}
+
 Um die Masse des $\pi^0$ zu bestimmen, werden Histogramme erzeugt. Auf einer Achse dieser Histogramme wird die mit Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} errechnete invariante Masse aufgetragen. Anschlie{\ss}end wird \"uber diese Histogramme mit einer Funktion gefittet.
 
 Zum Fitten wurde zun\"anchst auf ein bereits existierendes Fitmodul zur\"uckgegriffen. Dieses ist eine Kombination aus einer Gau{\ss}funktion und einem Polynom vierten Grades. Allerdings entspricht die Form des $\pi^0$-Peaks nicht der einer Gau{\ss}verteilung, weswegen nach einer alternativen Fitfunktion gesucht werden muss. 
@@ -410,7 +416,7 @@ Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, be
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealIntervalFitExample}
 		
-		\caption{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
+		\caption[Strahlzeit: Beispielfit f\"ur die Crystal-Ball-Fitfunktion]{Beispiel eines Fits. Es handelt sich dabei um das Energieintervall von 250 MeV bis 275 MeV mit der Bedingung, dass sich die Energie der Photonen im gleichem Intervall befanden.
 			Zu erkennen ist der Untergrundfit (Blau), der Crystal-Ball-Fit (Gr\"un) und die Addition der beiden Fits (Rot). Alle weiteren Fits mit dieser Bedingung sind in Abbildung \ref{fig:similarenergyallfits} zu sehen.
 		}
 		\label{fig:fitexampleenergyinterval0903}	
@@ -433,7 +439,7 @@ Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung bes
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealUnchargedFitExample}
 	\end{center}
-\caption{Beispiel eines Fits mit reduziertem Untergrund. Sowohl der $\pi^0$-Peak bei 135 MeV, auch als der $\eta$-Peak bei 550 MeV sind deutlich zu erkennen. Alle Fits zur dieser Bedingung sind in \ref{fig:similarenergyallfitsuncharged} zu sehen.}
+\caption[Strahlzeit: Beispiel eines Fits mit reduziertem Untergrund]{Beispiel eines Fits mit reduziertem Untergrund. Sowohl der $\pi^0$-Peak bei 135 MeV, auch als der $\eta$-Peak bei 550 MeV sind deutlich zu erkennen. Alle Fits zur dieser Bedingung sind in \ref{fig:similarenergyallfitsuncharged} zu sehen.}
 \label{fig:Reduzierter-Untergrund-Fit}
 \end{figure}
  Hier erkennt man direkt, dass sich der Untergrund vermindert hat, sodass die beiden Peaks deutlich zu erkennen sind. Daraus folgt, dass auch besser \"uber diese Peaks gefittet werden kann.
@@ -445,27 +451,27 @@ Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung bes
 Da viele Informationen \"uber die Prozesse nicht im Detektor bestimmt werden k\"onnen, ist es hilfreich, auf Simulationen zur\"uckzugreifen. Daf\"ur liegen verschiedene Packete zur Verf\"ugung, in denen unterschiedliche Prozesse simuliert wurden.
 
 So gibt es bereits vorgefertigte Pakete, wie den Cocktail.
-Im diesem sind ca. 250 Millionen physikalisch m\"ogliche Prozesse enthalten. Folglich sind im Cocktail aber nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten, sondern auch alle anderen m\"oglichen. 
+Im diesem sind ca. 250 Millionen Prozesse enthalten. Allerdings sind im Cocktail nicht nur $\pi^0 \rightarrow \gamma \gamma$ enthalten.
 
-Die Zerf\"alle im Cocktail sind bereits komplett durchsimuliert, wodurch er wie eine reale Strahlzeit behandelt werden kann.
+Die Zerf\"alle im Cocktail sind bereits komplett durchsimuliert. Das hei{\ss}t, sowohl der Zerfall der Teilchen, als auch das Verhalten der Detektoren wurde simuliert, wodurch der Cocktail wie eine reale Strahlzeit behandelt werden kann.
 
 Da in dieser Arbeit der Hauptaugenmerk auf Photonen liegt, die eine \"ahniche Energie besitzen, stellte sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enth\"alt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
 
 Deshalb wurde zun\"achst ein neues Packet mit mehr Prozessen erstellt. 
 Dieses Paket beinhaltet 10 Millionen $\pi^0 \rightarrow \gamma \gamma$ Prozesse, welche durch Pluto, eine Monte-Carlo basierende Simulation, generiert wurden. Das Verhalten des Crystal-Ball Detektors wurde mittels GEANT4\footnote{Geometry And Tracking}, einer Simulation, welche das Durchdringen von Teilchen durch Materie beschreibt, simuliert.
 
-Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig war. So dauerte das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Da nur Photonen mit einer \"ahnlichen Energie betrachtet, m\"ussen auch von diesem Packet die meisten Zerf\"alle verworfen werden. So kommt es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enth\"alt.
+Das Erstellen dieses neuen Paketes nahm sehr viel Zeit in Anspruch, da das Simulieren der Detektoren sehr aufw\"andig ist. So dauert das Erstellen eines Paketes mit 100000 Prozessen etwa zwei Stunden. Da nur Photonen mit einer \"ahnlichen Energie betrachtet werden, m\"ussen auch von diesem Packet die meisten Zerf\"alle verworfen werden. So kommt es, dass selbst das Paket mit 10 Millionen Prozessen nicht genug Photonenpaare mit \"ahnlicher Energie enth\"alt, da vorallem in Kapitel \ref{sec:Z-Vertex-Abhaengigkeit} sehr viele Prozesse ben\"otigt werden.
 
-Um nun aber eine noch größere Simulation zu vermeiden, wurde eine neue $\pi^0$-Gun geschrieben, bei der die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten und die Teilchen, die sowieso verworfen w\"aren, gar nicht erst durch GEANT simuliert wurden. 
+Um nun aber eine noch größere Simulation zu vermeiden, wurde ein neuer Ereignisgenerator geschrieben, bei dem die gew\"unschten Bedingungen bereits in Pluto f\"ur einen Filter sorgten, sodass die Teilchen, welche sowieso verworfen w\"aren, gar nicht erst durch GEANT simuliert wurden. 
 
-Damit die neue Gun auch alle relevanten Informationen beinhaltet, muss man sich folgenden Prozess anschauen.
+Damit die neue Gun auch alle relevanten Informationen beinhaltet, muss folgender Prozess betrachtet werden.
 %Da man aber trotzdem keine Informationen \"uber die Prozesse verlieren wollte, mussten alle Schritte des folgendes Zerfalls einzeln untersucht und anschließend in die Gun eingebaut werden. 
 
 \begin{equation}
 \gamma \rightarrow p + \pi^0 \rightarrow p + \gamma \gamma 
 \end{equation}
 
-Da das einfallende Photon durch Bremsstrahlung erzeugt wird, ist seine Energie nicht eindeutig, sondern liegt in einem gewissen Intervall. Also muss als erstes die Energie des Photons gew\"urfelt werden.
+Da die einfallenden Photonen durch Bremsstrahlung erzeugt werden, sind ihre Energien nicht eindeutig, sondern liegen in einem gewissen Intervall. Also muss als erstes die Energie der eingehenden Photonen gew\"urfelt werden.
 
 Dann begibt man sich ins Schwerpunktsystem des einfallenden Photons und des ruhenden Protons $p$. 
 Von diesem System kann dann die Schwerpunktsenergie $\sqrt{s}$ ausgerechnet werden.
@@ -474,7 +480,7 @@ Von diesem System kann dann die Schwerpunktsenergie $\sqrt{s}$ ausgerechnet werd
 \sqrt{s}= \sqrt{2E_{\gamma}m_p+2m_p^2}
 \end{equation}
 
-Anschlie{\ss}end wird angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wird, wird auch wieder mit einem Zufallsgenerator bestimmt. 
+Anschlie{\ss}end wird angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wird, wird auch wieder mit einem Zufallsgenerator bestimmt. Die Richtung ist also im Raum gleichverteilt.
 
 Aufgrund der Impulserhaltung muss gelten, dass der Impuls des Protons in die entgegengesetzte Richtung zum $\pi^0$ zeigt, und dass der Betrag der beiden Impulse gleich sein muss. Auch muss aufgrund der Energieerhaltung gelten, dass die Energie der beiden Teilchen addiert gleich der Schwerpunktsenergie ist. Es liegen also die folgenden Formeln vor:
 
@@ -486,15 +492,15 @@ Aufgrund der Impulserhaltung muss gelten, dass der Impuls des Protons in die ent
 
 Diese Gleichung kann nach dem Impuls $|\overrightarrow{p}|$ aufgel\"ost werden. Da die Masse der beiden Teilchen bekannt ist, kann ihr Impuls und damit auch ihre Energie über $E=\sqrt{m^2+p^2}$ ausgerechnet werden. 
 
-Weiter muss angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abwegig, da die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit w\"urde es selbst mit Lichtgeschwindigkeit nur ca. 25 nm zur\"ucklegen. Also ist die Annahme berechtigt.
+Weiter muss angenommen werden, dass das $\pi^0$ instantan in zwei Photonen zerf\"allt. Diese Annahme ist nicht abwegig, da die Lebenszeit eines $\pi^0$ nur etwa $8,5 * 10^{-17}$ Sekunden betr\"agt. Somit zerf\"allt es bereits nach wenigen Nanometern. Also ist die Annahme berechtigt.
 
-Um die Photonen zu erzeugen, begiebt man sich nun in das Ruhesystem des $\pi^0$. Dann wird eine zuf\"allige Richtung bestimmt, in dem ein Photon ausgestrahlt wird. Das andere Photon wird in die genau entgegengesetzte Richtung ausgestrahlt. Anschlie{\ss}end verl\"asst man wieder das Ruhesystem, dazu erhalten die beiden Photonen den Boost des $\pi^0$. 
+Um die aus dem Zerfall entstandenen Photonen zu erzeugen, begiebt man sich nun in das Ruhesystem des $\pi^0$. Dann wird eine zuf\"allige Richtung bestimmt, in dem ein Photon ausgestrahlt wird. Das andere Photon wird in die genau entgegengesetzte Richtung ausgestrahlt. Anschlie{\ss}end verl\"asst man wieder das Ruhesystem, dazu erhalten die beiden Photonen den Boost des $\pi^0$. 
 \newline
 
 
 In diesem Tool wird die Energie des Strahls in einem homogenen Intervall gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Photonen, welche durch Bremsstrahlung erzeugt werden, nicht gleichm\"a{\ss}ig ist, sondern in dem im Experiment betrachtetem Intervall eher an eine $1/x$-Verteilung erinnert. Folglich werden in meinem Tool deutlich mehr hochenergetische Bremsstrahlphotonen erzeugt. Dies st\"ort allerdings nicht weiter, da in diesen Untersuchungen nur sichergestellt werden muss, das alle im Experiment auftretenden Photonen auch in der Simulation auftreten.
 
-Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden muss und die neue Gun auf einer alten basierte, wurde zun\"achst auf das bereits benutzte TRandom aus ROOT zur\"uckgegriffen. Dieses besitzt eine Periodizit\"at von $10^9$ und ben\"otigt zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet war, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstehen, was darauf hindeutet, dass der Generator immmer wieder die gleichen Prozesse w\"urfelt (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). 
+Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden muss und der neue Ereignisgenerator auf einem alten basiert, wurde zun\"achst auf den bereits benutzten Zufallsgenerator aus ROOT names TRandom zur\"uckgegriffen. Dieser besitzt eine Periodizit\"at von $10^9$ und ben\"otigt zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet ist, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstehen, was darauf hindeutet, dass der Generator immmer wieder die gleichen Prozesse w\"urfelt (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). 
 
 
 
@@ -509,14 +515,16 @@ Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt w
 		\centering
 		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
 	\end{minipage}
-	\caption{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}}
+	\caption[Beispiel f\"ur die Verteilung durch Zufallsgeneratoren]{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}}
 	\label{fig:Random-Verteilung}
 \end{figure}
 
 
 
-Folglich musste es ausgetauscht und durch das ebenfalls von ROOT bereitgestellten TRandom3 ersetzt werden. Dieser besitzt mit $10^{6000}$ eine deutlich höhere Periodizität als TRandom. Zwar ben\"otigt es mit 45 ns pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entspricht die Verteilung mehr der erwarteten. Zu sehen ist dies rechts in der Abbildung.
-Schlie{\ss}lich muss noch überprüft werden, ob die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wird die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist, dadurch ist ein einfacherer Vergleich möglich. 
+Folglich musste er ausgetauscht und durch den ebenfalls von ROOT bereitgestellten Zufallsgenerator namens TRandom3 ersetzt werden. Dieser besitzt mit $10^{6000}$ eine deutlich höhere Periodizität als TRandom. Zwar ben\"otigt er mit 45 ns pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entspricht die Verteilung mehr der erwarteten. Zu sehen ist dies rechts in der Abbildung.
+
+Schlie{\ss}lich muss noch überprüft werden, ob der neue Ereingisgenerator so wie der alte funktioniert. Dazu wurde der alte Generator so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist. Dadaruch war ein einfacherer Vergleich m\"oglich. 
+%die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wird die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist, dadurch ist ein einfacherer Vergleich möglich. 
 
 \begin{figure}[h!]
 	\centering
@@ -530,21 +538,21 @@ Schlie{\ss}lich muss noch überprüft werden, ob die Form der Verteilung der neu
 		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
 	\end{minipage}
 	
-	\caption{Links wurde die neue und rechts die alte Gun benutzt. Aufgetragen wurde der $\theta$-Winkel in Radiant gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Auch bei diesen Plots erkennt man, dass höherenergetische Photonen eher am Strahlenausgang vorliegen. Die beiden Pakete beinhalteten jeweils 100000 Ereignisse.}
+	\caption[Simulation: Vergleich der der Ereignisgeneratoren]{Links wird der neue und rechts der alte Ereignisgenerator benutzt. Aufgetragen ist der $\theta$-Winkel in rad gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Die beiden Pakete beinhalten jeweils 100000 Ereignisse.}
 	\label{fig:Vergleich-der-beiden-Guns}
 \end{figure}
 
-In Abbildungen \ref{fig:Vergleich-der-beiden-Guns} erkennt man, dass sich die Form der Verteilung stark ähneln. 
+In Abbildungen \ref{fig:Vergleich-der-beiden-Guns} ist der $\theta$-Winkel der durch den $\pi^0$-Zerfall ausgesandten Photonen gegen ihre Energie aufgetragen. 
 
 
-Als letzte Absicherung wurde noch aus diesen Daten direkt die invariante Masse des $\pi^0$ berechnet. 
-
+Als letzte Absicherung wurde aus den im Ereignisgenerator bestimmten Werten f\"ur die Energie der Photonen und ihrem \"Offnungswinkel die invariante Masse des $\pi^0$ berechnet.
+Man erkennt, dass sich die Verteilung sehr stark \"ahneln, was darauf hindeutet, dass beide Ereignisgeneratoren gleich funktionieren.
 \begin{figure}[h!]
 	\centering
 
 		\centering
 		\includegraphics[width=0.9\textwidth]{20172504MCTrueME1}
-		\caption{Direkte Berechnung der $\pi^0$-Masse aus den Daten der Gun.}
+		\caption[Simulation: Direkte Berechnung der $\pi^0$-Masse aus dem neuen Ereignisgenerator]{Direkte Berechnung der $\pi^0$-Masse aus den Daten des neuen Ereignissgeneratoren.}
 
 \end{figure}
 
@@ -568,6 +576,11 @@ Also konnte angenommen werden, dass die neue $\pi^0$-Gun wie gewünscht funktion
 Zerf\"allt ein $\pi^0$, so werden nach Reaktion \ref{eq.pi0decay} zwei Photonen frei. Diese Photonen werden an der A2 durch den Crystal-Ball Detektor nachgewiesen. Dabei wird, sowohl der Winkel zwischen den beiden Photonen, als auch die Energie der Photonen bestimmt, um die invariante Masse des $\pi^0$ ausrechnen zu k\"onnen.
 
 Zur Analyse wird ANT\footnote{Analysis Toolkit} benutzt. Mit diesem Programm konnten auch alle gew\"unschten Bedingungen eingestellt werden. 
+\newline
+
+Eine Kalibration ist notwendig, um zu einem gegebenen Wert einen Umrechnungsfaktor zu bestimmen, der die gemessene Ladung in physikalisch aussagekr\"aftige Werte, zum Beispiel MeV oder ns, umrechnet. Diese Umrechnugnsfaktoren m\"ussen f\"ur jeden Detektorkristall einzeln bestimmt werden.\cite{Un08}
+
+
 
 \section{Strahlzeit}
 \label{sec:Reelle-Daten}
@@ -577,9 +590,9 @@ Im folgenden Abschnitt werden die gemessenen Daten aus der Strahlzeit Oktober 20
 \subsection{Energie Abhängigkeit}
 \label{sec:Energie-Interval-Abhaengigkeit}
 
-Als erstes wurde überprüft, ob es eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle gab. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Das hei{\ss}t, die Differenz der Energie der beiden Photonen betr\"agt maximal 25 MeV. Diese Bedingung wurde eingef\"uhrt, da man auf diese Weise herausfinden konnte, ob die Kalibirierung auch noch f\"ur zum Beispiel hoch energetische Photonen stimmt, da man wei{\ss}, dass beide Photonen eine hohe Energie besa{\ss}en. Anders konnte sonst nicht die Folgerung getroffen werden, da man sonst eine '\textit{Mischung}' der Energien hat und man nicht sagen kann, welcher Effekt durch welche Energie verursacht wurde.
+Als erstes wird überprüft, ob eine Abhängigkeit der Kalibrierung im Bereich verschiedener Energieintervalle vorliegt. Sprich, stimmt die Kalibrierung auch dann noch, wenn die Energie der beiden detektierten Photonen sich ähnelte. Das hei{\ss}t, die Differenz der Energie der beiden Photonen betr\"agt maximal 25 MeV. Diese Bedingung wird eingef\"uhrt, da man auf diese Weise herausfinden kann, ob die Kalibirierung auch noch f\"ur zum Beispiel zwei hoch energetische Photonen stimmt, da man wei{\ss}, dass beide Photonen eine hohe Energie besitzen. Anders kann die Folgerung nicht getroffen werden, da man sonst eine '\textit{Mischung}' der Energien hat und man nicht sagen kann, welcher Effekt durch welche Energie verursacht wird.
 
-Zur Untersuchung konnten dann aus den Daten der Strahlzeit, die invariante Masse des $\pi^0$ mit folgender Gleichung berechnet werden.
+Zur Untersuchung k\"onnen dann aus den Daten der Strahlzeit, die invariante Masse des $\pi^0$ mit folgender Gleichung berechnet werden.
 
  \begin{equation}
  \begin{split}
@@ -588,28 +601,29 @@ Zur Untersuchung konnten dann aus den Daten der Strahlzeit, die invariante Masse
  \end{split}
  \end{equation}
 
-Hier ist $m_{\pi^0}$ die berechnete Masse aus den beiden Energien $E_1$ und $E_2$ der Photonen. $\vartheta$ ist der Winkel zwischen den beiden Photonen. Um diesen zu berechnen musste angenommen werden, dass das Pion im Ursprung zerf\"allt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}.
+Hier ist $m_{\pi^0}$ die berechnete Masse aus den beiden Energien $E_1$ und $E_2$ der Photonen. $\vartheta$ ist der Winkel zwischen den beiden Photonen. Um diesen zu berechnen muss angenommen werden, dass das Pion im Ursprung zerf\"allt. Mehr dazu in Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}.
 Die Herleitung der Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} befindet sich im Anhang \ref{sec:Herleitung-der-Formel-zur-Berechnung-der-invarianten-Masse}.
 
-Mit diesen Daten konnte schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse wurde die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt wurden. 
+Mit diesen Daten kann schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse ist die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von 25 MeV unterteilt ist. 
 
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904Uncharged2DHist}
 	
-		\caption{2-D Histogramm: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es wurden nur dann die Invariante Masse errechnet, wenn die Energiedifferenz der beiden Photonen kleiner als 25 MeV war.}
+		\caption[Strahlzeit: 2D-Histogramm; Symmetrische Photonen]{Daten aus der Strahlzeit: Auf der x-Achse ist die errechnete invariante Masse aufgetragen, die y-Achse ist in 25 MeV Intervalle aufgeteilt. Es werden nur Photonen ber\"ucksichtigt, die sich energetisch \"ahnelten. Das hei{\ss}t ihre Energie unterscheidet sich maximal um 25 MeV.}
 			\label{fig:Energy-Interval-Hist-All-Bins}
 	\end{center}
 \end{figure}
 
-Beim Füllen des Histogramms wurde darauf geachtet, dass sich die Energien der beiden Photonen um maximal 25 MeV unterschieden.
+Beim Füllen des Histogramms wird darauf geachtet, dass sich die Energien der beiden Photonen um maximal 25 MeV unterscheiden.
 
-Im folgenden wurden nur die Energieintervalle f\"ur Photonen von 125 MeV bis 425 MeV ber\"ucksichtigt.
-Dieser Bereich wurde bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\pi^0$ zu stark durch das Rauschen gest\"ort wurde und somit die Position nicht eindeutig bestimmt werden konnte. F\"ur Energien oberhalb von 425 MeV lagen nicht mehr genug Ereignisse vor, sodass h\"ohere Energieintervalle ebenfalls verworfen werden mussten. 
+Im folgenden werden nur die Energieintervalle f\"ur Photonen von 125 MeV bis 425 MeV ber\"ucksichtigt.
+
+Dieser Bereich ist bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\pi^0$ zu stark durch das Rauschen gest\"ort wird und somit die Position nicht eindeutig bestimmt werden kann. F\"ur Energien oberhalb von 425 MeV liegen nicht mehr genug Ereignisse vor, sodass auch h\"ohere Energieintervalle ebenfalls verworfen werden m\"ssen. 
 
 
-Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über den Bereich der errechneten invarianten Masse von 50 MeV bis 220 MeV mit Hilfe von ROOT gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit.
+Um nun die Position des $\pi^0$ zu bestimmen, wird für jedes Intervall über den Bereich der errechneten invarianten Masse von 50 MeV bis 220 MeV mit Hilfe von ROOT gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit. Als Fitfunktion wird die Crystal-Ball-Funktion (Kapitel: \ref{sec:CB-Funktion}) verwendet. 
 
   % Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
   
@@ -634,28 +648,28 @@ Um nun die Position des $\pi^0$ zu bestimmen, wurde für jedes Intervall über d
  %Bereits an diesem neuem Histogramm war zu erkennen, dass die St\"orung durch den Untergrund stark reduziert wurde, was einen besseren Fit f\"ur sowohl das $\pi^0$ als auch das $\eta$ erm\"oglichte. %Deswegen wurden nun, auch in den folgenden kapiteln, die Teilchen auch auf \"uberpr\"uft.
  
  %Nun wurde auch \"uber dieses Histogramm f\"ur das $\pi^0$ von 125 MeV bis 425 MeV gefittet.
- Aus diesen Fitdaten konnte dann die Position des $\pi^0$ bestimmt werden. 
+ Aus diesen Fitdaten kann dann die Position des $\pi^0$ bestimmt werden. 
  
  \begin{figure}[h!]
  	\begin{center}
  		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealUnchargedDeviation}
  	
- 		\caption{Die errechnete Position des $\pi^0$ Peaks wurde gegen die Energie der Photonen aufgetragen.
- 			Es galt die Bedingung, dass die gemessenen Teilchen ungeladen sein mussten und dass die Energie der Photonen sich \"ahneln sollte. Alle Fits sind in Abbildung \ref{fig:similarenergyallfitsuncharged} zu sehen.} 
+ 		\caption[Strahlzeit: Symmetrische Photonen; Abweichung]{Daten aus der Strahlzeit: Die errechnete Position des $\pi^0$ Peaks ist gegen die Energie der Photonen aufgetragen.
+ 			Es gilt die Bedingung, dass die gemessenen Teilchen ungeladen sein m\"ussen und dass die Energie der Photonen sich \"ahneln muss. Alle Fits sind in Abbildung \ref{fig:similarenergyallfitsuncharged} zu sehen.} 
  		\label{fig.Energydependency_pion}
  	\end{center}
  \end{figure}
 
-In Abbildung \ref{fig.Energydependency_pion} wurden die errechneten Positionen der Pionen gegen die Energie der Photonen aufgetragen. Zu sehen ist eine deutliche Abweichung zum Literaturwert des $\pi^0$ Peaks für hohe Energien. 
+In Abbildung \ref{fig.Energydependency_pion} sind die errechneten Peak-Positionen der invarianten Masse des $\pi^0$ gegen die Energie der Photonen aufgetragen. Zu sehen ist eine deutliche Abweichung zum Literaturwert des $\pi^0$ Peaks für hohe Energien. 
 
-F\"ur eine Photonenenergie von ungef\"ahr 125 MeV lag eine leichte Abweichung von weniger als -1\% vor. Hier war die errechnete Masse war zu klein. Allerdings nahm die Abweichung bei steigender Photonenenergie mit einer '\textit{Steigung}'von ca. +1\% pro 50 MeV im Intervall von 150 MeV bis 300 MeV zu, sodass hier eine Abweichung von etwa +2\% erreicht wurde. Ab 300 MeV nahm die Abweichung mit fast +2\% deutlich st\"arker zu bis es schlie{\ss}lich bei einer Photonenenergie von 375 MeV abflachte. Die maximale Abweichung wurde bei einer Photonenenergie von 400 MeV erreichte und betrug fast +6\%.
+F\"ur eine Photonenenergie von ungef\"ahr 125 MeV liegt eine leichte Abweichung von weniger als -1\% vor. Hier ist die errechnete Masse zu klein. Allerdings nimmt die Abweichung bei steigender Photonenenergie mit einer '\textit{Steigung}'von ca. +1\% pro 50 MeV im Intervall von 150 MeV bis 300 MeV zu, sodass hier eine Abweichung von etwa +2\% erreicht wird. Ab 300 MeV nimmt die Abweichung mit fast +2\% deutlich st\"arker zu bis es schlie{\ss}lich bei einer Photonenenergie von 375 MeV abflacht. Die maximale Abweichung wird bei einer Photonenenergie von 400 MeV erreicht und betr\"agt fast +6\%.
 
 
 %Für eine Photonenenergie von ca. 150 MeV lag fast keine Abweichung vor. Diese Abweichung nahm allerdings im Intervall von 150 MeV bis 325 MeV konstant mit einer '\textit{Steigung}' von 1\% pro 50 MeV Photonenenergie zu. Ab 325 MeV nah, diese '\textit{Steigung}' zu und betrug im Intervall von 325 MeV bis 375 MeV ca. 2\% pro 50 MeV Photonenenergie. Schließlich flachte die Abweichung ab 375 MeV ab, und wurde sogar etwas kleiner. Die größte Abweichung lag mit über 7\% bei einer Photonenenergie von etwa 400 MeV vor.
 
-Auch fällt auf, dass die Abweichung der errechneten invarianten Masse des $\pi^0$ fast ausschließlich größer, als die tatsächliche Masse, war.
+Auch fällt auf, dass die Abweichung der errechneten invarianten Masse des $\pi^0$ fast ausschließlich größer, als die tatsächliche Masse, ist.
   
-Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie der Photonen vorlag. In den folgenden Abschnitten wurde versucht, die Ursache für diese Abhängigkeit zu bestimmen.
+Daraus folgt, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks und der Energie der Photonen vorliegt. In den folgenden Abschnitten wird versucht, die Ursache für diese Abhängigkeit zu bestimmen.
 
 %Daraufhin wurde das gleiche Verfahren nochmal angewendet, allerdings wurde dieses mal die Bedingung weggelassen, dass die Photonen sich energetisch ähneln mussten. Die Bedingung, dass die registrierten Teilchen ladungsfrei sein mussten, galt weiterhin. Die errechnete invariante Masse der Photonen wurde in das Histogramm (Abb.: \ref{fig:Energy-Intervall-Hist-All-Energys-No-Condition}) eingetragen. Die Energieintervalle wurden direkt mit der Crystal-Ball-Funktion gefittet. Zu sehen in Abbildung \ref{fig:allenergyallfits}. Nun wurden ebenfalls die errechneten invarianten Massen des $\pi^0$ gegen die Energien der Photonen aufgetragen (Abb.: \ref{fig:Energy-Intervall-No-Condition-Deviation-1303}). Auch hier war eine deutliche Abweichung der Position des $\pi^0$ zum Literaturwert zu erkennen. Diese Abweichungen betrugen zwar nur fast 2\% (siehe Abb. \ref{fig:Relative-Deviation-Energy-Interval-No-Condition}}), sind aber nicht vernachl\"assigbar. 
 
@@ -665,7 +679,7 @@ Daraus folgte, dass eine Abhängigkeit zwischen der Position des $\pi^0$-Peaks u
 \subsection{Vernachl\"assigung der Detektoren am Rand}
 \label{sec:Vernachlaessigung-der-Detektoren-am-Rand}
 
-Als Ursprung der in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} ermittelten Abweichung wurde zun\"achst der Aufbau des Crystal-Balls vermutet. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese hatten die Detektoren im Crystal-Ball nicht alle gleich viele Nachbar Detektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgab, sondern immer auch an seine Nachbarn, konnten diese Randdetektoren nicht ideal kalibriert werden. 
+Als Ursprung der in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} ermittelten Abweichung wird zun\"achst der Aufbau des Crystal-Balls vermutet. Genauer gesagt, der Strahlenein und -ausgang. Denn durch diese haben die Detektoren im Crystal-Ball nicht alle gleich viele Nachbardetektoren und da ein Photon seine gesamte Energie nicht an einen Detektorkristall abgibt, sondern immer auch an seine Nachbarn, k\"nnen diese Randdetektoren nicht ideal kalibriert werden und damit k\"onnen die Schauer am Rand nicht unverf\"alscht gemessen werden. 
 
 
 %In erster Linie war es wichtig einen Vergleich zwischen der $\pi^0$ Position mit und ohne Ber\"ucksichtigung der Detektoren am Rand zu erhalten. Es sollte herausgefunden werden, ob so die Messung verbessert werden konnte. Zus\"atzlich galten, wie in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, die Bedingungen, dass die Energie der Photonen sich im gleichem Energieinterval befand und dass die registrierten Teilchen ungeladen sein m\"ussen. 
@@ -681,30 +695,31 @@ Als Ursprung der in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} ermittelten
 
 %Das gef\"ullte Histogramm ist in Abbildung \ref{fig:2D-Hist-Angle-Energy-Position-Pi0} zu sehen. Hier erkennt man auch direkt, dass simulierte Daten benutzt wurden, da der $\pi^0$-Peak viel st\"arker ausgepr\"agt war, im Vergleich zu den reellen Daten.
 
-Zus\"atzlich zu den in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} geltenden Bedingungen wurde noch die Bedingung hinzugef\"ugt, dass die Detektoren am Rand des Strahlenein- und ausgangs nicht betrachtet wurden. Dies erreichte man dadurch, dass alle Reaktionen, die ein oder mehrere Photonen besa{\ss}en, welche einen Winkel von 30$^{\circ}$ oder weniger zur Strahlenachse hatten, verworfen wurden. Diese Gradzahl wurde durch eine Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang hatten einen '\textit{Radius}' von 2 Detektoren, und erstreckte sich \"uber einen Polarwinkel von 20$^{\circ}$. Folglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10$^{\circ}$. 
+Zus\"atzlich zu den in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} geltenden Bedingungen wird noch die Bedingung hinzugef\"ugt, dass die Detektoren am Rand des Strahlenein- und ausgangs nicht betrachtet werden. Dies erreicht man dadurch, dass alle Reaktionen, die ein oder mehrere Photonen besitzen, welche einen Winkel von 30$^{\circ}$ oder weniger zur Strahlenachse haben, verwerfen wurden. Diese Gradzahl wurde durch eine grobe Absch\"atzung errechnet. Die \"Offnungen f\"ur den Strahlenein- und ausgang haben einen '\textit{Radius}' von 2 Detektoren, und erstrecken sich \"uber einen Polarwinkel von ca. 20$^{\circ}$. Folglich h\"atte ein Ring aus Detektoren um diese \"Offnungen einen Polarwinkel von 10$^{\circ}$. 
  
-Auch f\"ur diese Bedingung wurde anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:30-Degree-Cut-Histogramm}) und die einzelnen Positionen wurden dann gefittet (Abb.: \ref{fig:30-Degree-Cut-RealData-All-Fits}), um die Position des $\pi^0$ zu bestimmen. Das Energieintervall das betrachtet und gefittet wurde entsprach dem aus Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, damit ein war ein besserer Vergleich zwischen den verschiedenen Effekte m\"oglich.
+Auch f\"ur diese Bedingung wird anschlie{\ss}end ein Histogramm angelegt (Abb.: \ref{fig:30-Degree-Cut-Histogramm}) und die einzelnen Positionen werden gefittet (Abb.: \ref{fig:30-Degree-Cut-RealData-All-Fits}), um die Position des $\pi^0$ zu bestimmen. Das Energieintervall das betrachtet und gefittet wird entspricht dem aus Kapitel \ref{sec:Energie-Interval-Abhaengigkeit}, damit ein ist ein besserer Vergleich zwischen den verschiedenen Effekte m\"oglich.
 
+Zum besseren Vergleich der beiden Ergebnisse werden die relative Abweichungen mit und ohne Bedingung zusammen in einen Graphen gezeichnet.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealBothDeviation}
-		\caption{Die relative Abweichung wurde in Prozent gegen die Energie der Photonen gezeichnet. Die rote Linie stellt die relative Abweichung ohne die Bedingung, dass Photonen mit einem Winkel kleiner als 30$^{\circ}$ verworfen wurden, die schwarze Linie mit der Bedingung.}
+		\caption[Strahlzeit: Symmetrische Photonen; Vernachl\"assigung der Detektoren am Rand; Abweichung]{Daten aus der Strahlzeit: Die relative Abweichung ist in Prozent gegen die Energie der Photonen gezeichnet. Die rote Linie stellt die relative Abweichung ohne die Bedingung, dass Photonen mit einem Winkel kleiner als 30$^{\circ}$ verworfen wurden, die schwarze Linie mit der Bedingung. Die detektierten Photonen m\"ussen sich energetisch \"ahneln.}
 		\label{fig:Vernachlaessigung-Detektoren-am-Rand}
 	\end{center}
 \end{figure}
 
-Zum besseren Vergleich der beiden Ergebnisse wurden die relative Abweichungen mit und ohne Bedingung zusammen in einen Graphen gezeichnet. 
+ 
 
-In der Abbildung\ref{fig:Vernachlaessigung-Detektoren-am-Rand} erkennt man, dass der Unterschied f\"ur Photonenenergien unterhalb von 275 MeV nur sehr klein ist und weniger als 0,2\% betr\"agt. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30$^{\circ}$ eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
+In der Abbildung\ref{fig:Vernachlaessigung-Detektoren-am-Rand} erkennt man, dass der Unterschied der beiden Betrachtungen f\"ur Photonenenergien unterhalb von 275 MeV nur sehr klein ist. Bei einem so kleinen Unterschied kann man nicht mit Gewissheit sagen, dass der Cut bei 30$^{\circ}$ eine Verbesserung der $\pi^0$-Peak Position bewirkt hat. Die Differenz ist noch im Bereich der statistischen Fluktuation. 
 
-F\"ur Photonenenergien oberhalb von ca. 275 MeV ist eine deutliche Verbesserung der Abweichung zu erkennen. So betrug der Unterschied teilweise fast 2\%.
+F\"ur Photonenenergien oberhalb von ca. 275 MeV ist eine deutliche Verbesserung der Abweichung zu erkennen. So liebt bei einer Photonenenergie von 400 MeV mit Detektoren am Rand eine Abweichung der errechneten $\pi^0$-Peakposition zur invarianten Masse des $\pi^0$ von fast 6\% vor, w\"ahrend die Abweichung bei gleicher Photonenenergie ohne Detektoren am Rand nur fast 4\% betr\"agt.
 
-Ein vermuteter Grund, warum es nur eine Verbesserung für hohe Energien gab, war, dass hochenergetische Photonen dann erzeugt werden, wenn auch das Pion eine hohe kinetische Energie besa{\ss}. Diese Photonen haben dann eine gr\"o{\ss}ere Wahrscheinlichkeit in Richtung des Strahlenausgang des Crystal-Balls aufzutreten.
+Ein vermuteter Grund, warum es nur eine Verbesserung für hohe Energien gibt, ist, dass hochenergetische Photonen dann erzeugt werden, wenn auch das Pion eine hohe kinetische Energie besa{\ss}. Diese Photonen haben dann eine gr\"o{\ss}ere Wahrscheinlichkeit in Richtung des Strahlenausgang des Crystal-Balls aufzutreten.
 
-Um das zu erkl\"aren betrachte man zun\"achst ein ruhendes $\pi^0$. Dieses zerf\"allt in 2 Photonen in zuf\"alliger Richtung mit einem Winkel von 180$^{\circ}$ zueinander und mit einer Energie von jeweils etwa 67,5 MeV. 
+Um das zu erkl\"aren betrachtet man zun\"achst ein ruhendes $\pi^0$. Dieses zerf\"allt in 2 Photonen in zuf\"alliger Richtung mit einem Winkel von 180$^{\circ}$ zueinander und mit einer Energie von jeweils etwa 67,5 MeV. 
 
 Gibt man dem $\pi^0$ nun einen Boost in z-Richtung, so erhalten auch die beiden Photonen einen Boost in diese Richtung.
-Zur Veranschaulichung betrachte man nun zwei extrem Beispiele:
+Zur Veranschaulichung betrachtet man nun zwei extrem Beispiele:
 
 \begin{enumerate}
 	\item Im Ruhesystem des $\pi^0$ werden die Photonen in einem Winkel von 90$^{\circ}$ zur Strahlenachse ausgesandt. Wird nun ein Boost in z-Richtung angewandt, so erhalten beide Photonen einen gleich gro{\ss}en Impuls in z-Richtung und haben folglich beide die gleiche Energie und den gleichen Winkel zur z-Achse. Dieser Winkel wird kleiner, wenn der Boost st\"arker wird.
@@ -728,28 +743,28 @@ Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energeti
 		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_400}
 	\end{minipage}
 	
-	\caption{Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV.}
+	\caption[Strahlzeit: Verteilung der symmetrischen Photonen im CB f\"ur verschiedene Energien]{Daten aus der Strahlzeit: Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV.}
 	\label{fig:Verteilung-im-CB}
 \end{figure}
 
 In den Plots in Abbildung \ref{fig:Verteilung-im-CB} erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
 
-Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand lag die Vermutung nahe, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. 
+Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand liegt die Vermutung nahe, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. 
 Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren. 
-Aussagen \"uber die Detektoren am Strahleneingang konnten ebenfalls nicht getroffen werden, da diese, im Vergleich zum Strahleneingang, nur sehr selten getroffen wurden.
+Aussagen \"uber die Detektoren am Strahleneingang k\"onnen ebenfalls nicht getroffen werden, da diese, im Vergleich zum Strahleneingang, nur sehr selten getroffen werden.
 
-Also musste weiter nach der Ursache dieser starken Abweichung gesucht werden.
+Also muss weiter nach der Ursache f\"ur diese starke Abweichung gesucht werden.
 
 
 
 \section{Simulation}
 \label{sec:Simulation}
 
-Da mit reellen Daten keine Ursache gefunden werden konnte, wodurch diese gro{\ss}e Abweichung entstand, wurde auf simulierte Daten zur\"uckgegriffen. 
+Da mit reellen Daten keine Ursache gefunden werden kann, wodurch diese gro{\ss}e Abweichung entsteht, wird auf simulierte Daten zur\"uckgegriffen. 
 
-Der Grund daf\"ur war, dass alle Prozesse in simulierten Daten genau bekannt waren. Das hei{\ss}t, von jedem registriertem Teilchen war bekannt, um welches Teilchen es sich gehandelt hat und aus welchem Prozess es entstanden ist. 
+Der Grund daf\"ur ist, dass alle Prozesse in simulierten Daten genau bekannt sind. Das hei{\ss}t, von jedem registriertem Teilchen ist bekannt, um welches Teilchen es sich handelt und aus welchem Prozess es entstanden ist. 
 
-So konnte der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, um leichter nach der Ursache f\"ur die Abweichung zu suchen.
+So kann der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, um leichter nach der Ursache f\"ur die Abweichung zu suchen.
 
 Als erstes muss \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu werden zwei Histogramme mit den Bedingungen aus den jeweiligen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand (Abb. \ref{fig:Simulierte-Daten-Abweichung} links) und eins ohne (Abb. \ref{fig:Sim-Data-2DHist-30-Degree-Edge}).
@@ -769,7 +784,7 @@ Auch hier werden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimBothDeviation}
 	\end{minipage}
-	\caption{Links ist als Beispiel das Histogramm aus den simulierten Daten dargestellt. Für dieses Histogramm gilt die Bedingung, dass auch die Detektoren am Rand berücksichtigt werden. Rechts sind die Abweichungen vom $\pi^0$-Peak mit (rot) und ohne (schwarz) Berücksichtigung der Detektoren am Rand zu sehen.}
+	\caption[Simulation: 2D-Histogramm und Abweichung f\"ur symmmetrische Photonen]{Daten aus der Simulation: Links ist als Beispiel das Histogramm aus den simulierten Daten dargestellt. Für dieses Histogramm gilt die Bedingung, dass auch die Detektoren am Rand berücksichtigt werden. Rechts sind die Abweichungen vom $\pi^0$-Peak mit (rot) und ohne (schwarz) Berücksichtigung der Detektoren am Rand zu sehen.}
 	\label{fig:Simulierte-Daten-Abweichung}
 \end{figure}
 %An den beiden Histogrammen erkennt man, dass es sich bei den verwendeten Daten um Simulierte gehandelt hat, da der $\eta$-Peak nicht vorhanden ist. Man hat nur noch einen Peak bei $\pi^0$. 
@@ -778,26 +793,64 @@ Auch hier werden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich
 
 %Da bei einer Simulation alle Prozesse genau bekannt waren, wurde alles so eingestellt, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma\ $ Prozesse betrachtet wurden.
 
-Schon am zweidimensionalem Histogramm aus Abbildung \ref{fig:Simulierte-Daten-Abweichung} ist zu erkennen, dass es sich um simulierte Daten handelte. Es lag nur ein Peak bei der Masse von $\pi^0$ vor. Einen $\eta$-Peak und einen störenden Untergrund gab es nicht. 
+Schon am zweidimensionalem Histogramm aus Abbildung \ref{fig:Simulierte-Daten-Abweichung} ist zu erkennen, dass es sich um simulierte Daten handelte. Es liegt nur ein Peak bei der Masse von $\pi^0$ vor. Einen $\eta$-Peak und einen störenden Untergrund gibt es nicht. 
 
-Ebenfalls war die bei den reellen Daten gefundene Abweichung auch hier größtenteils zu erkennen. So war die Form sehr ähnlich, aber auch anders. So war die Abweichung f\"ur kleine Photonenenergien ebensfalls klein und weniger als -1\%, nahm aber auch f\"ur Energien bis 300 MeV nicht zu, sondern blieb fast konstant. F\"ur Energien oberhalb von 300 MeV nahm die Abweichung mit \"uber +2\% pro 50 MeV zu. So wurde die maximale Abweichung bei einer Photonenenergie von 425 MeV erreicht. Eine Abflachung, wie sie bei den Daten aus der Strahlzeit zu erkennen war, lag hier nicht vor. 
+Ebenfalls ist die bei den reellen Daten gefundene Abweichung auch hier größtenteils zu erkennen. So war die Form sehr ähnlich, aber auch anders. So ist die Abweichung f\"ur kleine Photonenenergien ebensfalls klein und weniger als -1\%, nimmt aber auch f\"ur Energien bis 300 MeV nicht zu, sondern bleibt fast konstant. F\"ur Energien oberhalb von 300 MeV nimmt die Abweichung mit \"uber +2\% pro 50 MeV zu. So wird die maximale Abweichung bei einer Photonenenergie von 425 MeV erreicht. Hier betr\"agt sie fast 7\%. Eine Abflachung, wie sie bei den Daten aus der Strahlzeit zu erkennen ist, liegt hier nicht vor.
 
-Auch ergab sich kein Unterschied in den Abweichung für simulierte Daten, wenn die Detektoren am Rand vernachlässigt wurden. So musste dieser Grund dafür auch bestimmt werden. Folglich wurde damit die Vermutung widerlegt, dass die Detektoren am Rand schlecht eingestellt wurden.
+Auch ergibt sich kein Unterschied in den Abweichung für simulierte Daten, wenn die Detektoren am Rand vernachlässigt werden. So muss dieser Grund dafür auch bestimmt werden. Folglich wird damit die Vermutung widerlegt, dass die Detektoren am Rand schlecht eingestellt sind.
 
 
 %Allerdings war hier der Anstieg der Abweichung im Energieintervall von 200 MeV bis 300 MeV Photonenenergie nur so gering bis nicht vorhanden. Dafür flachte die Abweichung bei den reellen Daten ab einer Photonenenergie von ungefähr 375 MeV ab, während sie bei den simulierten Daten weiter '\textit{linear}' mit einer '\textit{Steigung}' von ca. 3\% - 4\% pro 50 MeV Photonenenergie anstieg. Die maximale Abweichung wurde bei einer Energie von 425 MeV erreicht und betrug fast 9\%. Damit war die Abweichung der errechneten Masse aus simulierten Daten größer, als aus reell gemessenen. Auch ergab sich kein Unterschied in den Abweichung für simulierte Daten, wenn die Detektoren am Rand vernachlässigt wurden. So musste dieser Grund dafür auch bestimmt werden. Folglich wurde damit die Vermutung widerlegt, dass die Detektoren am Rand schlecht eingestellt wurden.
 
-Da nun aber trotzdem die Form der Abweichung bei den simulierten Daten ungefähr der Form der reellen Daten ähnelte, konnte die Simulation benutzt werden, um ihre Ursache zu bestimmen.
+Da nun aber trotzdem die Form der Abweichung bei den simulierten Daten ungefähr der Form der reellen Daten ähnelt, kann die Simulation benutzt werden, um ihre Ursache zu bestimmen.
 
 %Ein weiterer Vorteil einer Simulation war, dass man von jedem detektierem Teilchen wusste, woher es kam und worum es sich dabei handelte. Folglich konnte alles so eingestellt werden, dass aus dem Cocktail nur $\pi^0 \rightarrow \gamma \gamma$ Prozesse betrachtet wurden.
+
+\subsection{Mindestwinkel zwischen detektierten Photonen}
+\label{sec:Min-Openingangle}
+
+%\colorbox{yellow}{\"Offnungswinkel ist mindestens 30 Grad; Mit Detektoren Am Rand}
+Als erstes wird \"uberpr\"uft, ob sich eine Verkleinerung der Abweichung ergibt, wenn man die Bedingung stellt, dass zwischen den beiden detektierten Photonen ein Mindestwinkel vorliegen muss. 
+Wie bereits erw\"ahnt, breitet sich ein Schauer im Detektor immer auch in longitudinaler Richtung aus. Also werden mehrere Detektoren durch ein einfallendes Photon ausgel\"ost. 
+Es m\"ussen zwei Bedingungen erf\"ullt sein, damit ein Detektor als ausgel\"ost eingestuft wird.
+
+Erstens muss das Analogsignal des Photomultipliers die eingestelle Diskriminatorschwelle von jeweils 2 MeV und eine Energieschwelle, welche in der Analyse gesetzt wird, \"uberschreiten.
+
+
+ 
+
+Das bedeutet allerdings auch, dass ein Detektorkristall von zwei Photonen ausgel\"ost werden kann, wenn der \"Offnungswinkel zwischen den beiden Photonen nicht gro{\ss} genug ist, um eine \"Uberlagerung zu vermeiden. Das f\"uhrt dazu, dass die Energie der Photonen nicht exakt bestimmt werden kann, da die Aufteilung der berechneten Energie auf die beiden Photonen nicht eindeutig festgelegt werden kann.
+
+Deswegen wird hier darauf geachtet, dass die registrierten Photonen einen \"Offnungswinkel von mindestens 30$^{\circ}$ besitzen, um eine solche \"Uberlagerung zu vermeiden.
+
+Die Detektoren am Rand werden hier auch ber\"ucksichtigt, da sich dadurch keine Verbesserung in Kapitel \ref{sec:Simulation} ergab.
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/20171904SimMinOpeningAngleDeviation}
+		\caption[Simulation: Symmetrische Photonen; Mindestwinkel zwischen detektierten Photonen]{Die Abweichung der $\pi^0$-Peak Position mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Teilchen mindestens 30$^{\circ}$ betrug. Alle Fits f\"ur diesen Plot befinden sich im Anhang (Abb.: \ref{fig:Relative-Abweichung-Min-Opening-Angle-AllFits})}
+		\label{fig:Relative-Abweichung-Min-Opening-Angle}
+	\end{center}
+\end{figure}
+
+Wie in Abbildung \ref{fig:Relative-Abweichung-Min-Opening-Angle} zu erkennen ist, \"ahnelt die hier bestimme Abweichung sehr stark der bereits gefundenen in Kapitel \ref{sec:Simulation}.
+
+Auch hier ist die Abweichung zun\"achst sehr klein und liegt etwas im negativen. Es liegt fast keine \"Anderung der Abweichung vor. Dies gilt bis zu einer Photonenenergie von 300 MeV.
+
+Ab einer Photonenenergie von \"uber 300 MeV nimmt die Abweichung allerdings sehr stark zu. Die '\textit{Steigung}' betr\"agt teilweise \"uber 2\% pro 50 MeV. Die maximale Abweichung wird bei einer Photonenenergie von 425 MeV erreicht und betr\"agt ca. 6,5\%.
+
+Folglich ergibt die Bedingung, dass der \"Offnungswinkel zwischen den beiden detektieretn Photonen mindestens 30$^{\circ}$ sein muss, keine Verbesserung und es muss weiter nach einer Ursache f\"ur die Abweichung gesucht werden.
+
+
+
 
 \subsection{Isotroper Zerfall von $\pi^0$ im Ursprung}
 \label{sec:Isotroper-Zerfall-Ursprung}
 
-Als erstes wurde der einfachste Prozess \"uberpr\"uft. Dazu zerfiel ein $\pi^0$ im Ursprung und erhielt einen Boost in eine zufällige Richtung. Dadurch gab es keine ausgezeichnete Richtung. Folglich konnte damit überprüft werden, ob sich alle Detektoren gleich verhielten. 
+Als n\"achstes wird der einfachste Prozess \"uberpr\"uft. Dazu zerf\"allt ein $\pi^0$ im Ursprung und erh\"alt einen Boost in eine zufällige Richtung. Dadurch gibt es keine ausgezeichnete Richtung. Folglich kann damit überprüft werden, ob sich alle Detektoren gleich verhalten. 
 
-Dazu wurde die neue $\pi^0$-Gun so eingestellt, dass es keinen Photonenstrahl und kein Proton mehr gab, lediglich der Boost des $\pi^0$ wurde gewürfelt. Die Photonen wurden dann anschließend wie in \ref{sec:Vorbereitung-der-Simulation} beschrieben gewürfelt und geboostet. 
-Als erstes wurde \"uberpr\"uft, ob die durch den Zerfall ausgesandten Photonen sich auch wirklich gleichm\"a{\ss}ig im Raum verteilten.
+Dazu wird die neue Ereignisgenerator so eingestellt, dass es keinen Photonenstrahl und kein Proton mehr gibt, lediglich der Boost des $\pi^0$ wird gewürfelt. Die Photonen werden dann anschließend, wie in Kapitel \ref{sec:Vorbereitung-der-Simulation} beschrieben, gewürfelt und geboostet. 
+Als erste Kontrolle wird \"uberpr\"uft, ob die durch den Zerfall ausgesandten Photonen sich auch wirklich gleichm\"a{\ss}ig im Raum verteilen.
 
 
 \begin{figure}[h!]
@@ -812,56 +865,57 @@ Als erstes wurde \"uberpr\"uft, ob die durch den Zerfall ausgesandten Photonen s
 		\centering
 		\includegraphics[width=0.9\textwidth]{20171204DistributionPhotonUrsprungIsotrop}
 	\end{minipage}
-\caption{Links ist die Verteilung der geboosteten $\pi^0$ im Raum zu erkennen. Die Winkel hier sind in Radiant angegeben. Rechts ist die Verteilung der detektierten Photonen im Crystal-Ball dargestellt.}
+\caption[Simulation:Symmetrische Photonen Verteilung der Mesonen und detektierten Photonen im CB bei isotropen Zerfall] {Monte-Carlo-Simulation: Links ist die Verteilung der geboosteten $\pi^0$ im Raum zu erkennen. Die Winkel hier sind in Radiant angegeben. Rechts ist der Ort dargestellt, an dem die Photonen den Crystal-Ball treffen. Dabei wird \"uber die ausgel\"osten Detektoren gemittelt, sodass dieses Netzmuster entsteht.}
 \label{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum}
 \end{figure}
 
-In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} links erkennt man, dass sich die Photonen isotrop verteilt haben. Folglich f\"uhrte das Tool den Boost des $\pi^0$ in eine zuf\"allige Richtung richtig aus.
+In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} links erkennt man, dass die $\pi^0$ einen Boost in eine zuf\"allige Raumrichtung erhalten. Dadurch sind die durch den Zerfall ausgesandten Photonen isotrop im Raum verteilt.
 
-Zus\"atzlich galt die Bedingung,wie in den vorherigen Kapiteln, dass nur Photonen mit einer ähnlichen Energie als Ereignis in die Datei geschrieben werden durften.
 
-In GEANT wurde die Länge des Target auf 0 cm gesetzt. Dadurch wurde gewährleistet, dass die Pionen auch wirklich im Ursprung zerfallen.
+Zus\"atzlich gilt die Bedingung, wie in den vorherigen Kapiteln, dass nur Photonen mit einer ähnlichen Energie als Ereignis in die Datei geschrieben werden d\"urfen.
+
+In GEANT wird zus\"atzlich die Länge des Target auf 0 cm gesetzt. Dadurch wird gewährleistet, dass die Pionen auch wirklich im Ursprung zerfallen.
 
 
 %Au{\ss}erdem ben\"otigte das Simulieren des Crystal-Balls sehr viel Zeit. So dauerte es zum Simulieren von 100000 Prozessen etwa zwei Stunden. Von diesen mussten die meisten verworfen werden, weil Photonen entstanden, deren Energie sich nicht \"ahnelte. Folglich w\"urde man ein Packet mit mehreren Millionen reinen $\pi^0 \rightarrow \gamma \gamma $ Prozessen ben\"otigen, um genug Ereignisse zu erhalten. So wurde ein Paket benutzt, welches 10 Millionen dieser Prozesse beinhaltete, allerdings war es trotzdem nicht gro{\ss} genug, um eine gute Statistik zu erhalten. gr\"o{\ss}ere Pakete existierten nicht.
 
 %Um nun  eine lange Simulaiton zu vermeiden, wurde beim Erstellen der Simulation \"uber Pluto, bereits hier die Energie der beiden Photonen \"uberpr\"uft. Nur dann wurde der Zerfall von Pluto eingetragen und anschlie{\ss}end \"uber GEANT4 simuliert. Dies hatte eine erhebliche Zeitersparnis zur Folge.
 
-Um zu überprüfen, ob alles wie gewollt eingestellt war, wurde ein weiteres zweidimensionales Histogramm angelegt.
+Um zu überprüfen, ob alles wie gewollt eingestellt ist, wird ein weiteres zweidimensionales Histogramm angelegt.
 
 
 
-In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} rechts sieht man, dass sich die Pionen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gab. Also wurde alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden konnte.
+In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} rechts sieht man, dass sich die Pionen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gibt. Also ist alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden kann.
 
-Nun wurde wie in den vorherigen Kapiteln ein Histogramm mit den Photonen gefüllt und anschließend wurde über die verschiedenen Photonenenergien gefittet. Dies wurde sowohl mit, als auch ohne Berücksichtigung der Detektoren am Rand durchgeführt.
+Nun wird wie in den vorherigen Kapiteln ein Histogramm mit den Photonen gefüllt (Abb. \ref{fig:Sim-Data-Ursprung-2DHist-No-Cut}) und anschließend wird über die verschiedenen Photonenenergien gefittet. Dies wird sowohl mit, als auch ohne Berücksichtigung der Detektoren am Rand durchgeführt.
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimIsotropUrsprungBothDeviation}
 	\end{center}
-\caption{Abweichung der errechneten invarianten Masse von der tatsächlichen $\pi^0$ Masse in Prozent. Bei der roten Linie wurden die Detektoren am Rand berücksichtigt, bei der schwarzen wurden sie vernachlässigt.}
+\caption[Simulation: Symmetrische Photonen; Isotroper Zerfall Abweichung mit und ohne Detektoren am Rand]{Abweichung der errechneten invarianten Masse von der tatsächlichen $\pi^0$ Masse in Prozent. Bei der roten Linie wurden die Detektoren am Rand berücksichtigt, bei der schwarzen wurden sie vernachlässigt.}
 \label{fig:Pi0-Ursprung-Relative-Abweichung}
 \end{figure}
 
 
 
 In der Abbildung \ref{fig:Pi0-Ursprung-Relative-Abweichung} ist die Abweichung der errechneten invarianten Masse für verschiedene Photonenenergien aufgetragen. Die Form der Abweichung ähnelt sehr stark der aus Abbildung \ref{fig:Simulierte-Daten-Abweichung}.
- Allerdings gab es hier kein Plateau im Photonenenergieintervall von 125 MeV bis 300 MeV, sondern es lag hier durchgehend eine sehr leichte '\textit{Steigung}' von etwa +0,2\% pro 50 MeV vor. Die maximale Abweichung lag hier ebenfalls bei 425 MeV und betrug fast +8\%. Auch hier war kein Unterschied zwischen den Abweichungen zu erkennen, wenn man die Detektoren am Rand berücksichtigte oder vernachlässigte. 
+ Allerdings gibt es hier kein Plateau im Photonenenergieintervall von 125 MeV bis 300 MeV, sondern es liegt hier eine sehr leichte '\textit{Steigung}' von etwa +0,2\% pro 50 MeV vor. Die maximale Abweichung liegt hier ebenfalls bei 425 MeV und betr\"agt fast +8\%. Auch hier ist kein Unterschied zwischen den Abweichungen zu erkennen, wenn man die Detektoren am Rand berücksichtigt oder vernachlässigt. 
 
-Daraus folgt, dass auf eine andere Weise nach der Ursache für die Abweichung gesucht werden musste, da die starke Vereinfachung des zu untersuchenden Prozesses nicht weiter geholfen hat.
+Daraus folgt, dass auf eine andere Weise nach der Ursache für die Abweichung gesucht werden muss, da die starke Vereinfachung des zu untersuchenden Prozesses nicht weiter geholfen hat.
 
 %Nun wurde \"uberpr\"uft, wie sich die Abweichung des $\pi^0$-Peaks verhielt, wenn das $\pi^0$ einen zuf\"alligen Boost in eine beliebige Richtung erhielt. Dazu wurde ein dreidimensionales Histogramm angelegt, mit der errechneten invarianten Masse auf der x-Achse, der Energie der Photonen auf der y-Achse und der Energie des geboosteten Mesons auf der z-Achse. Es galt immer noch die Bedingung, dass die detektierten Photonen eine \"ahnliche Energie aufweisen mussten, um in das Histogramm gef\"ullt zu werden.
 
 \subsection{Unterschied zwischen generierten und gemessenen Winkeln}
 \label{sec:Unterschied-tatsaechlicher-gemessener-Winkel}
 
-Es gab die Vermutung, dass es einen Unterschied, zwischen dem gemessenen und dem tatsächlichem Öffnungswinkel der beiden Photonen gab.
+Es gibt die Vermutung, dass ein starker Unterschied, zwischen dem gemessenen und dem tatsächlichem Öffnungswinkel der beiden Photonen vorliegt.
 
-Die Detektoren des Crystal-Balls sollten alle so ausgerichtet sein, dass sie in die Richtung des Zentrum des Targets zeigten, dieser liegt im Mittelpunkt der Kugel. Ist dies nicht der Fall, so wird ein falscher Öffnungswinkel zwischen den beiden Photonen bestimmt und damit nach Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} eine falsche invariante Masse.
+Die Detektoren des Crystal-Balls sollen alle so ausgerichtet sein, dass sie in die Richtung des Zentrum des Targets zeigen, dieser liegt im Mittelpunkt der Kugel. Ist dies nicht der Fall, so wird ein falscher Öffnungswinkel zwischen den beiden Photonen bestimmt und damit nach Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} eine falsche invariante Masse.
 
-Um diesen Unterschied zu untersuchen, wurde zuerst überprüft, ob ein von Null verschiedener Winkel zwischen dem generierten und dem gemessenen Teilchen vorlag.
+Um diesen Unterschied zu untersuchen, wird zuerst überprüft, ob ein von Null verschiedener Winkel zwischen dem generierten und dem gemessenen Teilchen vorliegt.
 
-Dafür musste bestimmt werden, welches generierte Teilchen zu den gemessenen gehörte. Dazu hielt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten war, dann handelte es sich wahrscheinlich um das gleiche Teilchen. Danach wurde dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckte, sondern '\textit{Löcher}' ohne Detektoren besaß, wurden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation konnte kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich konnten sie ohne große Bedenken vernachlässigt werden. Dies hatte einen weiteren Vorteil. Dadurch konnten generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besaßen und damit nicht mehr im Crystal-Ball detektiert werden konnten, direkt verworfen werden. Das führte dazu das jedes generierte Photon auch im Crystal-Ball gemessen wurde. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
+Dafür muss bestimmt werden, welches generierte Teilchen zu den gemessenen gehört. Dazu h\"alt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten ist, dann handelt es sich wahrscheinlich um das gleiche Teilchen. Danach wird dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckt, sondern '\textit{Löcher}' ohne Detektoren besitzt, werden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation kann kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich k\"onnen sie ohne große Bedenken vernachlässigt werden. Dies hat einen weiteren Vorteil. Dadurch k\"onnen generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besitzen und damit nicht mehr im Crystal-Ball detektiert werden k\"onnen, direkt verworfen werden. Das führt dazu, dass jedes generierte Photon auch im Crystal-Ball gemessen werden. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
 
 \begin{figure}[h!]
 	\centering
@@ -875,15 +929,15 @@ Dafür musste bestimmt werden, welches generierte Teilchen zu den gemessenen geh
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimOpeningAngleDeviation}
 	\end{minipage}
-	\caption{Links ist der Winkel zwischen dem generierten und dem entsprechendem gemessenen Photon gegen die Energie des gemessenen Photon aufgetragen. Rechts ist die Differenz zwischen dem gemessenen und dem tats\"achlichen \"Offnungswinkel gegen die Energie der gemessenen Photonen aufgetragen. Es wurden nur Photonen mit einer \"ahnlichen Energie ber\"ucksichtigt.}
+	\caption[Simulation:Symmetrische Photonen Winkel zw. Gen. und Rec. Photonen unterschied zwischen Gen. und Rec. \"Offnungswinkel]{Daten aus der Simulation: Links ist der Winkel zwischen dem generierten und dem entsprechendem gemessenen Photon gegen die Energie des gemessenen Photon aufgetragen. Rechts ist die Differenz zwischen dem gemessenen und dem tats\"achlichen \"Offnungswinkel gegen die Energie der gemessenen Photonen aufgetragen. Es wurden nur Photonen mit einer \"ahnlichen Energie ber\"ucksichtigt.}
 	\label{fig:Abweichung-Winkel-Oeffnungswinkel}
 
 \end{figure}
 
 
-In Abbildung \ref{fig:Abweichung-Winkel-Oeffnungswinkel} links wurde dann der Winkel zwischen dem generierten Photon und dem gemessenen Photon gegen die Energie des gemessenen aufgetragen.  
+In Abbildung \ref{fig:Abweichung-Winkel-Oeffnungswinkel} links ist der Winkel zwischen dem generierten Photon und dem gemessenen Photon gegen die Energie des gemessenen aufgetragen.  
 
-Man erkennt, dass der Winkel zwischen den beiden Photonen bei niedrigen Energien 1$^{\circ}$ bis 4$^{\circ}$ betrug. F\"ur h\"ohere Energien nahm diese Abweichung ab, bis sie nur noch 1$^{\circ}$ bis 2$^{\circ}$ betrug.
+Man erkennt, dass der Winkel zwischen den beiden Photonen bei niedrigen Energien 1$^{\circ}$ bis 4$^{\circ}$ betr\"agt. F\"ur h\"ohere Energien nimmt diese Abweichung ab, bis sie nur noch 1$^{\circ}$ bis 2$^{\circ}$ betr\"agt.
 
 Dies l\"asst sich dadurch erkl\"aren, dass h\"oher energetische Photonen einen deutlich st\"arkeren Schauer ausl\"osen, als Photonen mit niedriegerer Energie. Das f\"uhrte dazu, dass auch der Schauerradius gr\"o{\ss}er wurde. Dadurch wurden mehr Detektorkristalle ausgel\"ost, wodurch sich der genaue Auftreffort des Photons pr\"aziser bestimmen lie{\ss}. Folglich nahm der Winkel zwischen den beiden Photonen mit zunehmender Energie ab.
 
@@ -915,36 +969,36 @@ Daraus folgte, dass der \"Offnungswinkel f\"ur hohe Energien relativ genau besti
 \label{sec:Z-Vertex-Abhaengigkeit}
 
 
-Zusätzlich wurde auch die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen war, \"uberpr\"uft. 
+Zusätzlich wird auch die Abh\"angigkeit, zwischen der errechneten  Position des $\pi^0$-Peaks und dem Ort im Target in dem das Pion entstanden und zerfallen ist, \"uberpr\"uft. 
 
-In Kapitel \ref{sec:Vorbereitung-der-Simulation} wurde gezeigt, dass das $\pi^0$ maximal 25 nm zurücklegen kann. Folglich konnte angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
+Da das $\pi^0$ nur wenige Nanometer zur\"ucklegt, bevor es zerf\"allt, kann angenommen werden, dass das Pion am gleichem Ort zerf\"allt, an dem es auch entsteht.
 
 % Hier wurde schlie{\ss}lich ein weiterer Vorteil der Simulation ausgenutzt. Bei einer Simulation sind alle Prozesse genau bekannt. Von jedem Prozess wusste man demnach auch den genauen Ort an dem er sich ereignete. Bei reellen Messdaten war dies nicht m\"oglich, da der Crystal-Ball keinen Detektor besa{\ss}, um den Ort des Zerfalls zu bestimmen. 
  
-Zur Untersuchung der Z-Vertex Abhängigkeit wurde das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. 
-Im Zentrum des Targets befand sich der Ursprung des Koordinatensystems, so lag am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgte z=-4 cm bis z=-3 cm usw. 
+Zur Untersuchung der Z-Vertex Abhängigkeit wird das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. 
+Im Zentrum des Targets befindet sich der Ursprung des Koordinatensystems, so liegt am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgt z=-4 cm bis z=-3 cm usw. 
 
-Hier wurde ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten konnte n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen war. Daf\"ur gab es keine Detektoren im Crystal-Ball. In Simulationen waren alle Prozesse allerdings wohl bekannt, so wusste man auch von jedem Prozess an welchem Ort er sich ereignete. 
+Hier wird ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten kann n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gibt es keine Detektoren im Crystal-Ball. In Simulationen sind alle Prozesse allerdings wohl bekannt, so wei{\ss} man auch von jedem Prozess an welchem Ort er sich ereignete. 
 
-Anschließend wurde ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse angelegt. (Abb.: \ref{fig:Z-Vertex-3D-Hist}). Die Detektoren am Rand wurden nicht ber\"cksichtigt.
+Anschließend wird ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse angelegt. (Abb.: \ref{fig:Z-Vertex-3D-Hist}). Die Detektoren am Rand werden nicht ber\"cksichtigt.
 
-Daraus konnte dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wurde jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen berechnet. (Abb.: \ref{fig:ZVertex-All-Fits})
-Diese 10 Z-Vertex Abhängigkeiten wurden anschließend in Abbildung \ref{fig:Z-Vertex-Multi-Graph} eingetragen.
+Daraus kann dann die Position des $\pi^0$-Peaks in Abhängigkeit zum Z-Vertex Intervall berechnet werden, dazu wird jedes Z-Intervall einzeln betrachtet und die Position abhängig von der Energie der Photonen berechnet. (Abb.: \ref{fig:ZVertex-All-Fits})
+Diese 10 Z-Vertex Abhängigkeiten werden anschließend in Abbildung \ref{fig:Z-Vertex-Multi-Graph} eingetragen.
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904ZVertexMultigraph}
-		\caption{Die Abweichung der $\pi^0$-Peak Position für verschiedene Intervalle des Z-Vertex gegen die Energie der gemessenen Photonen.}
+		\caption[Simulation: Symmetrische Photonen; Abweichung f\"ur verschiedene Z-Vertices]{Daten aus der Simulation: Die Abweichung der $\pi^0$-Peak Position ist für verschiedene Intervalle des Z-Vertex gegen die Energie der gemessenen Photonen. Es werden die Detektoren am Rand vernachl\"assigt. Die Energie der Photonen muss sich \"ahneln.}
 		\label{fig:Z-Vertex-Multi-Graph}
 	\end{center}
 \end{figure}
 
-Auch hier hatte die Abweichung zwischen der errechneten invarianten Masse und der $\pi^0$ Masse die gleiche Form. So lag nur eine geringe Abweichung f\"ur alle Z-Vertices bei niedrigen Photonenenergien vor. Diese betrug maximal etwa -0,5\%. 
+Auch hier hat die Abweichung zwischen der errechneten invarianten Masse und der $\pi^0$ Masse die gleiche Form, wie in den vorherigen Sektionen. So liegt nur eine geringe Abweichung f\"ur alle Z-Vertices bei niedrigen Photonenenergien vor. Diese betr\"agt maximal etwa nur -0,5\%. 
 
-Die Abweichungen treffen sich alle bei einer Energie von etwa 200 MeV. Dort haben alle Z-Vertices eine Abweichung von etwa -0,5\%. An diesem Punkt erfolgt eine Vertauschung der Ordnung der Z-Vertices. Vor 200 MeV hat das Intervall von 4 cm bis 5 cm die gr\"o{\ss}te Abweichung und nach 200 MeV hat es die kleinste. F\"ur das Intervall von -4 cm bis -5 cm gilt genau das Umgekehrte. Das liegt daran, dass f\"ur niedriege Photonenenergien auch das $\pi^0$ eine niedrige Energie besitzen muss. Das hei{\ss}t es ist wahrscheinlich, dass das $\pi^0$ in entgegengesetzer Richtung zum Strahl ausgesandt wird, da es sonst mehr Energie besitzen w\"urde. Somit kann es sein, dass die meisten gemessenen niederenergetischen Teilchen einen Polarwinkel besitzen, der gr\"o{\ss}er 90$^{\circ}$ ist. Folglich wird der \"Offnungswinkel f\"ur $\pi^0$ die am Anfang des Targets entstehen, als zu gro{\ss} angenommen. F\"ur $\pi^0$ die am Ende des Targets entstehen wird, dann folglich ein zu kleiner \"Offnungswinkel gemessen. 
+Die Abweichungen treffen sich alle bei einer Energie von etwa 200 MeV. Dort haben alle Z-Vertices eine Abweichung von etwa -0,5\%. An diesem Punkt erfolgt eine Vertauschung der Ordnung der Z-Vertices. Vor 200 MeV hat das Intervall von 4 cm bis 5 cm die gr\"o{\ss}te Abweichung und nach 200 MeV hat es die kleinste. F\"ur das Intervall von -4 cm bis -5 cm gilt genau das Umgekehrte. Das liegt daran, dass f\"ur niedriege Photonenenergien auch das $\pi^0$ eine niedrige Energie besitzen muss. Das hei{\ss}t es ist wahrscheinlich, dass das $\pi^0$ in entgegengesetzer Richtung zum Strahl ausgesandt wird, da es sonst mehr Energie besitzen w\"urde. Somit kann es sein, dass die meisten gemessenen niederenergetischen Teilchen einen Polarwinkel besitzen, der gr\"o{\ss}er als 90$^{\circ}$ ist. Folglich wird der \"Offnungswinkel f\"ur $\pi^0$ die am Anfang des Targets entstehen, als zu gro{\ss} angenommen. F\"ur $\pi^0$ die am Ende des Targets entstehen wird, dann folglich ein zu kleiner \"Offnungswinkel gemessen. 
 
 Bei einer Photonenenergie von \"uber 200 MeV m\"ussen die $\pi^0$ ebenfalls mehr Energie besitzen. Folglich werden mehr $\pi^0$ in Strahlrichtung betrachtet und somit werden mehr Photonen ebenfalls in Strahlrichtung ausgesandt. Die Photonenenergie von 200 MeV ist der Umkehrpunkt.
-Ab hier wird f\"ur ein am Anfang des Targets entstehendes Teilchen ein zu kleiner \"Offnungswinkel gemessen und vice versa.
+Ab hier wird f\"ur ein am Anfang des Targets entstehendes $\pi^0$ ein zu kleiner \"Offnungswinkel zwischen den ausgesandten Photonen gemessen und vice versa.
 
 Ab 200 MeV f\"achert sich die Abweichung auch immer weiter auf. Bei 425 MeV betr\"agt sie fast 2\%. Das wiederum bedeutet, dass die r\"aumliche Ausdehnung des Target nur einen kleinen Effekt, im Gegensatz zur bereits festgestellten Abweichung besitzt.
 
@@ -956,27 +1010,9 @@ Die maximale Abweichung wird ebenfalls bei 425 MeV erreicht und betr\"agt ca. 7\
 
 %Da auch in den simulierten Daten diese Abweichung der $\pi^0$-Peak Position zu erkennen war, musste genauer nach der Ursache gesucht werden.
 
-\subsection{Mindestwinkel zwischen detektierten Photonen}
-\label{sec:Min-Openingangle}
 
-%\colorbox{yellow}{\"Offnungswinkel ist mindestens 30 Grad; Mit Detektoren Am Rand}
+\subsection{Unterschied zwischen generierten und berechneten \"Offnungswinkel f\"ur verschiedene Z-Vertices}
 
-Wie bereits erw\"ahnt, breitet sich ein Schauer im Detektor immer auch in longitudinaler Richtung aus. Also werden mehrere Detektoren durch ein einfallendes Photon ausgel\"ost.
-
-Das bedeutet allerdings auch, dass ein Detektorkristall von zwei Photonen ausgel\"ost werden kann, wenn der \"Offnungswinkel zwischen den beiden Photonen nicht gro{\ss} genug war, um eine \"Uberlagerung zu vermeiden. Das f\"uhrte dazu, dass die Energie der Photonen nicht exakt bestimmt werden konnte, da die Aufteilung der berechneten Energie auf die beiden Photonen nicht eindeutig festgelegt werden konnte.
-
-Deswegen wurde hier darauf geachtet, dass die registrierten Photonen einen \"Offnungswinkel von mindestens 30$^{\circ}$ besa{\ss}en, um eine solche \"Uberlagerung zu vermeiden.
-
-
-\begin{figure}[h!]
-	\begin{center}
-		\includegraphics[width=100mm]{NewCalib/20171904SimMinOpeningAngleDeviation}
-		\caption{Die Abweichung der $\pi^0$-Peak Position mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Teilchen mindestens 30$^{\circ}$ betrug. Alle Fits f\"ur diesen Plot befinden sich im Anhang (Abb.: \ref{fig:Relative-Abweichung-Min-Opening-Angle-AllFits})}
-		\label{fig:Relative-Abweichung-Min-Opening-Angle}
-	\end{center}
-\end{figure}
-
-Wie in Abbildung \ref{fig:Relative-Abweichung-Min-Opening-Angle} zu erkennen ist, hatte die Abweichung zwischen der errechneten invarianten Masse und der tats\"achlichen die gleiche Form, wie in den Kapiteln zuvor. Folglich brachte auch diese Bedingung keine Verbesserung.
 
 
 
@@ -1032,7 +1068,7 @@ Um nun mehrere dieser Hot-Crystals zu finden, wurde Abbildung \ref{fig:Verteilun
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitClusterSize0Marker}
 	\end{center}
-	\caption{Verteilung der detektierten Teilchen im Crystal-Ball. Die Energie der Teilchen musste \"ahnlich sein und lag im Intervall von 0 MeV bis 100 MeV. Markiert sich m\"ogliche Hot-Crystals}
+	\caption[Strahlzeit: Symmetrische Photonen; Markierte '\textit{Hot-Crystals}'; Niedrige Energien]{Verteilung der detektierten Teilchen im Crystal-Ball. Die Energie der Teilchen musste \"ahnlich sein und lag im Intervall von 0 MeV bis 100 MeV. Markiert sich m\"ogliche Hot-Crystals}
 	\label{fig:Markierte-Hot-Crystals}
 \end{figure}
 
@@ -1050,7 +1086,7 @@ Anschlie{\ss}end wurde versucht die Position der Hot-Crystals auch auf Crystal-B
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map100MeV}
-		\caption{Crystal-Ball Map f\"ur eine Photonenenergie von 0 MeV bis 100 MeV. Makiert sich die gleichen Kristalle, wie in Abbildung \ref{fig:Markierte-Hot-Crystals} und in lila zwei weitere tote Kristalle}
+		\caption[Strahlzeit: Symmetrische Photonen; Markierte Dead-Crystals auf der CB-Karte; Niedrige Energien]{Crystal-Ball Map f\"ur eine Photonenenergie von 0 MeV bis 100 MeV. Makiert sich die gleichen Kristalle, wie in Abbildung \ref{fig:Markierte-Hot-Crystals} und in lila zwei weitere tote Kristalle}
 		\label{fig:Makierte-Kristalle-Map}
 	\end{center}
 \end{figure}
@@ -1081,7 +1117,7 @@ Mithilfe der Karte ist es auch m\"oglich die Kristalle die genaue Elementnummer 
 \end{tabular}
 		
 
-	\caption{Tabelle mit den bereits bekannten Dead-Crystals. An der Anzahl der Events erkennt man auch, dass die Detektoren ausgeschaltet sind.}
+	\caption[Bereits bekannte Dead-Crystals]{Tabelle mit den bereits bekannten Dead-Crystals. An der Anzahl der Events erkennt man auch, dass die Detektoren ausgeschaltet sind.}
 	
 \end{table}
 
@@ -1098,7 +1134,7 @@ Mithilfe der Karte ist es auch m\"oglich die Kristalle die genaue Elementnummer 
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map400MeV}
 	\end{minipage}
-	\caption{ Es sind die gleichen Kristalle, wie in der vorherigen Abb. markiert. Allerdings sind die Kristalle die vorher rot makiert waren, hier gr\"un makiert, da man sie sonst nicht erkennen kann. }
+	\caption[Simulation: Symmetrische Photonen; Markierte Dead-Crystals]{ Es sind die gleichen Kristalle, wie in der vorherigen Abb. markiert. Allerdings sind die Kristalle die vorher rot makiert waren, hier gr\"un makiert, da man sie sonst nicht erkennen kann. }
 \end{figure}
 
 
@@ -1122,7 +1158,7 @@ Die genaue Ursache dieses Ph\"amomens muss allerdings noch bestimmt werden.
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map400MeV}
 	\end{minipage}
-	\caption{ Es wurden die gleichen Kristalle, wie in der vorherigen Abb. markiert, allerdings ist die Photonenenergie hier von 300 MeV bis 400 MeV.}
+	\caption[Strahlzeit: Symmetrische Photonen; Markierte Dead-Crystals; Hohe Energien]{ Es wurden die gleichen Kristalle, wie in der vorherigen Abb. markiert, allerdings ist die Photonenenergie hier von 300 MeV bis 400 MeV.}
 	
 \end{figure}
 
@@ -1146,7 +1182,7 @@ Auch wenn man verlangt, dass die Clustersize gr\"o{\ss}er als drei sein muss, da
 		\centering
 		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize3Map400MeV}
 	\end{minipage}
-	\caption{Daten aus der Strahlzeit. Makiert sind die bereits bekannten Dead-Crystals. Allerdings gibt es hier die Bedingung, dass mindestens 4 Detektoren bei einem Events ausgel\"ost werden m\"ussen.}
+	\caption[Strahlzeit: Symmetrische Photonen; Markierte Dead-Crystals; Clustersize $>$ 3]{Daten aus der Strahlzeit. Makiert sind die bereits bekannten Dead-Crystals. Allerdings gibt es hier die Bedingung, dass mindestens 4 Detektoren bei einem Events ausgel\"ost werden m\"ussen.}
 	
 \end{figure}
 \newpage
@@ -1161,7 +1197,7 @@ Die Karte, in der diese Kristalle makiert sind, ist in Abbildung \ref{fig:Vermut
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172504StrahlzeitMoreDead}
 	\end{center}
-\caption{Daten aus der Strahlzeit. Makiert sind vermutete Dead-Crystals, die als solche noch nicht markiert wurden}
+\caption[Strahlzeit: Symmetrische Photonen; Vermutliche Dead-Crystals]{Daten aus der Strahlzeit. Makiert sind vermutete Dead-Crystals, die als solche noch nicht markiert wurden}
 \label{fig:Vermutete-Dead-Crystals-Map}
 
 \end{figure}
@@ -1223,7 +1259,7 @@ Die Karte, in der diese Kristalle makiert sind, ist in Abbildung \ref{fig:Vermut
  	
  	
  	\end{tabular}
- \caption{Tabellen mit weiteren vermutlichen Dead-Crystals (Rot markiert). Auch eingetragen sind die Anzahl der Events in den Detektoren. Schwarz geschrieben sind die Nachbarn der Detektoren.}
+ \caption[Vermutete Dead-Crystals und ihre Nachbarn mit Anzahl ihrer Events]{Tabellen mit weiteren vermutlichen Dead-Crystals (Rot markiert). Auch eingetragen sind die Anzahl der Events in den Detektoren. Schwarz geschrieben sind die Nachbarn der Detektoren.}
 \label{tab:Vermutete-Dead-Crystals} 
 \end{center}
  \end{table}
@@ -1240,7 +1276,7 @@ Auch ist die Verteilung, welche die Photonen im Crystal-Ball haben, sehr ungew\"
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/ThetaPhiVerteilung/20172404ThetaPhi200MeVBeam}
-		\caption{Verteilung der Photonen im Crystal-Ball}
+		\caption[Strahlzeit: Symmetrische Photonen; Verteilung der detektierten Photonen im CB]{Daten aus der Strahlzeit. Verteilung der detektierte Photonen im Crystal-Ball. Es wurde \"uber alle von einem Photon ausgel\"osten Photonen gemittelt, um den genauen Aufftreffort zu bestimmen.}
 		\label{fig:Verteilung-der-Photonen-im-CB}
 	\end{center}
 \end{figure}
@@ -1450,12 +1486,12 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \end{figure}
 
 
-\section{Abbildungsverzeichnis}
-%\listoffigures
+
+\listoffigures
 
 
-\section{Tabellenverzeichnis}
-%\listoftables
+
+\listoftables
 %_______________________________________________________________________________
 %\section{Weiterf\"uhrende Details zur Arbeit}
 
@@ -1509,6 +1545,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \bibitem[KPh11G]{KPh11G} Internetseite der Kernphysik {\em Mainzer Mikrotron-Geschichte}, Internetseite \url{http://www.kernphysik.uni-mainz.de/379.php}, (Stand 04.03.2017)
 
 \bibitem[KPh11F]{KPh11F} Internetseite der Kernphysik {\em Funktionsprinzip des MAMI}, Internetseite \url{http://www.kernphysik.uni-mainz.de/375.php}, (Stand 06.03.2017)
+\bibitem[KPh11B]{KPh11B} Internetseite der Kernphysik {\em Betrieb}, Internetseite \url{http://www.kernphysik.uni-mainz.de/377.php}, (Stand 26.04.2017)
 
 \bibitem[KPh04]{KPh04} Prospekt des Institut für Kernphysik Internetlink, \url{https://portal.kph.uni-mainz.de/de/information/introduction/prospekt.pdf}, (Stand: 04.03.2017)
 
