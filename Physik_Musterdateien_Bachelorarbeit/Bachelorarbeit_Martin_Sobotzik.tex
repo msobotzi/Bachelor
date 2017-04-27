@@ -406,7 +406,7 @@ A(B-\frac{x-\bar{x}}{\sigma})^{-n}, \textnormal{  falls $\frac{x-\bar{x}}{\sigma
 \label{eq:Crystal-Ball-Funktion}
 \end{equation}
 
-Dabei ist $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gibt die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"ubergeht\cite{NBI15}. 
+Dabei ist $N$ der Normierungsfaktor, $\bar{x}$ der Erwartungswert und $\sigma$ die Standardabweichung der Gau{\ss}funktion. Der Parameter $\alpha$ gibt die Position an, an dem die Gau{\ss}verteilung in das Potenzgesetz, mit dem freien Parameter $n$, \"ubergeht\cite{Cern15}. 
 
 ROOT stellt diese Funktion bereits gr\"o{\ss}tenteils zur Verf\"ugung, lediglich die Normierung muss noch hinzugef\"ugt werden.
 
@@ -980,7 +980,7 @@ Da das $\pi^0$ nur wenige Nanometer zur\"ucklegt, bevor es zerf\"allt, kann ange
 Zur Untersuchung der Z-Vertex Abhängigkeit wird das 10 cm lange Fl\"ussig-Wasserstoff-Target im Zentrum des Crystal-Ball Detektor in zehn 1 cm lange Intervalle unterteilt. 
 Im Zentrum des Targets befindet sich der Ursprung des Koordinatensystems, so liegt am Anfang des Targets das Intervall von z=-5 cm bis z=-4 cm, dann folgt z=-4 cm bis z=-3 cm usw. 
 
-Hier wird ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten kann n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gibt es keine Detektoren im Crystal-Ball. In Simulationen sind alle Prozesse allerdings wohl bekannt, so wei{\ss} man auch von jedem Prozess an welchem Ort er sich ereignete. 
+Hier wird ein weiterer Vorteil der Simulation ausgenutzt. Aus den im Experiment genommenen Daten kann n\"amlich nicht der Ort bestimmt werden, an dem das $\pi^0$ zerfallen ist. Daf\"ur gibt es keine Detektoren im Crystal-Ball. In Simulationen sind alle Prozesse allerdings wohl bekannt, so wei{\ss} man auch von jedem Prozess an welchem Ort er sich ereignet. 
 
 Anschließend wird ein dreidimensionales Histogramm angelegt mit den Intervallen des Z-Vertex auf der z-Achse, der errechneten invarianten Masse auf der x-Achse und der Energie der Photonen auf der y-Achse angelegt. (Abb.: \ref{fig:Z-Vertex-3D-Hist}). Die Detektoren am Rand werden nicht ber\"cksichtigt.
 
@@ -1331,7 +1331,7 @@ Diese Gleichung kann nun quadriert werden:
 \end{split}
 \end{equation}
 
-Da man sich nur f\"ur die Photonen interessierte, konnte angenommen werden, dass es sich bei den Teilchen um Photonen handelt. Daraus folgt das $|\overrightarrow{p_1}|=E_1$ und $|\overrightarrow{p_2}|=E_2$ und $m_1=m_2=0$ gilt.
+Da man sich nur f\"ur die Photonen interessiert, kann angenommen werden, dass es sich bei den Teilchen um Photonen handelt. Daraus folgt das $|\overrightarrow{p_1}|=E_1$ und $|\overrightarrow{p_2}|=E_2$ und $m_1=m_2=0$ gilt.
 
 Damit lässt sich die invariante Masse des Pions, welches in die beiden Photonen zerfallen ist, durch
 \begin{equation}
@@ -1342,7 +1342,7 @@ Damit lässt sich die invariante Masse des Pions, welches in die beiden Photonen
 \end{equation}
 berechnen.
 
-Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konnte die Energie der Photonen bestimmt werden und durch Kenntnis des Auftreffortes der Photonen im Crystal-Ball konnte der Winkel zwischen den beiden Photonen errechnet werden, dazu musste allerdings angenommen werden, dass das $\pi^0$ im Zentrum des Targets zerfällt. Siehe dazu Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}.
+Durch den Crystal-Ball sind alle Variablen in dieser Gleichung bekannt. So kann die Energie der Photonen bestimmt werden und durch Kenntnis des Auftreffortes der Photonen im Crystal-Ball kann der Winkel zwischen den beiden Photonen errechnet werden. Dazu muss allerdings angenommen werden, dass das $\pi^0$ im Zentrum des Targets zerfällt. Siehe dazu Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}.
 
 \section{Abbildungen}
 
@@ -1578,6 +1578,8 @@ Internetseite \url{http://www.kph.uni-mainz.de/a2.php} (Stand 11.03.2017)
 \bibitem[PDG16]{PDG16} Internetseite der PDG {\em Particle Data Group} \url{http://pdg.lbl.gov/}, (Stand 20.03.2017)
 
 \bibitem[De15]{De15} Skript \& Übungsblätter zur Vorlesung Experimentalphysik Vb WS15/16 Johannes-Gutenberg Universi\"at Mainz, Prof. Denig \url{https://reader.uni-mainz.de/WiSe2015-16/08-128-055-00/_layouts/15/start.aspx#/Lists/DocumentLib/Forms/AllItems.aspx?RootFolder=}, (Stand: 14.03.2017)
+
+\bibitem[Ce15]{Ce15} Hilfeseite für die Crsystal-Ball Funktion in Root \url{https://root.cern.ch/root/html/tutorials/math/CrystalBall.C.html} (Stand: 27.04.2017)
 
 \bibitem[NBI15]{NBI15} Einf\"urung in die Programmierung mit Root von Manuel Calderon de la Barca Sanchez \url{http://www.nbi.dk/~petersen/Teaching/Stat2015/PythonRootIntro/ROOT_TipsAndTricks.pdf} (Stand: 27.03.2017)
 
