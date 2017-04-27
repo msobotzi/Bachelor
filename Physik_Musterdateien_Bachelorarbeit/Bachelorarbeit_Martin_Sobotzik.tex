@@ -505,16 +505,16 @@ Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt w
 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20171104BadRandomGenerator}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20171204GoodRandomGenerator}
-	\end{minipage}
+	\begin{center}$
+\begin{array}{cc}
+
+
+		\includegraphics[width=75mm]{20171104BadRandomGenerator}
+
+
+		\includegraphics[width=75mm]{20171204GoodRandomGenerator}
+	\end{array}$
+\end{center}
 	\caption[Beispiel f\"ur die Verteilung durch Zufallsgeneratoren]{Beispiel f\"ur durch die Gun generierten Verteilungen. Links wurde das Paket TRandom und links TRandom3 benutzt. Man erkennt direkt eine deutliche Verbesserung der Verteilung von TRandom auf TRandom3. Es handelte sich dabei jeweils um das Histogramm f\"ur symmetrische Photonen mit einer Energie von 375 MeV bis 400 MeV und einem Z-Vertex von -5 cm bis -4 cm. F\"ur weitere Details zur Vertex Aufteilung siehe Kapitel \ref{sec:Z-Vertex-Abhaengigkeit}}
 	\label{fig:Random-Verteilung}
 \end{figure}
@@ -527,16 +527,16 @@ Schlie{\ss}lich muss noch überprüft werden, ob der neue Ereingisgenerator so w
 %die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wird die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist, dadurch ist ein einfacherer Vergleich möglich. 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_New}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170704Pi0_Gun_Old}
-	\end{minipage}
+\begin{center}
+	
+$\begin{array}{cc}
+
+		\includegraphics[width=75mm]{New_MC_Pi0_Gun/20170704Pi0_Gun_New}
+
+
+		\includegraphics[width=75mm]{New_MC_Pi0_Gun/20170704Pi0_Gun_Old}
+\end{array}$
+\end{center}
 	
 	\caption[Simulation: Vergleich der der Ereignisgeneratoren]{Links wird der neue und rechts der alte Ereignisgenerator benutzt. Aufgetragen ist der $\theta$-Winkel in rad gegen die Energie in GeV der durch den Zerfall ausgesandten Photonen. Die beiden Pakete beinhalten jeweils 100000 Ereignisse.}
 	\label{fig:Vergleich-der-beiden-Guns}
@@ -552,7 +552,7 @@ Man erkennt, dass sich die Verteilung sehr stark \"ahneln, was darauf hindeutet,
 
 		\centering
 		\includegraphics[width=0.9\textwidth]{20172504MCTrueME1}
-		\caption[Simulation: Direkte Berechnung der $\pi^0$-Masse aus dem neuen Ereignisgenerator]{Direkte Berechnung der $\pi^0$-Masse aus den Daten des neuen Ereignissgeneratoren.}
+		\caption[Simulation: Direkte Berechnung der $\pi^0$-Masse aus dem neuen Ereignisgenerator]{Direkte Berechnung der $\pi^0$-Masse aus den Daten des neuen Ereignissgeneratoren. Es wurden nur Photonen mit einer \"ahnlichen Energie benutzt.}
 
 \end{figure}
 
@@ -732,22 +732,19 @@ Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energeti
 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_125}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20170504ThetaPhiEnergySymmetric2014_10_400}
-	\end{minipage}
+\begin{center}
+	$\begin{array}{cc}
+		\includegraphics[width=75mm]{20170504ThetaPhiEnergySymmetric2014_10_125}
+
+		\includegraphics[width=75mm]{20170504ThetaPhiEnergySymmetric2014_10_400}
+\end{array}$
+\end{center}
 	
-	\caption[Strahlzeit: Verteilung der symmetrischen Photonen im CB f\"ur verschiedene Energien]{Daten aus der Strahlzeit: Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV.}
+	\caption[Strahlzeit: Verteilung der symmetrischen Photonen im CB f\"ur verschiedene Energien]{Daten aus der Strahlzeit: Links ist die Verteilung der Photonen im Crystal-Ball mit einer Energie von 125 MeV bis 150 MeV zu sehen, rechts von 400 MeV bis 425 MeV. Es werden nur Photonen mit einer \"ahnlichen Energie ber\"ucksichtigt. Auch gibt es einen Cut auf die Masse des $\pi^0$}
 	\label{fig:Verteilung-im-CB}
 \end{figure}
 
-In den Plots in Abbildung \ref{fig:Verteilung-im-CB} erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten.
+In den Plots in Abbildung \ref{fig:Verteilung-im-CB} erkennt man sehr gut, wie sich die Verteilung der Photonen \"andert, wenn die Energie der Photonen zunimmt und die Bedingung gilt, dass sich die Energie der Photonen \"ahneln m\"ussen. So sind die Photonen f\"ur kleine Energien \"uber den ganzen Crystal-Ball verteilt, w\"ahrend f\"ur gr\"o{\ss}ere Energien die Photonen immer h\"aufiger am Strahlenausgang auftreten. In dieser Abbildung gibt es einen Cut auf die Masse des $\pi^0$. Das bedeutet, die beiden detektierten Photonen werden nur in das Histogramm eingetragen, wenn die aus diesen berechnete invariante Masse zwischen 70 MeV und 200 MeV liegt.
 
 Aus der Verbesserung der Abweichung f\"ur hohe Photonenenergien und unter Vernachl\"assigung der Detektoren am Rand liegt die Vermutung nahe, dass die Detektoren am Rand des Strahleneingangs nicht sehr gut f\"ur hohe Photonenenergien kalibriert sind. 
 Allerdings war damit nicht die gesamte Abweichung zu erkl\"aren. 
@@ -774,16 +771,15 @@ Anschlie{\ss}end wird \"uber diese dann auch wieder mit der Crystal-Ball-Funktio
 Auch hier werden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich in einen einzelnen Graphen gezeichnet.
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimNoCut2DHist}
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimBothDeviation}
-	\end{minipage}
+\begin{center}
+	$\begin{array}{cc}
+
+	
+		\includegraphics[width=75mm]{NewCalib/20171904SimNoCut2DHist}
+	
+		\includegraphics[width=75mm]{NewCalib/20171904SimBothDeviation}
+\end{array}$
+\end{center}	
 	\caption[Simulation: 2D-Histogramm und Abweichung f\"ur symmmetrische Photonen]{Daten aus der Simulation: Links ist als Beispiel das Histogramm aus den simulierten Daten dargestellt. Für dieses Histogramm gilt die Bedingung, dass auch die Detektoren am Rand berücksichtigt werden. Rechts sind die Abweichungen vom $\pi^0$-Peak mit (rot) und ohne (schwarz) Berücksichtigung der Detektoren am Rand zu sehen.}
 	\label{fig:Simulierte-Daten-Abweichung}
 \end{figure}
@@ -853,24 +849,19 @@ Als erste Kontrolle wird \"uberpr\"uft, ob die durch den Zerfall ausgesandten Ph
 
 
 \begin{figure}[h!]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-		\includegraphics[width=0.9\textwidth]{20171005Pi0UrsprungThetaPhiVerteilung}
-		
-		\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{20171204DistributionPhotonUrsprungIsotrop}
-	\end{minipage}
-\caption[Simulation:Symmetrische Photonen Verteilung der Mesonen und detektierten Photonen im CB bei isotropen Zerfall] {Monte-Carlo-Simulation: Links ist die Verteilung der geboosteten $\pi^0$ im Raum zu erkennen. Die Winkel hier sind in Radiant angegeben. Rechts ist der Ort dargestellt, an dem die Photonen den Crystal-Ball treffen. Dabei wird \"uber die ausgel\"osten Detektoren gemittelt, sodass dieses Netzmuster entsteht.}
+\begin{center}
+	$\begin{array}{cc}
+
+		\includegraphics[width=75mm]{20171005Pi0UrsprungThetaPhiVerteilung}
+
+		\includegraphics[width=75mm]{20171204DistributionPhotonUrsprungIsotrop}
+\end{array}$
+\end{center}
+\caption[Simulation:Symmetrische Photonen Verteilung der Mesonen und detektierten Photonen im CB bei isotropen Zerfall] {Monte-Carlo-Simulation: Links ist die Verteilung der geboosteten $\pi^0$ im Raum zu erkennen. Die $\pi^0$ hatten keine Einschr\"ankung in der Energie. Die Winkel hier sind in Radiant angegeben. Rechts ist der Ort dargestellt, an dem die Photonen den Crystal-Ball treffen. Dabei wird \"uber die ausgel\"osten Detektoren gemittelt, sodass dieses Netzmuster entsteht. Die Photonen m\"ussen sich energetisch \"ahneln. Au{\ss}erdem werden nur Photonen mit einer Energie zwischen 125 MeV und 425 MeV ber\"ucksichtigt.}
 \label{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum}
 \end{figure}
 
 In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} links erkennt man, dass die $\pi^0$ einen Boost in eine zuf\"allige Raumrichtung erhalten. Dadurch sind die durch den Zerfall ausgesandten Photonen isotrop im Raum verteilt.
-
-
 Zus\"atzlich gilt die Bedingung, wie in den vorherigen Kapiteln, dass nur Photonen mit einer ähnlichen Energie als Ereignis in die Datei geschrieben werden d\"urfen.
 
 In GEANT wird zus\"atzlich die Länge des Target auf 0 cm gesetzt. Dadurch wird gewährleistet, dass die Pionen auch wirklich im Ursprung zerfallen.
@@ -917,26 +908,24 @@ Um diesen Unterschied zu untersuchen, wird zuerst überprüft, ob ein von Null v
 Dafür muss bestimmt werden, welches generierte Teilchen zu den gemessenen gehört. Dazu h\"alt man ein generiertes Teilchen fest und bestimmte anschließend den Winkel zwischen ihm und jedem gemessenen Teilchen. Wenn der Winkel am kleinsten ist, dann handelt es sich wahrscheinlich um das gleiche Teilchen. Danach wird dies für das nächste generierte Teilchen durchgeführt. Da der Crystal-Ball nicht den gesamten Raum abdeckt, sondern '\textit{Löcher}' ohne Detektoren besitzt, werden auch hier die Detektoren am Rand vernachlässigt. In den vorherigen Abschnitten mit Simulation kann kein Unterschied zwischen Berücksichtigung und Vernachlässigung der Detektoren am Rand festgestellt werden, folglich k\"onnen sie ohne große Bedenken vernachlässigt werden. Dies hat einen weiteren Vorteil. Dadurch k\"onnen generierte Photonen, welche einen zu kleinen bzw. zu großen $\theta$ Winkel besitzen und damit nicht mehr im Crystal-Ball detektiert werden k\"onnen, direkt verworfen werden. Das führt dazu, dass jedes generierte Photon auch im Crystal-Ball gemessen werden. Gäbe es diese Bedingung nicht, so würde ein generiertes Photon, welches nicht im Crystal-Ball detektiert wird, mit einem anderen Teilchen gleichgesetzt, da der Winkel zwischen diesen am kleinsten wäre. Dies würde das Ergebnis verfälschen. 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimPhotonAngleDeviation}
+\begin{center}
+$\begin{array}{cc}
+
+		\includegraphics[width=75mm]{AngleRegGen/20172604AngleRegGen100-125MeV}
 		
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/20171904SimOpeningAngleDeviation}
-	\end{minipage}
-	\caption[Simulation:Symmetrische Photonen Winkel zw. Gen. und Rec. Photonen unterschied zwischen Gen. und Rec. \"Offnungswinkel]{Daten aus der Simulation: Links ist der Winkel zwischen dem generierten und dem entsprechendem gemessenen Photon gegen die Energie des gemessenen Photon aufgetragen. Rechts ist die Differenz zwischen dem gemessenen und dem tats\"achlichen \"Offnungswinkel gegen die Energie der gemessenen Photonen aufgetragen. Es wurden nur Photonen mit einer \"ahnlichen Energie ber\"ucksichtigt.}
-	\label{fig:Abweichung-Winkel-Oeffnungswinkel}
+
+		\includegraphics[width=75mm]{AngleRegGen/20172604AngleRegGen400-425MeV}
+\end{array}$
+\end{center}
+	\caption[Simulation: Symmetrische Photonen Winkel zw. Gen. und Rec. Photonen]{Daten aus der Simulation: Es wird ein langes Target benutzt. Der Winkel zwischen dem generiertem und dem rekonstruiertem Photon ist gegen verschiedene Photonenenergien aufgetragen. Die die Energie der Photonen muss sich \"ahneln. Links besitzen die Photonen eine Energie von 125 MeV bis 150 Mev, w\"ahrend sie rechts eine Energie von 400 MeV bis 425 MeV besitzen. Das 2D-Histogramm ist in Abbildung \ref{fig:Angle-Rec-Gen-Hist} zu sehen.}
+	\label{fig:Winkel-Gen-Rec}
 
 \end{figure}
 
 
-In Abbildung \ref{fig:Abweichung-Winkel-Oeffnungswinkel} links ist der Winkel zwischen dem generierten Photon und dem gemessenen Photon gegen die Energie des gemessenen aufgetragen.  
+In Abbildung \ref{fig:Winkel-Gen-Rec} ist der Winkel zwischen dem generierten Photon und dem gemessenen Photon gegen die Energie des gemessenen aufgetragen.  
 
-Man erkennt, dass der Winkel zwischen den beiden Photonen bei niedrigen Energien 1$^{\circ}$ bis 4$^{\circ}$ betr\"agt. F\"ur h\"ohere Energien nimmt diese Abweichung ab, bis sie nur noch 1$^{\circ}$ bis 2$^{\circ}$ betr\"agt.
+Links besitzen die Photonen eine Energie von 125 MeV bis 150 MeV, w\"ahrend sie rechts in der Abbildung 400 MeV bis 425 MeV beistzen. Man erkennt, dass f\"ur gr\"o{\ss}ere Energien, der Winkel zwischen dem generiertem Photon und dem rekontruiertem Photon kleiner wird.
 
 Dies l\"asst sich dadurch erkl\"aren, dass h\"oher energetische Photonen einen deutlich st\"arkeren Schauer ausl\"osen, als Photonen mit niedriegerer Energie. Das f\"uhrte dazu, dass auch der Schauerradius gr\"o{\ss}er wurde. Dadurch wurden mehr Detektorkristalle ausgel\"ost, wodurch sich der genaue Auftreffort des Photons pr\"aziser bestimmen lie{\ss}. Folglich nimmt der Winkel zwischen dem generiertem und dem entsprechendem gemessenem Photonen mit zunehmender Energie ab.
 
@@ -957,6 +946,9 @@ Da nun bekannt war, dass es einen Winkel, zwischen generierten und gemessenen Ph
 %	\label{fig:Abweichung-Winkel-ge-rec-verschiedene-Energien}
 %	
 %\end{figure}
+
+\colorbox{yellow}{Unterschied zw. Rec und Kon \"Offnungswinkel}
+
 Dies ist in Abbildung \ref{fig:Abweichung-Winkel-Oeffnungswinkel} rechts zu sehen. Auch hier erkennt man, dass die Abweichung f\"ur h\"ohere Energien klein ist im Vergleich zu kleineren Energien. 
 
 Daraus folgte, dass der \"Offnungswinkel f\"ur hohe Energien relativ genau bestimmt werden konnte. Das bedeutete allerdings, dass die Abweichungen der errechneten invarianten Masse zur tats\"achlichen Masse des $\pi^0$ dadurch nicht erkl\"art werden konnten, da diese mit steigender Photonenenergie zunahm. 
@@ -1103,11 +1095,13 @@ Mithilfe der Karte ist es auch m\"oglich die Kristalle die genaue Elementnummer 
 	\hline
 	Nummer in Abb. & Elementnummer&Anzahl der Events \\
 	\hline
+	\hline
 	1 & 549 &0 \\
 	\hline
-	2 & 597 &0 \\
+
+	2 & 565& 0\\
 	\hline
-	3 & 565& 0\\
+		3 & 597 &0 \\
 	\hline
 	4 & 677& 0\\
 	\hline
@@ -1122,18 +1116,15 @@ Mithilfe der Karte ist es auch m\"oglich die Kristalle die genaue Elementnummer 
 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map100MeV}
-		
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map400MeV}
-	\end{minipage}
-	\caption[Simulation: Symmetrische Photonen; Markierte Dead-Crystals]{ Es sind die gleichen Kristalle, wie in der vorherigen Abb. markiert. Allerdings sind die Kristalle die vorher rot makiert waren, hier gr\"un makiert, da man sie sonst nicht erkennen kann. }
+\begin{center}$
+	\begin{array}{cc}
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map100MeV}
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404MCClustersize0Map400MeV}
+	\end{array}$
+\end{center}
+	\caption[Simulation: Symmetrische Photonen; Markierte Dead-Crystals]{ Es sind die gleichen Kristalle, wie in der vorherigen Abb. markiert. Allerdings sind die Kristalle die vorher rot makiert waren, hier gr\"un makiert, da man sie sonst nicht erkennen kann. Links besitzen die Photonen eine Energie von 0 MeV bis 100 MeV rechts von 300 MeV bis 400 MeV.}
 \end{figure}
 
 
@@ -1146,17 +1137,15 @@ Die genaue Ursache dieses Ph\"amomens muss allerdings noch bestimmt werden.
 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitDeadCrystalMarked}
-		
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map400MeV}
-	\end{minipage}
+\begin{center}
+	$\begin{array}{cc}
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitDeadCrystalMarked}
+
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize0Map400MeV}
+\end{array}$
+\end{center}
 	\caption[Strahlzeit: Symmetrische Photonen; Markierte Dead-Crystals; Hohe Energien]{ Es wurden die gleichen Kristalle, wie in der vorherigen Abb. markiert, allerdings ist die Photonenenergie hier von 300 MeV bis 400 MeV.}
 	
 \end{figure}
@@ -1170,17 +1159,16 @@ Auch wenn man verlangt, dass die Clustersize gr\"o{\ss}er als drei sein muss, da
 
 
 \begin{figure}[h!]
-	\centering
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize3Map100MeV}
+	\begin{center}$
+		\begin{array}{cc}
+
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize3Map100MeV}
 		
-	\end{minipage}
-	\hfill
-	\begin{minipage}{0.45\textwidth}
-		\centering
-		\includegraphics[width=0.9\textwidth]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize3Map400MeV}
-	\end{minipage}
+
+		\includegraphics[width=75mm]{NewCalib/Strahlzeit2014/ClusterSizeNew/20172404Clustersize3Map400MeV}
+\end{array}$
+\end{center}
 	\caption[Strahlzeit: Symmetrische Photonen; Markierte Dead-Crystals; Clustersize $>$ 3]{Daten aus der Strahlzeit. Makiert sind die bereits bekannten Dead-Crystals. Allerdings gibt es hier die Bedingung, dass mindestens 4 Detektoren bei einem Events ausgel\"ost werden m\"ussen.}
 	
 \end{figure}
@@ -1275,7 +1263,7 @@ Auch ist die Verteilung, welche die Photonen im Crystal-Ball haben, sehr ungew\"
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/ThetaPhiVerteilung/20172404ThetaPhi200MeVBeam}
-		\caption[Strahlzeit: Symmetrische Photonen; Verteilung der detektierten Photonen im CB]{Daten aus der Strahlzeit. Verteilung der detektierte Photonen im Crystal-Ball. Es wurde \"uber alle von einem Photon ausgel\"osten Photonen gemittelt, um den genauen Aufftreffort zu bestimmen.}
+		\caption[Strahlzeit: Symmetrische Photonen; Verteilung der detektierten Photonen im CB]{Daten aus der Strahlzeit: Es handelt sich um Photonen mit einer Energie zwischen 200 MeV und 225 MeV. Es ist die Verteilung der detektierte Photonen im Crystal-Ball dargestellt. Es wurde \"uber alle von einem Photon ausgel\"osten Photonen gemittelt, um den genauen Aufftreffort zu bestimmen.}
 		\label{fig:Verteilung-der-Photonen-im-CB}
 	\end{center}
 \end{figure}
@@ -1283,6 +1271,8 @@ Zu sehen ist diese Verteilung in Abbildung \ref{fig:Verteilung-der-Photonen-im-C
 Allerdings sieht man in dieser Abbildung, dass die meisten Teilchen in der unteren H\"alfte des Crystal-Balls bei einem $\phi$ Winkel von ca. -100$^{\circ}$ detektiert werden.
 
 Als Ursache f\"ur diese Verteilung werden die Neutronen vermutet, die durch hochenergetische Elektronen im Beam-Dump ausgel\"ost werden. 
+
+Dass es sich hierbei um Hot-Crystals handelt, ist sehr unwahrscheinlich, da sehr viele Crystalle betroffen sind.
 
 Auch hierf\"ur muss die genaue Ursache noch herausgefunden werden.
 
@@ -1357,7 +1347,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealIntervalAllFits}
-		\caption{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln.}
+		\caption[Strahlzeit: Symmetrische Photonen alle Fits mit Hintergrund]{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln.}
 		\label{fig:similarenergyallfits}
 	\end{center}
 \end{figure}
@@ -1365,7 +1355,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904RealUnchargedAllFits}
-		\caption{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln und dass die detektierten Teilchen ungeladen sind.}
+		\caption[Strahlzeit: Alle Fits keine weiteren Bedingungen]{Alle Fits der Energieintervalle mit der Bedingung, dass sich die Photonen sich energetisch ähneln und dass die detektierten Teilchen ungeladen sind.}
 		\label{fig:similarenergyallfitsuncharged}
 	\end{center}
 \end{figure}
@@ -1373,7 +1363,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904Real30DegreeCutHist}
-		\caption{Das Histogramm das gef\"ullt wurde mit der Bedingung, dass sich die Energie der Photonen \"ahneln muss und dass die Detektoren am Rand vernachl\"assigt wurden.}
+		\caption[Strahlzeit: 2D-Hist ohne Detektoren am Rand]{Das Histogramm das gef\"ullt wurde mit der Bedingung, dass sich die Energie der Photonen \"ahneln muss und dass die Detektoren am Rand vernachl\"assigt wurden.}
 		\label{fig:30-Degree-Cut-Histogramm}
 	\end{center}
 \end{figure}
@@ -1382,7 +1372,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/20171904Real30DegreeCutAllFits}
-		\caption{Alle Fits der Energieintervalle mit den Bedingungen, dass sich die Photonen sich energetisch ähneln und dass die detektierten Teilchen ungeladen sind. Au{\ss}erdem wurden die Detektoren am Rand vernachl\"assigt.}
+		\caption[Strahlzeit: 2D-Hist ohne Detektoren am Rand; alle Fits]{Alle Fits der Energieintervalle mit den Bedingungen, dass sich die Photonen sich energetisch ähneln und dass die detektierten Teilchen ungeladen sind. Au{\ss}erdem wurden die Detektoren am Rand vernachl\"assigt.}
 		\label{fig:30-Degree-Cut-RealData-All-Fits}
 	\end{center}
 \end{figure}
@@ -1395,7 +1385,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904Sim30DegreeCut}
-		\caption{Zweidimensionales Histogramm mit Simulierten Daten. Die Energie der detektierten Photonen musste \"ahnlich sein, au{\ss}erdem wurden die Detektoren am Rand nicht ber\"ucksichtigt.}
+		\caption[Simulation: 2D-Hist; Ohne Detektoren am Rand]{Zweidimensionales Histogramm mit Simulierten Daten. Die Energie der detektierten Photonen musste \"ahnlich sein, au{\ss}erdem wurden die Detektoren am Rand nicht ber\"ucksichtigt.}
 		\label{fig:Sim-Data-2DHist-30-Degree-Edge}
 	\end{center}
 \end{figure}
@@ -1404,7 +1394,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904SimNoCutAllFits}
-		\caption{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen.}
+		\caption[Simulation: Alle Fits; Keine weiteren Bedingungen]{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen.}
 		\label{fig:Sim-No-Cut-All-Fits}
 	\end{center}
 \end{figure}
@@ -1413,7 +1403,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904Sim30DegreeCutAllFits}
-		\caption{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen. Au{\ss}erdem werden die Detektoren am Rand ber\"ucksichtigt.}
+		\caption[Simulation: Alle Fits ohne Detektoren am Rand]{Alle Fits zu den Simulierten Daten mit der Bedingung, dass die Photonen eine \"ahnliche Energie besitzen m\"ussen. Au{\ss}erdem werden die Detektoren am Rand ber\"ucksichtigt.}
 		\label{fig:Sim-30-Degree-Cut-All-Fits}
 	\end{center}
 \end{figure}
@@ -1421,7 +1411,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimUrsprungIsotropNoCutHist}
-		\caption{Zweidimensionales Histogramm mit Simulierten Daten. Die Pionen sind Isotrop im Ursprung zerfallen und erhielten einen Boost in eine zuf\"allig bestimme Richtung. Die Energie der detektierten Photonen musste \"ahnlich sein.}
+		\caption[Simulation: 2D-Hist Isotroper Boost im Ursprung ]{Zweidimensionales Histogramm mit Simulierten Daten. Die Pionen sind Isotrop im Ursprung zerfallen und erhielten einen Boost in eine zuf\"allig bestimme Richtung. Die Energie der detektierten Photonen musste \"ahnlich sein.}
 		\label{fig:Sim-Data-Ursprung-2DHist-No-Cut}
 	\end{center}
 \end{figure}
@@ -1429,7 +1419,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimIsotropUrsprungNoCutAllFits}
-\caption{Alle Fits mit der Bedingung, dass das $\pi^0$ im Ursprung zerf\"allt, und in eine zuf\"allige Richtung geboostet wird. }
+\caption[Simulation: Isotroper Boost im Ursprung alle Fits]{Alle Fits mit der Bedingung, dass das $\pi^0$ im Ursprung zerf\"allt, und in eine zuf\"allige Richtung geboostet wird. }
 \label{fig:All-Fits-Isotrop-No-Cut}
 \end{center}
 
@@ -1438,7 +1428,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimUrsprungIsotrop30DegreeCutHist}
-		\caption{Zweidimensionales Histogramm mit Simulierten Daten. Die Pionen sind Isotrop im Ursprung zerfallen und erhielten einen Boost in eine zuf\"allig bestimme Richtung. Die Energie der detektierten Photonen musste \"ahnlich sein, au{\ss}erdem wurden die Detektoren am Rand nicht ber\"ucksichtigt.}
+		\caption[Simulation: 2D-Hist Isotroper Boost im Ursprung ohne Detektoren am Rand]{Zweidimensionales Histogramm mit Simulierten Daten. Die Pionen sind Isotrop im Ursprung zerfallen und erhielten einen Boost in eine zuf\"allig bestimme Richtung. Die Energie der detektierten Photonen musste \"ahnlich sein, au{\ss}erdem wurden die Detektoren am Rand nicht ber\"ucksichtigt.}
 		\label{fig:Sim-Data-Ursprung-2DHist-30-Degree-Edge}
 	\end{center}
 \end{figure}
@@ -1446,15 +1436,36 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimIsotropUrsprung30DegreeCutAllFits}
-		\caption{Alle Fits mit der Bedingung, dass das $\pi^0$ im Ursprung zerf\"allt, und in eine zuf\"allige Richtung geboostet wird. Die Detektoren am Rand wurden nicht ber\"ucksichtigt.}
+		\caption[Simulation: 2D-Hist Isotroper Boost im Ursprung ohne Detektoren am Rand alle Fits]{Alle Fits mit der Bedingung, dass das $\pi^0$ im Ursprung zerf\"allt, und in eine zuf\"allige Richtung geboostet wird. Die Detektoren am Rand wurden nicht ber\"ucksichtigt.}
 	\end{center}
 	
 \end{figure}
 
 \begin{figure}[h!]
 	\begin{center}
+		\includegraphics[width=100mm]{AngleRegGen/20171804TrueCandsAngleDeviation}
+		\caption[Simulation: Winkel zwischen generiertem und rekonstruiertem Photon]{Daten aus der Simulation: Zu sehen ist der Winkel zwischen dem generiertem und dem entsprechendem rekonstruiertem Photon f\"ur verschiedene Energien.}
+		\label{fig:Angle-Rec-Gen-Hist}
+	\end{center}
+\end{figure}
+
+
+
+
+
+\begin{figure}[h!]
+	\begin{center}
+		\includegraphics[width=100mm]{NewCalib/20171904SimOpeningAngleDeviation}
+		\caption[Simulation: Unterschied zwischen dem rekontruiertem und den errechneten \"Offnungswinkel]{Daten aus der Simulation: Zu sehen ist der Unterschied zwischen dem tats\"achlichem und dem errechneten \"Offnungswinkel f\"ur verschiedene Photonenenergien.}
+		\label{fig:Unterschied-Rec-Gen-Opening-Angle}
+	\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904SimZVertex3DHist}
-		\caption{Darstellung der Abh\"angigkeit der errechneten $\pi^0$-Masse (x-Achse) von der Energie der detektierten Photonen (y-Achse) und dem Ort an dem das $\pi^0$ im Target zerfallen ist (z-Achse).
+		\caption[Simulation: 3D-Hist Z-Vertex]{Darstellung der Abh\"angigkeit der errechneten $\pi^0$-Masse (x-Achse) von der Energie der detektierten Photonen (y-Achse) und dem Ort an dem das $\pi^0$ im Target zerfallen ist (z-Achse).
 		Leider war es nicht m\"oglich dieses Histogramm besser dazustellen.}
 	\label{fig:Z-Vertex-3D-Hist}
 	\end{center}
@@ -1464,7 +1475,7 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904ZVertexAllFits}
-		\caption{Alle Fits f\"ur die Betrachtung der Z-Vertex Abh\"angigkeit. In jeder Zeile ist ein einzelnes Z-Vertex-Intervall aufgetragen. Die Detektoren am Rand wurden ber\"ucksichtigt}
+		\caption[Simulation: Z-Vertex alle Fits]{Alle Fits f\"ur die Betrachtung der Z-Vertex Abh\"angigkeit. In jeder Zeile ist ein einzelnes Z-Vertex-Intervall aufgetragen. Die Detektoren am Rand wurden ber\"ucksichtigt}
 		\label{fig:ZVertex-All-Fits}
 	\end{center}
 \end{figure}
@@ -1472,14 +1483,14 @@ Durch den Crystal-Ball waren alle Variablen in dieser Gleichung bekannt. So konn
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904SimMinOpeningAngleHist}
-		\caption{Histogramm mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Photonen mindestens 30$^\circ$ bestr\"agt.}
+		\caption[Simulation: 2D-Hist \"Offnungswinkel $>$ 30$^{\circ}$]{Histogramm mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Photonen mindestens 30$^\circ$ bestr\"agt.}
 	\end{center}
 \end{figure}
 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904SimMinOpeningAngleAllFits}
-		\caption{Alle Fits f\"ur die Bedingung, dass der \"Offnungswinkel zwischen den detektierten Teilchen mindestens $30^{\circ}$ betr\"agt.}
+		\caption[Simulation: \"Offnungswinkel $>$ 30$^{\circ}$ alle Fits]{Alle Fits f\"ur die Bedingung, dass der \"Offnungswinkel zwischen den detektierten Teilchen mindestens $30^{\circ}$ betr\"agt.}
 		\label{fig:Relative-Abweichung-Min-Opening-Angle-AllFits}
 	\end{center}
 \end{figure}
