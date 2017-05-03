@@ -208,9 +208,9 @@ Das Hauptaugenmerk dieser Arbeit liegt bei der Untersuchung der Energieabh\"angi
 %ersten \"Uberblick \"uber den nachfolgenden Text zu geben.
 \section{Gliederung}
 
-In Kapitel \ref{chap:Exp-Aufbau} wird zunächst der experimentelle Aufbau am MAMI beschrieben. Dabei wird als erstes der Aufbau des Beschleunigers beschrieben. Anschließend wird kurz auf die Funktionsweise der Detektorkomponenten (Photonenmarkierungsanlage, Crystal-Ball, TAPS und Teilchenidentifikationsdetektor) eingegangen. Auch wird kurz die Funktionsweise der Szintillatoren und des Algorithmus zur Clusterbildung beschrieben.
+In Kapitel \ref{chap:Exp-Aufbau} wird zunächst der experimentelle Aufbau am MAMI beschrieben. Dabei wird als erstes der Aufbau des Beschleunigers beschrieben. Anschließend wird kurz auf die Funktionsweise der Detektorkomponenten (Photonenmarkierungsanlage, Crystal-Ball, TAPS und Teilchenidentifikationsdetektor) eingegangen. Auch wird kurz die Funktionsweise der Szintillatoren beschrieben.
 
-In Kapitel \ref{chap:Vorbereitung} werden die Vorbereitungen beschrieben, die nötig sind, um die Studien in dieser Arbeit durchzuführen. Hier wird die Umstellung auf eine neue Funktion zum Peak fitten beschrieben. Außerdem werden Bedingungen gestellt, um den störenden Untergrund zu reduzieren. Schließlich wird noch die Funktionsweise eines neuen Ereignisgenerators beschrieben.
+In Kapitel \ref{chap:Wergzeuge} und \ref{chap:Vorbereitung} werden die verwendeten Programme beschrieben und die Funktionsweise des Algorithmus zur Clusterbildung. Außerdem wird die Vorbereitungen eingegangen, die nötig sind, um die Studien in dieser Arbeit durchzuführen. Hier wird die Umstellung auf eine neue Funktion zum Peak fitten beschrieben. Außerdem werden Bedingungen gestellt, um den störenden Untergrund zu reduzieren. Schließlich wird noch die Funktionsweise eines neuen Ereignisgenerators beschrieben.
 
 In Kapitel \ref{chap:Studien} werden schließlich verschiedene Studien durchgeführt, um die Ursache einer energieabhängigen Abweichung der rekonstruierten $\pi^0$-Masse von der tatsächlichen $\pi^0$-Masse zu erklären. Dabei ist dieses Kapitel in zwei große Abschnitte geteilt. Im ersten wird versucht mit Daten aus der Strahlzeit 2014 die Ursache zu bestimmen und im zweiten Abschnitt werden durch Simulation generierte Daten verwendet.
 
@@ -262,7 +262,7 @@ Da die Elektronen mit einem Linearbeschleuniger nur einige MeV pro Meter beschle
  
  Diese Bedingungen geben ebenfalls die Grenzen f\"ur den maximal m\"oglichen Energiegewinn jeder Stufe an. 
 \newline
-Wie bereits erw\"ahnt besitzt MAMI drei dieser RTMs. Die erste Stufe MAMI A besteht aus zwei RTMs mit 18 bzw. 51 Uml\"aufen. Die zweite Stufe MAMI B besteht aus dem, gr\"o{\ss}ten RTM der Welt mit 90 Uml\"aufen und Dipolen mit einer Breite von jeweils 5 m, wodurch sie 450 t schwer waren. Damit sind auch die technischen Grenzen erreicht \cite{KPh11F}.
+Wie bereits erw\"ahnt besitzt MAMI drei dieser RTMs. Die erste Stufe MAMI A besteht aus zwei RTMs mit 18 bzw. 51 Uml\"aufen. Die zweite Stufe MAMI B besteht aus dem, gr\"o{\ss}ten RTM der Welt mit 90 Uml\"aufen und Dipolen mit einer Breite von jeweils 5 m, wodurch sie 450 t schwer sind. Damit sind auch die technischen Grenzen erreicht \cite{KPh11F}.
 
 
 \begin{figure}[h!]
@@ -273,7 +273,7 @@ Wie bereits erw\"ahnt besitzt MAMI drei dieser RTMs. Die erste Stufe MAMI A best
 \end{center}
 \end{figure}
 
-Um dennoch höhere Energien zu erreichen, ist ein anderes Konzept erforderlich. MAMI C ist folglich reiner RTM mehr, sondern ein HDSM. Das hei{\ss}t, es besteht aus vier 90$^{\circ}$ Dipolen, welche jeweils 250 t schwer sind und einem zus\"atzlichen Linearbeschleuniger. 
+Um dennoch höhere Energien zu erreichen, ist ein anderes Konzept erforderlich. MAMI C ist folglich kein reiner RTM mehr, sondern ein HDSM. Das hei{\ss}t, es besteht aus vier 90$^{\circ}$ Dipolen, welche jeweils 250 t schwer sind und einem zus\"atzlichen Linearbeschleuniger. 
 Das bedeutet, dass die Elektronen imm HDSM zweimal pro Umlauf beschleunigt werden.
 
 Zwar wird der Rest von MAMI mit einer Hochfrequenz von 2,45 GHz betrieben, allerdings muss der erste Beschleuniger von MAMI-C aufgrund der Hallenl\"ange mit einer Hochfrequenz von 4,90 GHz laufen, w\"ahrend der zweite f\"ur eine bessere longitudinale Strahlstabilit\"at mit 2,45 GHz l\"auft \cite{Ca10}.
@@ -327,7 +327,7 @@ Zwar wird der Rest von MAMI mit einer Hochfrequenz von 2,45 GHz betrieben, aller
  Diese Tagger-Elektronenleiter besteht aus 353 Szintillatoren, welche sich jeweils zur H\"alfte \"uberlappen.
  Dadurch ergeben sich 352 Kan\"ale mit einer Energieaufl\"osung von $\Delta E \approx$  2 MeV bzw. 4 MeV bei einer Strahlenenergie von $E_e=$ 800 MeV bzw. 1,6 GeV. 
  
- F\"ur die Daten, welche in dieser Arbeit analysiert werden, wird der EPT (End-Point-Tagger) benutzt. Das Funktionsprinzip des EPT ist \"ahnlich zu dem des Glasgow-Mainz-Taggers, allerdings besitzt der EPT nur 47 Kan\"ale, welche sich nicht \"uberlappen und sind im oberen Photonenenergieende angebracht. Die Strahlf\"uhrung wird daf\"ur leicht ge\"andert.
+ F\"ur die Daten, welche in dieser Arbeit analysiert werden, wird der EPT (End-Point-Tagger) benutzt. Das Funktionsprinzip des EPT ist \"ahnlich zu dem des Glasgow-Mainz-Taggers, allerdings besitzt der EPT nur 47 Kan\"ale, welche sich im Gegensatz zum Glasgow-Mainz-Tagger nicht \"uberlappen und im oberen Photonenenergieende angebracht sind. Die Strahlf\"uhrung wird daf\"ur leicht ge\"andert.
  
  Folglich lässt sich der Impuls, durch Kenntnis des Auftrefforts des Elektron auf der Tagger-Leiter bzw. im EPT und der St\"arke des Magnetfeldes, bestimmen und dadurch auch die Energie der Elektronen. 
  
@@ -394,7 +394,7 @@ N\approxeq 2^t
 E(t) \approxeq \frac{E_0}{2^t}
 \end{equation}
 
-Dieser Schauer breitet sich, sowohl in longitudinaler als auch transversaler Richtung aus. Diese tranversale Ausbreitung kann durch den Moli\'ere-Radius beschrieben werden. 
+Dieser Schauer breitet sich, sowohl in longitudinaler als auch transversaler Richtung aus. Diese transversale Ausbreitung kann durch den Moli\'ere-Radius beschrieben werden. 
 Der Moli\'ere-Radius wird berechnet durch \cite{Leo87}:
 
 \begin{equation}
@@ -432,13 +432,13 @@ Als Ereignisgenerator wird zun\"achst auf Pluto zur\"uckgegriffen. Pluto ist ein
 Mit einem Ereignisgenerator ist es allerdings nur m\"oglich den Zerfall und die Reaktionsprodukte zu erzeugen. Das Verhalten des Detektorsystems wird dadurch nicht simuliert. Dazu wurde auf Geant4 zur\"uckgegriffen. Geant4 ist ein Toolkit f\"ur Simulationen, welches das Durchdringen von Teilchen durch Materie mit Hilfe von Monte-Carlo-Methoden beschreibt. Auch Geant4 ist in C++ geschrieben \cite{Ge04}.
 
 
-\section{Clustering Algorithmus}
+\section{Algorithmus zur Clusterbildung}
 \label{sec:Clustering-Algorithmus}
 
 Wie bereits in Abschnitt \ref{sec:Szintillatoren} erw\"ahnt wurde, wird sich ein elektromagnetischer Schauer aus Elektronen, Positronen und Photonen erzeugt, wenn ein Photon einen Detektorkristall trifft. Dieser Schauer breitete sich aus und dringt in benachbarte Kristalle ein. Folglich wird nicht die gesamte Energie eines Photons an einen Kristall abgegeben, sondern immer auch an seine Nachbarn.
 
 Damit ein Kristall als ausgel\"ost eingestuft wird, m\"ussen zwei Bedingungen erf\"ullt werden.
-Das Analogsignal des Photomultipliers muss die eingestelle Diskriminatorschwelle von jeweils 1,1 MeV und eine Energieschwelle, welche in der Analyse gesetzt wird, \"uberschreiten.
+Das Analogsignal des Photomultipliers muss die eingestellte Diskriminatorschwelle von jeweils 1,1 MeV und eine Energieschwelle, welche in der Analyse gesetzt wird, \"uberschreiten.
 
 Sind diese beiden Bedingungen erf\"ullt, wird der Kristall in der weiteren Analyse mit einbezogen.
  
@@ -537,14 +537,14 @@ Der Untergrund wurde weiterhin mit einem Polynom vierten Grades angen\"ahert, be
 	\end{center}
 \end{figure}
 
-Zuerst wird der Untergrund (die Seitenb\"ander) mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} Blau dargestellt. Von den Daten kann dann damit der Untergrund abgezogen werden. Nun wird \"uber die verbleibenden Daten der Crystal-Ball-Fit angewand (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot).
+Zuerst wird der Untergrund (die Seitenb\"ander) mit einem Polynom vierten Grades gefittet, in Abbildung \ref{fig:fitexampleenergyinterval0903} Blau dargestellt. Von den Daten kann dann damit der Untergrund abgezogen werden. Nun wird \"uber die verbleibenden Daten der Crystal-Ball-Fit angewandt (Gr\"un). Damit leichter \"uberpr\"uft werden konnte, ob der Fit sinnvoll war, wurde beide Fits addiert und zus\"atzlich in den Graphen gezeichnet (Rot).
 
 
 \section{Reduzierung des Untergrunds}
 
 Im Crystal-Ball Detektor werden nicht nur Photonen, viele alle m\"oglichen Teilchen detektiert. Folglich werden auch viele Teilchen registriert, die man nicht betrachten will. Diese erzeugen zus\"atzlich einen Untergrund, der die Genauigkeit des Fits verschlechtert.
 
-Zu erahnen ist dies bereits in Abbildung \ref{fig:fitexampleenergyinterval0903}. Hier ist der $\pi^0$-Peak bei einer invarianten Masse von 135 MeV und der $\eta$-Peak bei ca. 550 MeV zu sehen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
+Zu erahnen ist dies bereits in Abbildung \ref{fig:fitexampleenergyinterval0903}. Hier ist der $\pi^0$-Peak bei einer invarianten Masse von 135 MeV und der $\eta$-Peak bei ca. 550 MeV zu sehen. Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interessant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
 
 Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besitzen. M\"oglich ist dies durch den PID-Detektor. Sind die detektierten Teilchen geladen, dann handelt es sich nicht um Photonen und sie werden verworfen. Dies f\"uhrt zu einer Reduzierung des Untergrunds. Zu sehen ist das in Abbildung \ref{fig:Reduzierter-Untergrund-Fit}.
 
@@ -595,7 +595,7 @@ Von diesem System kann dann die Schwerpunktsenergie $\sqrt{s}$ ausgerechnet werd
 \sqrt{s}= \sqrt{2E_{\gamma}m_p+2m_p^2}
 \end{equation}
 
-Anschlie{\ss}end wird angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wird, wird auch wieder mit einem Zufallsgenerator bestimmt. Die Richtung ist also im Raum gleichverteilt.
+Anschlie{\ss}end wird angenommen, dass die Reaktion des Protons mit dem Photon ein $\pi^0$ aussendet. Die Richtung in der dieses $\pi^0$ ausgesandt wird, wird auch wieder mit einem Zufallsgenerator bestimmt. Die Richtung ist also im Raum gleich verteilt
 
 Aufgrund der Impulserhaltung muss gelten, dass der Impuls des Protons in die entgegengesetzte Richtung zum $\pi^0$ zeigt, und dass der Betrag der beiden Impulse gleich sein muss. Auch muss aufgrund der Energieerhaltung gelten, dass die Energie der beiden Teilchen addiert gleich der Schwerpunktsenergie ist. Es liegen also die folgenden Formeln vor:
 
@@ -615,7 +615,7 @@ Um die aus dem Zerfall entstandenen Photonen zu erzeugen, begibt man sich nun in
 
 In diesem Tool wird die Energie des Strahls in einem homogenen Intervall gew\"urfelt. Dies entspricht nicht der Realit\"at, da die Energieverteilung von Photonen, welche durch Bremsstrahlung erzeugt werden, nicht gleichm\"a{\ss}ig ist, sondern in dem im Experiment betrachtetem Intervall eher mit einer $1/E_{\gamma}$-Verteilung angen\"ahert werden kann. Folglich werden mit diesem neuen Tool deutlich mehr hochenergetische Bremsstrahlphotonen erzeugt. Dies st\"ort allerdings nicht weiter, da in diesen Untersuchungen nur sichergestellt werden muss, das alle im Experiment auftretenden Photonen auch in der Simulation auftreten.
 
-Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden muss und der neue Ereignisgenerator auf einem alten basiert, wurde zun\"achst auf den bereits benutzten Zufallsgenerator aus ROOT names TRandom zur\"uckgegriffen. Dieser besitzt eine Periodizit\"at von $10^9$ und ben\"otigt zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet ist, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstehen, was darauf hindeutet, dass der Generator immmer wieder die gleichen Prozesse w\"urfelt (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). 
+Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt werden muss und der neue Ereignisgenerator auf einem alten basiert, wurde zun\"achst auf den bereits benutzten Zufallsgenerator aus ROOT namens TRandom zur\"uckgegriffen. Dieser besitzt eine Periodizit\"at von $10^9$ und ben\"otigt zum Generieren einer Zahl 34 ns. Allerdings stellte sich heraus, dass dieser Zufallsgenerator nicht gut f\"ur viele gr\"o{\ss}ere Pakete geeignet ist, da durch ihn keine gleichm\"a{\ss}ige Verteilung, sondern '\textit{Nadeln}' entstehen, was darauf hindeutet, dass der Generator immer wieder die gleichen Prozesse w\"urfelt (vgl. dazu das linke Bild von Abb. \ref{fig:Random-Verteilung}). 
 
 
 
@@ -742,6 +742,8 @@ Dieser Bereich ist bewusst gew\"ahlt, da f\"ur kleinere Energien der Peak des $\
 
 Um nun die Position des $\pi^0$ zu bestimmen, wird für jedes Intervall über den Bereich der errechneten invarianten Masse von 50 MeV bis 220 MeV mit Hilfe von ROOT gefittet. Die Einschr\"ankung des Bereichs erm\"oglichte einen besseren Fit. Als Fitfunktion wird die Crystal-Ball-Funktion (Kapitel \ref{sec:CB-Funktion}) verwendet. 
 Aus diesen Fitdaten kann dann die Position des $\pi^0$ bestimmt werden.
+
+\colorbox{yellow}{Fitrange ist von Fit zu Fit unterschiedlich zumindest bei Daten aus der Strahlzeit}
   % Sein Peak wird allerdings sehr stark durch den Untergrund gest\"ort. Der Fokus dieser Arbeit lag zwar bei der Betrachtung des $\pi^0$, allerdings war es auch interresant die Position des $\eta$-Peaks zu betrachten, daher wurde nach einem Weg gesucht, den Untergrund m\"oglichst stark zu reduzieren. 
   
  %Daher wurde nun auch \"uberpr\"uft, ob die detektierten Teilchen eine Ladung besa{\ss}en, wenn ja, dann handelte es sich nicht um Photonen und sie wurden nicht in das Histogramm eingef\"ugt. 
@@ -845,7 +847,7 @@ In der Abbildung \ref{fig:Vernachlaessigung-Detektoren-am-Rand} erkennt man, das
 
 F\"ur Photonenenergien oberhalb von ca. 275 MeV ist eine deutliche Verbesserung der Abweichung zu erkennen. So liegt bei einer Photonenenergie von 400 MeV mit Detektoren am Rand eine Abweichung der errechneten $\pi^0$-Peakposition zur invarianten Masse des $\pi^0$ von ungefähr 4\% vor, w\"ahrend die Abweichung bei gleicher Photonenenergie ohne Detektoren am Rand nur rund 2\% betr\"agt.
 
-Ein vermuteter Grund, warum es nur eine Verbesserung für hohe Energien gibt, ist, dass hochenergetische Photonen dann erzeugt werden, wenn auch das Pion eine hohe kinetische Energie besa{\ss}. Diese Photonen haben dann eine gr\"o{\ss}ere Wahrscheinlichkeit in Richtung des Strahlenausgang des Crystal-Balls aufzutreten.
+Ein vermuteter Grund, warum es nur eine Verbesserung für hohe Energien gibt, ist, dass hochenergetische Photonen dann erzeugt werden, wenn auch das Pion eine hohe kinetische Energie besitzt. Diese Photonen haben dann eine gr\"o{\ss}ere Wahrscheinlichkeit in Richtung des Strahlenausgang des Crystal-Balls aufzutreten.
 
 Um das zu erkl\"aren betrachtet man zun\"achst ein ruhendes $\pi^0$. Dieses zerf\"allt in 2 Photonen in zuf\"alliger Richtung mit einem Winkel von 180$^{\circ}$ zueinander und mit einer Energie von jeweils etwa 67,5 MeV. 
 
@@ -857,9 +859,9 @@ Zur Veranschaulichung betrachtet man nun zwei extreme Beispiele:
 	\item Werden die Photonen allerdings entlang der $z$-Achse ausgesandt, so bewirkt ein Boost in $z$-Richtung nun, dass das Photon in $z$-Richtung Energie dazu erh\"alt, w\"ahrend das Photon entgegengesetzt zur $z$-Richtung Energie '\textit{verliert}'. Die Energiedifferenz nimmt also zu.
 \end{enumerate}
 
-F\"ur h\"ohere Photonenenergien werden diese Effekte verst\"arkt und alles in allem werden mehr Photonen in Strahlenrichtung gemessen. Daraus folgt, dass Photonen mit niedriger Energie sich eher gleichm\"a{\ss}ig im Raum verteilen, w\"ahrend hochenergetische Photonen h\"aufiger am Strahlenausgang des Crystal-Balls auftreten. Beachte, dass es sich hier um Photonen mit \"ahnlicher Energie handelt.
+F\"ur h\"ohere Photonenenergien werden diese Effekte verst\"arkt und alles in allem werden mehr Photonen in Strahlenrichtung gemessen. Daraus folgt, dass Photonen mit niedriger Energie sich eher gleichm\"a{\ss}ig im Raum verteilen, w\"ahrend hochenergetische Photonen h\"aufiger am Strahlenausgang des Crystal-Balls auftreten. Beachte, dass die hier betrachteten Photonen eine ähnliche Energie besitzen müssen.
 
-Dies f\"uhrte auch zu einem weiteren Problem. Dadurch, dass die h\"oher energetischen Photonen wahrscheinlicher am Strahlenausgang vorliegen, werden nicht alle Detektoren im Crystal-Ball gleich ber\"ucksichtigt. So liegen, am Strahleneingang fast keine hochenergetische Photonen vor.
+Dies f\"uhrt auch zu einem weiteren Problem. Dadurch, dass die h\"oher energetischen Photonen wahrscheinlicher am Strahlenausgang vorliegen, werden nicht alle Detektoren im Crystal-Ball gleich ber\"ucksichtigt. So liegen, am Strahleneingang fast keine hochenergetische Photonen vor.
 
 
 \begin{figure}[h!]
@@ -892,7 +894,7 @@ Da mit reellen Daten keine Ursache gefunden werden kann, wodurch diese gro{\ss}e
 
 Der Grund daf\"ur ist, dass alle Prozesse in simulierten Daten genau bekannt sind. Das hei{\ss}t, von jedem registriertem Teilchen ist bekannt, um welches Teilchen es sich handelt und aus welchem Prozess es entstanden ist. 
 
-So kann der ganze Zerfall Schritt f\"ur Schritt auseinander genommen werden, um leichter nach der Ursache f\"ur die Abweichung zu suchen.
+So kann jeder einzelne Aspekt des Zerfalls genauer untersucht werden.
 
 Als erstes muss \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu werden zwei Histogramme mit den Bedingungen aus den jeweiligen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand (Abb. \ref{fig:Simulierte-Daten-Abweichung} links) und eins ohne (Abb. \ref{fig:Sim-Data-2DHist-30-Degree-Edge}).
@@ -922,7 +924,7 @@ Auch hier werden die beiden Abweichungen vom $\pi^0$-Peak zum besseren Vergleich
 
 Schon am zweidimensionalem Histogramm aus Abbildung \ref{fig:Simulierte-Daten-Abweichung} ist zu erkennen, dass es sich um simulierte Daten handelte. Es liegt nur ein Peak bei der Masse von $\pi^0$ vor. Einen $\eta$-Peak und einen störenden Untergrund gibt es nicht. 
 
-Deswegen wird zur Bestimmung der $\pi^0$-Position f\"ur die simulierten Daten der Untergrundfit ausgeschaltet, sodass die Crystal-Ball-Funktion die einzige Fitfunktion ist.
+Deswegen wird zur Bestimmung der $\pi^0$-Position f\"ur die simulierten Daten der Untergrundfit ausgeschaltet, sodass die Crystal-Ball-Funktion die einzige Fitfunktion ist. Auch der Bereich über den gefittet wird, wird konstant gehalten.
 
 Ebenfalls ist die bei den reellen Daten gefundene Abweichung auch hier für große Photonenenergien zu erkennen. Allerdings ist die Form etwas anders. So ist die Abweichung f\"ur kleine Photonenenergien sehr klein und weniger als -1\%, und nimmt auch f\"ur Energien bis 300 MeV nicht zu, sondern bleibt fast konstant. F\"ur Energien oberhalb von 300 MeV nimmt die Abweichung mit \"uber +2\% pro 50 MeV zu. So wird die maximale Abweichung bei einer Photonenenergie von 450 MeV erreicht. Hier betr\"agt sie ca. 6\%. 
 
@@ -1276,11 +1278,11 @@ Um nun mehrere dieser Hot-Crystals zu finden, wurde Abbildung \ref{fig:Verteilun
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/Strahlzeit2014/ClusterSize/20172104StrahlzeitClusterSize0Marker}
 	\end{center}
-	\caption[Strahlzeit: Markierte '\textit{Hot-Crystals}'; Niedrige Energien]{Daten aus der Strahlzeit: Verteilung der detektierten Teilchen im Crystal-Ball. Die Energie der Teilchen musste \"ahnlich sein und lag im Intervall von 0 MeV bis 100 MeV. Markiert sind m\"ogliche Hot-Crystals}
+	\caption[Strahlzeit: Markierte '\textit{Hot-Crystals}'; Niedrige Energien]{Daten aus der Strahlzeit: Verteilung der detektierten Teilchen im Crystal-Ball. Die Energie der Teilchen muss \"ahnlich sein und liegt im Intervall von 0 MeV bis 100 MeV. Markiert sind m\"ogliche Hot-Crystals}
 	\label{fig:Markierte-Hot-Crystals}
 \end{figure}
 
-In Abbildung \ref{fig:Markierte-Hot-Crystals} ist die Verteilung der registrierten Teilchen im Crystal-Ball f\"ur eine Photonenenergie von 0 MeV bis 100 MeV dargestellt. Hier wurden 3 m\"ogliche Kandidaten f\"ur Hot-Crystals mit roten Kreisen makiert. 
+In Abbildung \ref{fig:Markierte-Hot-Crystals} ist die Verteilung der registrierten Teilchen im Crystal-Ball f\"ur eine Photonenenergie von 0 MeV bis 100 MeV dargestellt. Hier wurden 3 m\"ogliche Kandidaten f\"ur Hot-Crystals mit roten Kreisen markiert. 
 
 
 Um sich nun besser orientieren zu k\"onnen, wurde mit den gleichen Daten eine Karte des Crystal-Balls gef\"ullt, auf der jeder Detektor dargestellt war.
@@ -1316,7 +1318,7 @@ Mithilfe der Karte ist es auch m\"oglich die Kristalle die genaue Elementnummer 
 
 	2 & 565& 0\\
 	
-		3 & 597 &0 \\
+	3 & 597 &0 \\
 	
 	4 & 677& 0\\
 	
@@ -1721,7 +1723,7 @@ Durch den Crystal-Ball sind alle Variablen in dieser Gleichung bekannt. So kann 
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/20171904SimMinOpeningAngleHist}
-		\caption[Simulation: 2D-Hist \"Offnungswinkel $>$ 30$^{\circ}$]{Histogramm mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Photonen mindestens 30$^\circ$ bestr\"agt.}
+		\caption[Simulation: 2D-Hist \"Offnungswinkel $>$ 30$^{\circ}$]{Histogramm mit der Bedingung, dass der \"Offnungswinkel zwischen den beiden detektierten Photonen mindestens 30$^\circ$ betr\"agt.}
 	\end{center}
 \end{figure}
 
