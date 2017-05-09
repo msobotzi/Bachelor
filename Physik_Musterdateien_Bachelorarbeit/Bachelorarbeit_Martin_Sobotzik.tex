@@ -576,7 +576,7 @@ Im diesem sind ca. 250 Millionen Prozesse aus Photoproduktion für EPT Photonene
 
 Die Zerf\"alle im Cocktail sind bereits komplett durchsimuliert. Das hei{\ss}t, sowohl der Zerfall der Teilchen, als auch das Verhalten der Detektoren wurde simuliert, wodurch der Cocktail wie eine reale Strahlzeit mit prompt-random Subtraktion behandelt werden kann. Das hei{\ss}t, es werden nur Prozesse betrachtet, die ein Photon mit einer Energie von $1420\,\text{MeV}$ bis $1580\,\text{MeV}$ als Eingangsteilchen besitzen. Diese Bedingung wird gesetzt, um die Simulation so klein wie m\"oglich zu halten, da man sonst auch sehr viele Prozesse mit kleinen Photonenstrahlenergien simulieren m\"usste.
 
-Da in dieser Arbeit das Hauptaugenmerk auf Photonen liegt, welche durch den Prozess $\pi^0 \rightarrow \gamma \gamma$ entstehen und eine \"ahnliche Energie besitzen, stellt sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enth\"alt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
+Da in dieser Arbeit das Hauptaugenmerk auf Photonen liegt, welche durch den Prozess $\pi^0 \rightarrow \gamma \gamma$ entstehen und eine \"ahnliche Energie besitzen müssen, stellt sich relativ schnell heraus, dass der Cocktail nicht genug relevante Prozesse enth\"alt, nachdem alle unerw\"unschten heraus gefiltert wurden. 
 
 Deshalb wurde zun\"achst ein neues Paket mit mehr Prozessen erstellt. 
 Dieses Paket beinhaltet $10^7$ $\pi^0 \rightarrow \gamma \gamma$ Prozesse, welche durch Pluto mit einer Photonenstrahlenergie zwischen $1420\,\text{MeV}$ und $1580\,\text{MeV}$ generiert wurden. Das Verhalten des Crystal-Ball Detektors wird anschlie{\ss}end mit Geant4 simuliert.
@@ -651,7 +651,7 @@ Da in vielen Schritten eine Raumrichtung oder ein Energieintervall gew\"urfelt w
 
 Folglich musste er ausgetauscht und durch den ebenfalls von ROOT bereitgestellten Zufallsgenerator namens TRandom3 ersetzt werden. Dieser besitzt mit $10^{6000}$ eine deutlich höhere Periodizität als TRandom. Zwar ben\"otigt er mit $45 \,\text{ns}$ pro gew\"urfelter Zahl etwas mehr Zeit, daf\"ur entspricht die Verteilung mehr der erwarteten. Zu sehen ist dies rechts in der Abbildung.
 
-Schlie{\ss}lich muss noch überprüft werden, ob der neue Ereignisgenerator so wie der alte funktioniert. Dazu wird auch der alte Ereignisgenerator so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen im Intervall von $1580\,\text{MeV}$ bis $1604\,\text{MeV}$ verteilt ist. Dadurch ist ein einfacherer Vergleich m\"oglich. 
+Schlie{\ss}lich muss noch überprüft werden, ob der neue Ereignisgenerator so wie der alte funktioniert. Dazu wird auch der alte Ereignisgenerator so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen im Intervall von $1420\,\text{MeV}$ bis $1580\,\text{MeV}$ verteilt ist. Dadurch ist ein einfacherer Vergleich m\"oglich. 
 %die Form der Verteilung der neuen $\pi^0$-Gun, der alten entsprach. Dazu wird die alte Gun ebenfalls so eingestellt, dass die Energieverteilung des eintreffenden Photonenstrahls homogen verteilt ist, dadurch ist ein einfacherer Vergleich möglich. 
 
 \begin{figure}[h!]
@@ -731,7 +731,7 @@ Zur Untersuchung kann dann aus den Daten der Strahlzeit die invariante Masse des
  \end{split}
  \end{equation}
 
-Hier ist $m_{\text{rec}}$ die berechnete invariante Masse, welche aus den beiden Energien $E_1$ und $E_2$ und dem \"Offnungswinkel $\alpha$ berechnet werden kann. Um diesen zu berechnen muss angenommen werden, dass das $\pi^0$ im Ursprung zerf\"allt. Mehr dazu in Abschnitt \ref{sec:Z-Vertex-Abhaengigkeit}.
+Hier ist $m_{\text{rec}}$ die berechnete invariante Masse, welche aus den beiden Energien $E_1$ und $E_2$ und dem \"Offnungswinkel $\alpha$ berechnet werden kann. Um diese zu berechnen muss angenommen werden, dass das $\pi^0$ im Ursprung zerf\"allt. Mehr dazu in Abschnitt \ref{sec:Z-Vertex-Abhaengigkeit}.
 Die Herleitung der Gleichung \ref{eq:Formel-zur-Berechnung-der-invarianten-Masse} befindet sich im Anhang \ref{sec:Herleitung-der-Formel-zur-Berechnung-der-invarianten-Masse}.
 
 Mit diesen Daten kann schließlich ein zweidimensionales Histogramm mit der invarianten Masse auf der x-Achse angelegt werden. Auf der y-Achse ist die Energie der Photonen aufgetragen, welche in Intervalle mit einer Breite von $25 \,\text{MeV}$ unterteilt ist. 
@@ -786,7 +786,7 @@ Aus diesen Fitdaten kann dann die Position des $\pi^0$ bestimmt werden.
  A = (\frac{m_{\text{rec}}}{m_{\pi^0}}-1)
  \end{equation}
  
- Dabei ist $m_{\text{rec}}$ die rekonstruierte Masse und $m_{\pi^0}$ die tats\"achliche Masse. Die Abweichung $A$ gibt den Unterschied zwischen den beiden in Prozent an.
+ Dabei ist $m_{\text{rec}}$ die rekonstruierte Masse und $m_{\pi^0}$ die tats\"achliche Masse des $\pi^0$. Die Abweichung $A$ gibt den Unterschied zwischen den beiden in Prozent an.
  
   %Daraus wird anschlie{\ss}end die Abweichung berechnet. Dazu wird die berechnete $\pi^0$-Peakposition durch den Literaturwert des $\pi^0$ geteilt. Anschlie{\ss}end wird noch Minus 1 gerechnet. Dieses Ergebnis wird mit 100 multipliziert, um die Abweichung in Prozent zu erhalten.
  
@@ -848,7 +848,7 @@ Zum besseren Vergleich der beiden Ergebnisse werden die relative Abweichungen mi
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{20170405StrahlzeitBothDeviation}
-		\caption[Strahlzeit: Vernachl\"assigung der Detektoren am Rand; Abweichung]{Daten aus der Strahlzeit: Die Abweichung der errechneten Position des $\pi^0$ Peaks ist gegen die Energie der Photonen aufgetragen. Die rote Linie stellt die relative Abweichung ohne die Bedingung, dass Photonen mit einem $\theta$-Winkel kleiner als 30$^{\circ}$ verworfen werden, die schwarze Linie mit der Bedingung. Die detektierten Photonen m\"ussen sich energetisch \"ahneln. Alle Fits sind in Abbildung \ref{fig:30-Degree-Cut-RealData-All-Fits} zu sehen.}
+		\caption[Strahlzeit: Vernachl\"assigung der Detektoren am Rand; Abweichung]{Daten aus der Strahlzeit: Die Abweichung der errechneten Position des $\pi^0$ Peaks ist gegen die Energie der Photonen aufgetragen. Die rote Linie stellt die relative Abweichung ohne die Bedingung dar, dass Photonen mit einem $\theta$-Winkel kleiner als 30$^{\circ}$ verworfen werden, die schwarze Linie mit der Bedingung. Die detektierten Photonen m\"ussen sich energetisch \"ahneln. Alle Fits sind in Abbildung \ref{fig:30-Degree-Cut-RealData-All-Fits} zu sehen.}
 		\label{fig:Vernachlaessigung-Detektoren-am-Rand}
 	\end{center}
 \end{figure}
@@ -904,10 +904,11 @@ Also muss weiter nach der Ursache f\"ur diese starke Abweichung gesucht werden.
 \section{Simulation}
 \label{sec:Simulation}
 
-Da mit reellen Daten keine Ursache gefunden werden kann, wodurch diese gro{\ss}e Abweichung entsteht, wird auf simulierte Daten zur\"uckgegriffen. 
+Da mit Daten aus der Strahlzeit keine Ursache gefunden werden kann, wodurch diese gro{\ss}e Abweichung entsteht, wird auf simulierte Daten zur\"uckgegriffen. 
 
-Der Grund daf\"ur ist, dass alle Prozesse in simulierten Daten genau bekannt sind. Das hei{\ss}t, von jedem registriertem Teilchen ist bekannt, um welches Teilchen es sich handelt und aus welchem Prozess es entstanden ist. Auch ist die genaue Energie und Trajektorie bekannt.
+Der Grund daf\"ur ist, dass alle Prozesse in simulierten Daten genau bekannt sind. Das hei{\ss}t, von jedem registriertem Teilchen ist bekannt, um welches Teilchen es sich handelt und aus welchem Prozess es entstanden ist. Auch ist die genaue Energie und Trajektorie bekannt. 
 So kann jeder einzelne Aspekt des Zerfalls genauer untersucht werden.
+Als Ereignisgenerator wird der in Abschnitt \ref{sec:Vorbereitung-der-Simulation} beschriebene verwendet.
 
 Als erstes muss \"uberpr\"uft werden, ob die in Kapitel \ref{sec:Energie-Interval-Abhaengigkeit} und \ref{sec:Vernachlaessigung-der-Detektoren-am-Rand} gefundene Abh\"angigkeit auch in der Simulation auftritt. 
 Dazu werden zwei Histogramme mit den Bedingungen aus den vorherigen Kapiteln gef\"ullt. Eins mit den Detektoren am Rand (Abb. \ref{fig:Simulierte-Daten-Abweichung} links) und eins ohne (Abb. \ref{fig:Sim-Data-2DHist-30-Degree-Edge}).
@@ -1032,7 +1033,7 @@ Es kann nur sein, dass der $\pi^0$-Peak ab einer Photonenenergie von $225\,\text
 Als n\"achstes wird der einfachste Prozess \"uberpr\"uft. Dazu zerf\"allt ein $\pi^0$ im Ursprung und erh\"alt einen Boost in eine zufällige Richtung. Dadurch gibt es keine ausgezeichnete Richtung. Folglich kann damit überprüft werden, ob sich alle Detektoren gleich verhalten. 
 
 Dazu wird der neue Ereignisgenerator so eingestellt, dass es keinen Photonenstrahl und kein Proton mehr gibt, lediglich der Boost des $\pi^0$ wird gewürfelt. Die Photonen werden dann anschließend, wie in Kapitel \ref{sec:Vorbereitung-der-Simulation} beschrieben, gewürfelt und geboostet. 
-Als erste Kontrolle wird \"uberpr\"uft, ob die durch den Zerfall ausgesandten Photonen sich auch wirklich gleichm\"a{\ss}ig im Raum verteilen.
+Zur Kontrolle wird \"uberpr\"uft, ob die Pionen und die durch den Zerfall ausgesandten Photonen sich auch wirklich gleichm\"a{\ss}ig im Raum verteilen.
 
 
 \begin{figure}[h!]
@@ -1062,7 +1063,7 @@ Um zu überprüfen, ob alles wie gewollt eingestellt ist, wird ein weiteres zwei
 
 
 
-In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} rechts sieht man, dass sich die Pionen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gibt. Also ist alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden kann.
+In Abbildung \ref{fig:Verteilung-von-Mesonen-und-Photonen-im-Raum} rechts sieht man, dass sich die Photonen gleichm\"a{\ss}ig im Raum verteilen und es keine ausgezeichnete Richtung gibt. Also ist alles wie gew\"unscht eingestellt, wodurch das weitere Verhalten des Crystal-Balls betrachtet werden kann.
 
 Nun wird, wie in den vorherigen Kapiteln, ein Histogramm mit den Photonen gefüllt (Abb. \ref{fig:Sim-Data-Ursprung-2DHist-No-Cut}) und anschließend wird über die verschiedenen Photonenenergien gefittet. Dies wird sowohl mit, als auch ohne Berücksichtigung der Detektoren am Rand durchgeführt.
 
@@ -1743,6 +1744,7 @@ Durch den Crystal-Ball sind alle Variablen in dieser Gleichung bekannt. So kann 
 \end{figure}
 \end{comment}
 
+
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=100mm]{NewCalib/UrsprungIsotrop/20171904SimUrsprungIsotrop30DegreeCutHist}
@@ -1750,6 +1752,7 @@ Durch den Crystal-Ball sind alle Variablen in dieser Gleichung bekannt. So kann 
 		\label{fig:Sim-Data-Ursprung-2DHist-30-Degree-Edge}
 	\end{center}
 \end{figure}
+
 
 \begin{comment}
 \begin{figure}[h!]
@@ -1896,6 +1899,9 @@ Inhalt...
 
 
 
+
+
+
 \renewcommand{\bibname}{\bfont Literaturverzeichnis} 
 \bibliographystyle{h-physrev3}
 \begin{thebibliography}{99}
@@ -1972,10 +1978,24 @@ Internetseite, \url{http://www.kph.uni-mainz.de/a2.php} (Stand: 11.03.2017)
 
 %... an wen auch immer. Denken Sie an Ihre Freundinnen und Freunde, 
 %Familie, Lehrer, Berater und Kollegen.
+An dieser Stelle möchte ich allen danken, die mich während der Anfertigung dieser Bachelorarbeit unterstützt haben.
+Deswegen möchte ich zuerst Prof. Dr. Wolfgang Gradl und den Doktoranden der A2-Kollaboration danken, die mir bei Fragen geduldig zugehört und auch gerne weiter geholfen haben. 
 
+Auch möchte ich mich bei meinen Freunden bedanken, die mich während dieser Arbeit moralisch unterstützt haben.
+
+Mein größter Dank geht raus an meine Eltern, die mir mein Studium durch ihre Unterstützung überhaupt erst ermöglicht haben.
 \end{appendix}
 
 
 \end{document}  
         
+   
+   
+   
+   
+   
+   
+   
+   
+   
         
